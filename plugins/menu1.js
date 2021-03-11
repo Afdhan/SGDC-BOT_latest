@@ -114,11 +114,11 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
-/*%readmore`
-    let header = conn.menu.header || '╭─「 %category 」'
-    let body   = conn.menu.body   || '│ • %cmd%islimit'
-    let footer = conn.menu.footer || '╰────\n'
-    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``*/
+//readmore`
+ //   let header = conn.menu.header || '╭─「 %category 」'
+ //   let body   = conn.menu.body   || '│ • %cmd%islimit'
+  //  let footer = conn.menu.footer || '╰────\n'
+ //   let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``*/
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
