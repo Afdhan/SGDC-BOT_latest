@@ -85,7 +85,6 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 *┃║ Date :             ${week}, ${date}*
 *┃║ Time :            ${time}*
 *┃║ Uptime :        _${uptime} (${muptime})_*
-*┃║ PingSpeed : _${ping} MS_*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ LIST MENU ᳀══════*
