@@ -29,7 +29,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {`
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
-`.trim()) 
+`.trim()
 
 handler.command = /^(admin?menu)$/i
 handler.owner = false
