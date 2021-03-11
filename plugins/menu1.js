@@ -123,7 +123,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 }
 handler.help = ['menu','help','?']
 handler.tags = ['main']
-handler.command = /^(?)$/i
+handler.command = /^(ayam)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
