@@ -7,7 +7,7 @@ handler.before = m => {
   let isGroupLink = linkRegex.exec(m.text)
 
   if (chat.antiLink && isGroupLink) m.reply('Link Group Terdeteksi! Anda Akan Dikeluarkan Otomatis Oleh SGDC-BOT')
-
+conn.groupRemove([m.chat])
   return true
 }
 
