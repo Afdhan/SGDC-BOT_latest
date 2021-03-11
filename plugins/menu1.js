@@ -85,7 +85,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 *┃║ Date :             ${week}, ${date}*
 *┃║ Time :            ${time}*
 *┃║ Uptime :        _${uptime} (${muptime})_*
-*┃║ PingSpeed : _${ping} MS_*
+*┃║ PingSpeed : _ MS_*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ LIST MENU ᳀══════*
@@ -155,7 +155,7 @@ handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
-
+ī
 handler.admin = false
 handler.botAdmin = false
 
