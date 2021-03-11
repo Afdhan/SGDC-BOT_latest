@@ -7,7 +7,7 @@ handler.before = m => {
   
 
   if (chat.antiToxic) m.reply('Kata Toxic Terdeteksi! Anda Akan Dikeluarkan Otomatis Oleh SGDC-BOT')
-  await conn.groupRemove([m.chat])
+  conn.groupRemove([m.chat])
   return true
 }
 
