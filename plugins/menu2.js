@@ -1,9 +1,9 @@
 let fs = require ('fs')
 let path = require('path')
-let { performance } = require('perf_hooks'){
+let { performance } = require('perf_hooks')
 let old = performance.now()
 let neww = performance.now()
-}
+
 let ping = performance.now(neww - old)
     let date = d.toLocaleDateString(locale, {
       day: 'numeric',
