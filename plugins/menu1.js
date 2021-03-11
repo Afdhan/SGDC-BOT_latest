@@ -34,8 +34,8 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let uptime = clockString(_uptime)
     let totalreg = Object.keys(global.DATABASE._data.users).length
     let rtotalreg = Object.values(global.DATABASE._data.users).filter(user => user.registered == true).length
-    let tags = {
-      'main': 'Main',
+/*    let tags = {
+    *  'main': 'Main',
       'xp': 'Exp & Limit',
       'sticker': 'Sticker',
       'kerang': 'Kerang Ajaib',
@@ -52,7 +52,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'advanced': 'Advanced',
       'info': 'Info',
       '': 'No Category',
-    }
+    }*/
     for (let plugin of Object.values(global.plugins))
       if (plugin && 'tags' in plugin)
         for (let tag of plugin.tags)
@@ -72,8 +72,8 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
         if (menu.tags && menu.tags.includes(tag))
           if (menu.help) groups[tag].push(menu)
     }
-    conn.menu = conn.menu ? conn.menu : {}
-    let before = conn.menu.before || `
+    conn.menu = { `
+//    let before = conn.menu.before || `
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
@@ -85,6 +85,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 *┃║ Date :             ${week}, ${date}*
 *┃║ Time :            ${time}*
 *┃║ Uptime :        _${uptime} (${muptime})_*
+*┃║ PingSpeed : _${ping} MS_*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ LIST MENU ᳀══════*
@@ -112,23 +113,23 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
-*┗━━━━━━━━━━━━━━━━━━━━┛*
-//readmore`
- //   let header = conn.menu.header || '╭─「 %category 」'
- //   let body   = conn.menu.body   || '│ • %cmd%islimit'
-  //  let footer = conn.menu.footer || '╰────\n'
- //   let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``*/
-    let _text  = before + '\n'
+*┗━━━━━━━━━━━━━━━━━━━━┛*`
+/*%readmore`
+    let header = conn.menu.header || '╭─「 %category 」'
+    let body   = conn.menu.body   || '│ • %cmd%islimit'
+    let footer = conn.menu.footer || '╰────\n'
+    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
+/*  let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
       for (let menu of groups[tag]) {
         for (let help of menu.help)
-          _text += body.replace(/%cmd/g, menu.prefix ? help : '%p' + help).replace(/%islimit/g, menu.limit ? ' (Limit)' : '')  + '\n'
+           _text += body.replace(/%cmd/g, menu.prefix ? help : '%p' + help).replace(/%islimit/g, menu.limit ? ' (Limit)' : '')  + '\n'
       }
       _text += footer + '\n'
     }
     _text += after
-    text =  typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
+     text =  typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
     let replace = {
       '%': '%',
       p: _p, uptime, muptime,
@@ -139,13 +140,13 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       exp, limit, name, weton, week, date, time, totalreg, rtotalreg,
       readmore: readMore
     }
-    text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
+     text = text.replace(new RegExp(`%(${Object.keys(replace).join`|`})`, 'g'), (_, name) => replace[name])
     conn.reply(m.chat, text.trim(), m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
   }
-}
+}*/
 handler.help = ['menu','help','?']
 handler.tags = ['main']
 handler.command = /^(menu|help|\?)$/i
@@ -154,12 +155,12 @@ handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
-ī
+
 handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.exp = 1
+handler.exp = 3
 
 module.exports = handler
 
