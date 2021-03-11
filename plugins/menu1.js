@@ -85,7 +85,6 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 *┃║ Date :             ${week}, ${date}*
 *┃║ Time :            ${time}*
 *┃║ Uptime :        _${uptime} (${muptime})_*
-*┃║ PingSpeed : _ MS_*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ LIST MENU ᳀══════*
@@ -160,7 +159,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.exp = 3
+handler.exp = 1
 
 module.exports = handler
 
