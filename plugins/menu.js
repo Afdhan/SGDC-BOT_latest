@@ -16,7 +16,7 @@ let ping = performance.now(neww - old)
       second: 'numeric'
     })
     let _uptime = process.uptime() * 1000
-    let _muptime
+    /*let _muptime
     if (process.send) {
       process.send('uptime')
       _muptime = await new Promise(resolve => {
@@ -24,7 +24,7 @@ let ping = performance.now(neww - old)
         setTimeout(resolve, 1000)
       }) * 1000
     }
-    let muptime = clockString(_muptime)
+    let muptime = clockString(_muptime)*/
     let uptime = clockString(_uptime)
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
 let name = conn.getName(m.sender)
@@ -39,7 +39,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {`
 *┃║ Prefix :          ( ${_p} )*
 *┃║ Date :             ${week}, ${date}*
 *┃║ Time :            ${time}*
-*┃║ Uptime :        _${uptime} (${muptime})_*
+*┃║ Uptime :        _${uptime}_*
 *┃║ PingSpeed : _${ping} MS_*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
