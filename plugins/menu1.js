@@ -74,25 +74,51 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-╭─「 ${conn.user.name} 」
-│ Hai, %name!
-│
-│ *%exp XP*
-│ Tersisa *%limit Limit*
-│
-│ Tanggal: *%week %weton, %date*
-│ Waktu: *%time*
-│
-│ Uptime: *%uptime (%muptime)*
-│ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
-╰────
-%readmore`
+*┏━━━━━━━━━━━━━━━━━━━━┓*
+*┃══════᳀ SGDC - BOT ᳀══════*
+*┣━━━━━━━━━━━━━━━━━━━━┛*
+*┃╭══════════════════╮*
+*┃║ YourName : _${name}_*
+*┃║ BotName :    SGDC - BOT*
+*┃║ Version :       1.4.0 (beta)*
+*┃║ Prefix :          ( ${_p} )*
+*┃║ Date :             ${week}, ${date}*
+*┃║ Time :            ${time}*
+*┃║ Uptime :        _${uptime} (${muptime})_*
+*┃║ PingSpeed : _${ping} MS_*
+*┃╰══════════════════╯*
+*┣━━━━━━━━━━━━━━━━━━━━┓*
+*┃══════᳀ LIST MENU ᳀══════*
+*┣━━━━━━━━━━━━━━━━━━━━┛*
+*┃╭══════════════════╮*
+*┃║★ ${_p}gretongmenu*
+*┃║★ ${_p}makermenu*
+*┃║★ ${_p}internetmenu*
+*┃║★ ${_p}groupmenu*
+*┃║★ ${_p}adminmenu*
+*┃║★ ${_p}ownermenu*
+*┃║★ ${_p}optionmenu*
+*┃║★ ${_p}toolsmenu*
+*┃╰══════════════════╯*
+*┣━━━━━━━━━━━━━━━━━━━━┓*
+*┃═══════᳀  INGFO  ᳀═══════*
+*┣━━━━━━━━━━━━━━━━━━━━┛*
+*┃╭══════════════════╮*
+*┃║ Grup: t.me/SGDC_TEAM*
+*┃║ Grup: t.me/DesaConfig*
+*┃║ Channel: t.me/SobatGretong*
+*┃║ Channel: t.me/DesaConfigCh*
+*┃║ Donate: nyawer.co/SGDC*
+*┃║ Donate: saweria.co/AFD11*
+*┃╰══════════════════╯*
+*┣━━━━━━━━━━━━━━━━━━━━┓*
+*┃══════᳀ SGDC - BOT ᳀══════*
+*┗━━━━━━━━━━━━━━━━━━━━┛*
+/*%readmore`
     let header = conn.menu.header || '╭─「 %category 」'
     let body   = conn.menu.body   || '│ • %cmd%islimit'
     let footer = conn.menu.footer || '╰────\n'
-    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
+    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``*/
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
@@ -123,7 +149,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 }
 handler.help = ['menu','help','?']
 handler.tags = ['main']
-handler.command = /^(ayam)$/i
+handler.command = /^(menu|help|\?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
