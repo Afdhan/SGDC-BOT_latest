@@ -4,12 +4,12 @@ let handler = async m => m.reply(`
 *┏═════════════════════╯*
 *║  PAYLOAD*
 *┣━━━━━━►*
-*║CONNECT [host_port] [protocol]\r*
-*║Host: www.ruangguru.com\r*
-*║Connection: keep-alive\r*
-*║Proxy-Connection: keep-alive\r*
-*║X-Online-Host: www.ruangguru.com\r*
-*║\r*
+*║CONNECT [host_port] [protocol][cr]*
+*║Host: www.ruangguru.com[cr]*
+*║Connection: keep-alive[cr]*
+*║Proxy-Connection: keep-alive[cr]*
+*║X-Online-Host: www.ruangguru.com[cr]*
+*║[crlf]*
 *║*
 *┣━━━━━━►*
 *║Proxy ━► 124.158.167.170:8080*
