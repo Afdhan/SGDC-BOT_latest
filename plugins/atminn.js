@@ -1,4 +1,4 @@
-let handler  = async m => (`
+let handler  = async m => m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
