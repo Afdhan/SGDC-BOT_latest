@@ -6,8 +6,8 @@ let { spawn } = require('child_process')
 
 let handler = async (m, { conn, args }) => {
 await m.reply('*[ • WAIT • ]* _Media Sedang Dikirim..._')
-let ciwi = pickRandom('./src/ciwi/\.jpg')
-//let img = path.join(ciwi pickRandom(fs.readdirSync(ciwi)))
+//let ciwi = pickRandom('./src/ciwi/\.jpg')
+let ciwi = path.join(pickRandom(fs.readdirSync('src/ciwi')))
 conn.sendFile(m.chat, ciwi, 'RandomCewe.jpg','Jangan Dijadiin Bacol!', m)
 }
 
