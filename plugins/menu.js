@@ -2,7 +2,6 @@ let fs = require ('fs')
 let path = require('path')
 let { performance } = require('perf_hooks')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
-try {
     let old = performance.now()
     let neww = performance.now()
     let ping = performance.now(neww - old)
