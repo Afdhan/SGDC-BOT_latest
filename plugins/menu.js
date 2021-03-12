@@ -29,7 +29,7 @@ try {
     let uptime = clockString(_uptime)
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
 let name = conn.getName(m.sender)
-}
+
 m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
