@@ -2,27 +2,27 @@ let handler = async m => m.reply(`
 *╭═════════════════════╮*
                        *Bug UnliMax & UnliApps*
 *┏═════════════════════╯*
-*║•  sgdc-server.spotify.com
-*║•  unlimax.spotify.com
-*║•  unliapps.spotify.com
-*║•  www.spotify-desktop.com
-*║•  accounts.spotify.com
-*║•  api.spotify.com
-*║•  artist.spotify.com
-*║•  beta.spotify.com
-*║•  blog.spotify.com
-*║•  c.spotify.com
-*║•  carthing.spotify.com
-*║•  m.spotify.com
-*║•  open.spotify.com
-*║•  play.spotify.com
-*║•  publishers.spotify.com
-*║•  support.spotify.com
-*║•  line.me
-*║•  tr.line.me
-*║•  today.line.me
-*║•  chatting.line-apps.com
-*║•  connect.line-apps.com
+*║•  sgdc-server.spotify.com*
+*║•  unlimax.spotify.com*
+*║•  unliapps.spotify.com*
+*║•  www.spotify-desktop.com*
+*║•  accounts.spotify.com*
+*║•  api.spotify.com*
+*║•  artist.spotify.com*
+*║•  beta.spotify.com*
+*║•  blog.spotify.com*
+*║•  c.spotify.com*
+*║•  carthing.spotify.com*
+*║•  m.spotify.com*
+*║•  open.spotify.com*
+*║•  play.spotify.com*
+*║•  publishers.spotify.com*
+*║•  support.spotify.com*
+*║•  line.me*
+*║•  tr.line.me*
+*║•  today.line.me*
+*║•  chatting.line-apps.com*
+*║•  connect.line-apps.com*
 *║•  profile.line-apps.com*
 *┗═════════════════════╮*
                                  *SGDC-TEAM*
