@@ -28,7 +28,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let uptime = clockString(_uptime)
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
 let name = conn.getName(m.sender)
-
+}
 m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
@@ -71,7 +71,7 @@ m.reply(`
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()) 
-}
+
 handler.command = /^(menu|help|helep)$/i
 handler.owner = false
 handler.mods = false

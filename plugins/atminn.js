@@ -1,4 +1,4 @@
-let handler  = async m => m.reply(`
+let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
@@ -10,10 +10,10 @@ let handler  = async m => m.reply(`
 *┃══════᳀ ADMIN MENU ᳀═════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
 *┃╭══════════════════╮*
-*┃║★ !add*  [628xx,628xx]
-*┃║★ !demote*  [@user]
-*┃║★ !promote*  [@user]
-*┃║★ !kick*  [@user]
+*┃║★ ${_p}add*  [628xx,628xx]
+*┃║★ ${_p}demote*  [@user]
+*┃║★ ${_p}promote*  [@user]
+*┃║★ ${_p}kick*  [@user]
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃═══════᳀  INGFO  ᳀═══════*
@@ -31,7 +31,7 @@ let handler  = async m => m.reply(`
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()) 
 
-handler.command = /^(adminmenu)$/i
+handler.command = /^(admin(menu)?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
