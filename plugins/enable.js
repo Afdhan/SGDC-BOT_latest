@@ -39,14 +39,14 @@ ${usedPrefix}disable welcome
 }
 
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff))$/i
-handler.owner = false
+handler.owner = true
 handler.mods = false
 handler.premium = false
 handler.group = true
 handler.private = false
 
 handler.admin = false
-handler.botAdmin = true
+handler.botAdmin = false
 
 handler.fail = null
 
