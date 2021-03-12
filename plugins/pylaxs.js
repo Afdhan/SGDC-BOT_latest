@@ -4,8 +4,8 @@ let handler = async m => m.reply(`
 *┏═════════════════════╯*
 *║  PAYLOAD*
 *┣━━━━━━►*
-*║CONNECT belajar.kemdikbud.go.id[cr]
-*║Host: elearning.iainpalopo.ac.id[cr]
+*║CONNECT belajar.kemdikbud.go.id[cr]*
+*║Host: elearning.iainpalopo.ac.id[cr]*
 *║Connection: Keep-Alive[crlf*2]*
 *║*
 *┣━━━━━━►*
