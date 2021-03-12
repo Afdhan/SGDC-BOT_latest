@@ -3,6 +3,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
 *┃╭══════════════════╮*
+*┃║ YourName :    ${conn.getName(m.sender)}
 *┃║ BotName :    SGDC - BOT*
 *┃║ Version :       1.4.0 (beta)*
 *┃║ Prefix :          ( ${_p} )*
