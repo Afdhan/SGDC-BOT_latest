@@ -31,7 +31,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => (`
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()) 
 
-handler.command = /^(admin(menu)?)$/i
+handler.command = /^(adminmenu)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
