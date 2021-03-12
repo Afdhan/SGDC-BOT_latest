@@ -1,4 +1,4 @@
-let handler  = async (m, { conn, usedPrefix: _p }) => (`
+let handler  = async m => (`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
