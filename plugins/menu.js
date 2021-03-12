@@ -5,16 +5,6 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let old = performance.now()
     let neww = performance.now()
     let ping = performance.now(neww - old)
-    let date = d.toLocaleDateString(locale, {
-      day: 'numeric',
-      month: 'long',
-      year: 'numeric'
-    })
-    let time = d.toLocaleTimeString(locale, {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric'
-    })
     let _uptime = process.uptime() * 1000
     let _muptime
     if (process.send) {
@@ -38,7 +28,6 @@ m.reply(`
 *┃║ BotName :    SGDC - BOT*
 *┃║ Version :       1.4.0 (beta)*
 *┃║ Prefix :          ( ${_p} )*
-*┃║ Date :             ${week}, ${date}*
 *┃║ Time :            ${time}*
 *┃║ Uptime :        _${uptime} (${muptime})_*
 *┃║ PingSpeed : _${ping} MS_*
