@@ -1,21 +1,4 @@
-let fs = require ('fs')
-let path = require('path')
-let { performance } = require('perf_hooks')
 let handler  = async (m, { conn, usedPrefix: _p }) => {
-    let old = performance.now()
-    let neww = performance.now()
-    let ping = performance.now(neww - old)
-    let _uptime = process.uptime() * 1000
-    let _muptime
-    if (process.send) {
-      process.send('uptime')
-      _muptime = await new Promise(resolve => {
-        process.once('message', resolve)
-        setTimeout(resolve, 1000)
-      }) * 1000
-    }
-    let muptime = clockString(_muptime)
-    let uptime = clockString(_uptime)
     let name = conn.getName(m.sender)
 }
 m.reply(`
@@ -27,9 +10,6 @@ m.reply(`
 *┃║ BotName :    SGDC - BOT*
 *┃║ Version :       1.4.0 (beta)*
 *┃║ Prefix :          ( ${_p} )*
-*┃║ Time :            ${time}*
-*┃║ Uptime :        _${uptime} (${muptime})_*
-*┃║ PingSpeed : _${ping} MS_*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ LIST MENU ᳀══════*
