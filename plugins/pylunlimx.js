@@ -4,9 +4,9 @@ let handler = async m => m.reply(`
 *┏═════════════════════╯*
 *║  PAYLOAD*
 *┣━━━━━━►*
-*║CONNECT [host_port] [protocol][cr]
-*║Host: www.spotify.com[cr]
-*║X-Online-Host: www.spotify.com[cr]
+*║CONNECT [host_port] [protocol][cr]*
+*║Host: www.spotify.com[cr]*
+*║X-Online-Host: www.spotify.com[cr]*
 *║Connection: Keep-Alive[crlf][crlf]*
 *║*
 *┣► Mode Direct*
