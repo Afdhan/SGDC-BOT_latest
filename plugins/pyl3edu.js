@@ -4,13 +4,13 @@ let handler = async m => m.reply(`
 *┏═════════════════════╯*
 *║  PAYLOAD*
 *┣━━━━━━►*
-*║CONNECT [host_port] [protocol]\r*
-*║Host: classroom.google.com\r*
-*║Connection: keep-alive\r*
-*║Proxy-Connection: keep-alive\r*
-*║X-Online-Host: classroom.google.com\r*
-*║X-Forward-Host: classroom.google.com\r*
-*║\r*
+*║CONNECT [host_port] [protocol][cr]*
+*║Host: classroom.google.com[cr]*
+*║Connection: keep-alive[cr]*
+*║Proxy-Connection: keep-alive[cr]*
+*║X-Online-Host: classroom.google.com[cr]*
+*║X-Forward-Host: classroom.google.com[cr]*
+*║[crlf]*
 *║*
 *┣► Mode Direct*
 *┣► Pakai Port Dropbear*
