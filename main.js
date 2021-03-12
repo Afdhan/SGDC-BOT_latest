@@ -115,8 +115,8 @@ global.reloadHandler = function () {
     conn.off('group-add', conn.onAdd)
     conn.off('group-leave', conn.onLeave)
   }
-  conn.welcome = '*Hallo mbah @user!*\n_Selamat datang di @subject! Jangan lupa baca deskripsi :)_'
-  conn.bye = '*Selamat tinggal mbah@user!*\n_Semoga tenang dialam sana :(_'
+  conn.welcome = '*_Hallo mbah @user!_*\nSelamat datang di *@subject!*\n_Jangan lupa baca deskripsi :)_'
+  conn.bye = '*_Selamat tinggal mbah @user!_*\n_Semoga tenang dialam sana :(_'
   conn.handler = handler.handler
   conn.onAdd = handler.welcome 
   conn.onLeave = handler.leave
