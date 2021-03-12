@@ -1,7 +1,4 @@
-let handler  = async (m, { conn, usedPrefix: _p }) => {
-    let name = conn.getName(m.sender)
-}
-m.reply(`
+let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
