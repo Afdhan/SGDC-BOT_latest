@@ -35,7 +35,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()) 
 
-handler.command = /^(grup(menu)|group(menu)?)$/i
+handler.command = /^(grupmenu|groupmenu)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
