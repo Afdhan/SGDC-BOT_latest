@@ -1,4 +1,4 @@
-let handler  = async (m, { conn, usedPrefix: _p }) => {`
+let handler  = async (m, { conn, usedPrefix: _p }) => (`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
@@ -33,9 +33,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {`
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
-`.trim()
+`.trim()) 
 
-handler.command = /^(grup?menu|group?menu)$/i
+handler.command = /^(grup(menu)|group(menu)?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -49,3 +49,4 @@ handler.fail = null
 
 
 module.exports = handler
+

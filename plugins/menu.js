@@ -1,10 +1,11 @@
 let fs = require ('fs')
 let path = require('path')
 let { performance } = require('perf_hooks')
-let old = performance.now()
-let neww = performance.now()
-
-let ping = performance.now(neww - old)
+let handler  = async (m, { conn, usedPrefix: _p }) => {
+try {
+    let old = performance.now()
+    let neww = performance.now()
+    let ping = performance.now(neww - old)
     let date = d.toLocaleDateString(locale, {
       day: 'numeric',
       month: 'long',
@@ -16,7 +17,7 @@ let ping = performance.now(neww - old)
       second: 'numeric'
     })
     let _uptime = process.uptime() * 1000
-    /*let _muptime
+    let _muptime
     if (process.send) {
       process.send('uptime')
       _muptime = await new Promise(resolve => {
@@ -24,11 +25,12 @@ let ping = performance.now(neww - old)
         setTimeout(resolve, 1000)
       }) * 1000
     }
-    let muptime = clockString(_muptime)*/
+    let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
 let name = conn.getName(m.sender)
-let handler  = async (m, { conn, usedPrefix: _p }) => {`
+}
+m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
@@ -39,7 +41,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {`
 *┃║ Prefix :          ( ${_p} )*
 *┃║ Date :             ${week}, ${date}*
 *┃║ Time :            ${time}*
-*┃║ Uptime :        _${uptime}_*
+*┃║ Uptime :        _${uptime} (${muptime})_*
 *┃║ PingSpeed : _${ping} MS_*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
@@ -69,8 +71,8 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {`
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
-`.trim()
-
+`.trim()) 
+}
 handler.command = /^(menu|help|helep)$/i
 handler.owner = false
 handler.mods = false
