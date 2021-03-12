@@ -16,8 +16,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
-let week = d.toLocaleDateString(locale, { weekday: 'long' })
-let name = conn.getName(m.sender)
+    let name = conn.getName(m.sender)
 }
 m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
