@@ -36,7 +36,7 @@ let handler = async m => m.reply(`
 *╰═════════════════════╯*
 `.trim()) 
 
-handler.command = /^(bugunli?max)$/i
+handler.command = /^(bugunli(max))$/i
 
 handler.owner = false
 handler.mods = false
