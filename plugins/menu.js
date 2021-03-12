@@ -3,9 +3,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
 *┃╭══════════════════╮*
-*┃║ YourName :    ${conn.getName(m.sender)}
+*┃║ YourName :    ${conn.getName(m.sender)}*
 *┃║ BotName :    SGDC - BOT*
 *┃║ Version :       1.4.0 (beta)*
+*┃║ Uptime :     {clockString(process.uptime() * 1000)}*
 *┃║ Prefix :          ( ${_p} )*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
