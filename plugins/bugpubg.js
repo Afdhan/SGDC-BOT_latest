@@ -23,7 +23,7 @@ let handler = async m => m.reply(`
 *╰═════════════════════╯*
 `.trim()) 
 
-handler.command = /^(bugpubg?m)$/i
+handler.command = /^(bugpubg)$/i
 
 handler.owner = false
 handler.mods = false
