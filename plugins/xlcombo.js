@@ -22,7 +22,7 @@ await conn.reply(m.chat, `
 conn.sendFile(m.chat, xlcombo, 'XL Combo Lite.hc','ini', m)
 }
 
-handler.command = /^(xlcombo?lite)$/i
+handler.command = /^(xlcombo(lite))$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
