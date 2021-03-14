@@ -1,6 +1,9 @@
+let util = require('util')
+let path = require('path')
+let { spawn } = require('child_process')
 let list = ${(global.ube)}
-        with open(list, 'r') as file = {
-let lines = file.readlines()
+        with open(list, 'r') {
+let lines = list.readLines()
         with ThreadPoolExecutor(max_workers: 30) as crot = {
                 for line in lines:
                     data = line.strip()
