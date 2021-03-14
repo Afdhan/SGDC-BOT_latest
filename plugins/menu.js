@@ -1,9 +1,9 @@
 let name = conn.getName(m.sender)
-let d = new Date
-let locale = 'id'
-let exp = global.DATABASE.data.users[m.sender].exp
+//let d = new Date
+//let locale = 'id'
+//let exp = global.DATABASE.data.users[m.sender].exp
 let limit = global.DATABASE.data.users[m.sender].limit
-let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
+/*let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
 let date = d.toLocaleDateString(locale, {
       day: 'numeric',
@@ -16,7 +16,7 @@ let date = d.toLocaleDateString(locale, {
       second: 'numeric'
     })
 let _uptime = process.uptime() * 1000
-/*let _muptime
+let _muptime
     if (process.send) {
       process.send('uptime')
       _muptime = await new Promise(resolve => {
@@ -24,8 +24,8 @@ let _uptime = process.uptime() * 1000
         setTimeout(resolve, 1000)
       }) * 1000
     }
-    let muptime = clockString(_muptime)*/
-    let uptime = clockString(_uptime)
+    let muptime = clockString(_muptime)
+    let uptime = clockString(_uptime)*/
 let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
@@ -34,9 +34,6 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃║ YourName :   ${name}*
 *┃║ BotName :    SGDC - BOT*
 *┃║ Version :       1.4.0 (beta)*
-*┃║ Tanggal :      ${week} ${date}
-*┃║ Waktu :         ${time}
-*┃║ Uptime:        ${uptime}*
 *┃║ Prefix :          ( ${_p} )*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
