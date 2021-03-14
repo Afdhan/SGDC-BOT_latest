@@ -43,3 +43,16 @@ global.ube [
 '205080400113037:sinta123',
 '205080407113032:fardhian123',
 ]
+handler.command = /^tes$/i
+handler.owner = false
+handler.mods = false
+handler.premium = false
+handler.group = false
+handler.private = false
+
+handler.admin = false
+handler.botAdmin = false
+
+handler.fail = null
+
+module.exports = handler
