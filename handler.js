@@ -12,7 +12,7 @@ module.exports = {
         let user
         if (user = global.DATABASE._data.users[m.sender]) {
           if (!isNumber(user.exp)) user.exp = 0
-          if (!isNumber(user.limit)) user.limit = 100
+          if (!isNumber(user.limit)) user.limit = 10
           if (!isNumber(user.lastclaim)) user.lastclaim = 0
           if (!'registered' in user) user.registered = false
           if (!user.registered) {
@@ -22,9 +22,10 @@ module.exports = {
           }
           if (!isNumber(user.afk)) user.afk = -1
           if (!'afkReason' in user) user.afkReason = ''
+          if (!'banned' in user) user.banned = false
         } else global.DATABASE._data.users[m.sender] = {
           exp: 0,
-          limit: 100,
+          limit: 10,
           lastclaim: 0,
           registered: false,
           name: this.getName(m.sender),
@@ -32,6 +33,7 @@ module.exports = {
           regTime: -1,
           afk: -1,
           afkReason: ''
+          banned: false
         }
     
         let chat
@@ -118,6 +120,7 @@ module.exports = {
           if (m.chat in global.DATABASE._data.chats) {
             let chat = global.DATABASE._data.chats[m.chat]
             if (name != 'unbanchat.js' && chat && chat.isBanned) return // Except this
+            if (name != 'unbanuser.js' && user && user.banned) return
           }
           if (plugin.rowner && !isROwner) { // Real Owner
             fail('rowner', m, this)
@@ -159,7 +162,7 @@ module.exports = {
           if (xp > 99) m.reply('Ngecit -_-') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.DATABASE._data.users[m.sender].limit < plugin.limit * 1) {
-            this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+            this.reply(m.chat, `*_Limit Habis!_*`, m)
             continue // Limit habis
           }
           try {
@@ -193,7 +196,7 @@ module.exports = {
             }
           } finally {
             // m.reply(util.format(_user)) 
-            if (m.limit) m.reply('Hmm...')
+           if (m.limit) m.reply(*_+ m.limit + ' Limit terpakai_*')
           }
     			break
   	  	}
@@ -204,7 +207,7 @@ module.exports = {
       if (m) {
         if (m.sender && (user = global.DATABASE._data.users[m.sender])) {
           user.exp += m.exp
-          user.limit -= m.limit * 100
+          user.limit -= m.limit * 1
         }
     
         let stat
