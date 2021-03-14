@@ -16,6 +16,10 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃║★ ${_p}restart*
 *┃║★ ${_p}deletechat*
 *┃║★ ${_p}mutechat*
+*┃║★ ${_p}bann* [@user]
+*┃║★ ${_p}unbann* [@user]
+*┃║★ ${_p}addprem* [@user]
+*┃║★ ${_p}delprem* [@user]
 *┃║★ ${_p}oadd*  [628xxx]
 *┃║★ ${_p}okick*  [@user]
 *┃║★ ${_p}opromote*  [@user]

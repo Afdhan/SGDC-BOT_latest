@@ -19,6 +19,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃║★ ${_p}sgdc*  [Text]
 *┃║★ ${_p}nulis*  [Text]
 *┃║★ ${_p}sticker*  [Image]
+*┃║★ ${_p}quotemaker* [Text] | [WM]
 *┃║★ ${_p}readmore*  [Text] | [Text]
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
