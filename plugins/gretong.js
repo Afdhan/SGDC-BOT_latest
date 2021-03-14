@@ -77,8 +77,9 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┣━━━━━━━━━━━━━━━━━━━━┛*
 *┃╭══════════════════╮*
 *┃║★ ${_p}sshindo*
+*┃║★ ${_p}univ*
 *┃║★ ${_p}randomssh*
-*┃║★ ${_p}keytrial*
+*┃║★ ${_p}keytrial* _(none)_
 *┃║★ ${_p}ipopok*
 *┃║★ ${_p}ipedukasi*
 *┃╰══════════════════╯*
@@ -86,7 +87,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃═════᳀  V2ray Vmess  ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
 *┃╭══════════════════╮*
-*┃║★ ${_p}v2rayimclass*
+*┃║★ ${_p}v2rayimclass* 
 *┃║★ ${_p}v2rayopok*
 *┃║★ ${_p}v2rayaxis*
 *┃║★ ${_p}v2raytsel* _(none)_
@@ -107,7 +108,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()) 
 
-handler.command = /^(gretong(menu)?)$/i
+handler.command = /^(gretong(menu))$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
