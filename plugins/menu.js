@@ -16,7 +16,7 @@ let date = d.toLocaleDateString(locale, {
       second: 'numeric'
     })
 let _uptime = process.uptime() * 1000
-let _muptime
+/*let _muptime
     if (process.send) {
       process.send('uptime')
       _muptime = await new Promise(resolve => {
@@ -24,7 +24,7 @@ let _muptime
         setTimeout(resolve, 1000)
       }) * 1000
     }
-    let muptime = clockString(_muptime)
+    let muptime = clockString(_muptime)*/
     let uptime = clockString(_uptime)
 let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
@@ -36,7 +36,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃║ Version :       1.4.0 (beta)*
 *┃║ Tanggal :      ${week} ${date}
 *┃║ Waktu :         ${time}
-*┃║ Uptime:        ${uptime} (${muptime})*
+*┃║ Uptime:        ${uptime}*
 *┃║ Prefix :          ( ${_p} )*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
