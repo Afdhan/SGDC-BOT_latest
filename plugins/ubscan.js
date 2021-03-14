@@ -46,7 +46,7 @@ global.ube = [
 ' [ MODAR ] 195030801111020:aldinur1234 ',
 ' [ MODAR ] 195030807111028:alelomasae ',
 ' [ MODAR ] 195030807111028:aleloma ',
-' [ AKTIF ] 175130101111044:jusanti123
+' [ AKTIF ] 175130101111044:jusanti123 ',
 ' [ MODAR ] 195030807111028:aleloma1234 ',
 ' [ MODAR ] 195030807111028:lomasae ',
 ' [ MODAR ] 195030807111028:lomasae1234 ',
