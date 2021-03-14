@@ -7,8 +7,8 @@ let who
   if (!who) throw 'Tag salah satu lah,dan masukkan nomor untuk di verivikasi !'
   // if (participants.map(v=>v.jid).includes(global.conn.user.jid)) {
     global.DATABASE._data.chats[m.chat].premium = true
-  var nomor = m.sender
-    m.reply(`*Done berhasil added User✅*\n\n*Nomor : wa.me/${nomor.split("@s.whatsapp.net")[0]}\n*Expired:* 30Days\n*Thanks For Added Premium !*`)
+  var nomor = m.mentionedJid[0]
+    m.reply(`*_Berhasil Menambahkan User!_*\n\n*Nomor : wa.me/${nomor.split("@s.whatsapp.net")[0]}*`)
   // } else m.reply('Ada nomor host disini...')
 }
 
