@@ -3,6 +3,7 @@ m.reply(`
 *╭══════════════════╮*
                    *Random Univ Scanner*
 *╰══════════════════╯*
+
 *═►* _Scan Baris Ke:_ *${pickRandom(global.number)}*
 *►* ${pickRandom(global.univ)}
 
