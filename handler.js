@@ -32,7 +32,7 @@ module.exports = {
           age: -1,
           regTime: -1,
           afk: -1,
-          afkReason: ''
+          afkReason: '',
           banned: false
         }
     
@@ -44,7 +44,6 @@ module.exports = {
           if (!'sBye' in chat) chat.sBye = ''
           if (!'delete' in chat) chat.delete = true
           if (!'antiLink' in chat) chat.antiLink = false
-          if (!'antiToxic' in chat) chat.antiToxic = false
         } else global.DATABASE._data.chats[m.chat] = {
           isBanned: false,
           welcome: false,
@@ -57,7 +56,7 @@ module.exports = {
         console.log(e, global.DATABASE.data)
       }
       if (!m.fromMe && opts['self']) return
-      if (!m.text) return
+      if (typeof m.text !== 'string') m.text = ''
       if (m.isBaileys) return
       m.exp += 1
   
@@ -117,8 +116,9 @@ module.exports = {
 
     			if (!isAccept) continue
           m.plugin = name
-          if (m.chat in global.DATABASE._data.chats) {
+          if (m.chat in global.DATABASE._data.chats || m.sender in global.DATABASE._data.users) {
             let chat = global.DATABASE._data.chats[m.chat]
+            let user = global.DATABASE._data.users[m.sender]
             if (name != 'unbanchat.js' && chat && chat.isBanned) return // Except this
             if (name != 'unbanuser.js' && user && user.banned) return
           }
@@ -157,12 +157,12 @@ module.exports = {
             continue
           }
 
-          m.isCommand = false
+          m.isCommand = true
           let xp = 'exp' in plugin ? parseInt(plugin.exp) : 9 // XP Earning per command
           if (xp > 99) m.reply('Ngecit -_-') // Hehehe
           else m.exp += xp
           if (!isPrems && plugin.limit && global.DATABASE._data.users[m.sender].limit < plugin.limit * 1) {
-            this.reply(m.chat, `*_Limit Habis!_*`, m)
+            this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
             continue // Limit habis
           }
           try {
@@ -196,7 +196,7 @@ module.exports = {
             }
           } finally {
             // m.reply(util.format(_user)) 
-           if (m.limit) m.reply(*_+ m.limit + ' Limit terpakai_*')
+            if (m.limit) m.reply(+ m.limit + ' Limit terpakai')
           }
     			break
   	  	}
@@ -283,9 +283,10 @@ module.exports = {
     let chat = global.DATABASE._data.chats[m.key.remoteJid]
     if (chat.delete) return
     await this.reply(m.key.remoteJid, `
-*_Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan!_*
+Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan
 
-*[ ꜱɢᴅᴄ-ʙᴏᴛ ] Detector*
+Untuk mematikan fitur ini, ketik
+*.enable delete*
 `.trim(), m.message, {
       contextInfo: {
         mentionedJid: [m.participant]
@@ -297,15 +298,15 @@ module.exports = {
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    //rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
-    owner: 'Perintah ini hanya dapat digunakan oleh *Owner Bot!*',
-    mods: 'Perintah ini hanya dapat digunakan oleh *Moderator!*',
-    premium: 'Perintah ini hanya untuk member *Premium!*',
-    group: 'Perintah ini hanya dapat digunakan di *Grup!*',
-    private: 'Perintah ini hanya dapat digunakan di *Chat Pribadi!*',
+    rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
+    owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
+    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
+    premium: 'Perintah ini hanya untuk member _*Premium*_ !',
+    group: 'Perintah ini hanya dapat digunakan di grup!',
+    private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
     admin: 'Perintah ini hanya untuk *Admin* grup!',
     botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-    //unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*'
+    unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*'
   }[type]
   if (msg) return m.reply(msg)
 }
