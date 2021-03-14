@@ -1,7 +1,7 @@
 let handler = async (m, { conn, args }) => {
   let users = m.mentionedJid
   conn.groupMakeAdmin(m.chat, users)
-  conn.reply(m.chat, '*_Berhasil Menambahkan ${users} Sebagai Admin!_*', m)
+  conn.reply(m.chat, '*_Berhasil Menambahkan ${conn.getName(m.mentionedJid[0])} Sebagai Admin!_*', m)
 }
 handler.help = ['promote','admin','^'].map(v => 'o' + v + ' @user')
 handler.tags = ['owner']
