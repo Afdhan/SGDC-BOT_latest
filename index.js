@@ -18,7 +18,7 @@ CFonts.say(`MUHAMMAD AFDHAN`, {
 function start(file) {
   let args = [path.join(__dirname, file), ...process.argv.slice(2)]
   CFonts.say([process.argv[0], ...args].join(' '), {
-    font: 'console',0
+    font: 'console',
     align: 'center',
     gradient: ['red', 'magenta']
   })
@@ -26,7 +26,7 @@ function start(file) {
     stdio: ['inherit', 'inherit', 'inherit', 'ipc']
   })
   p.on('message', data => {
-    console.log('[Database Saved]', data)
+    console.log('[ RECEIVED ]', data)
     switch (data) {
       case 'reset':
         p.kill()
