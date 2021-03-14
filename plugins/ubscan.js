@@ -18,8 +18,8 @@ handler.premium = false
 handler.group = false
 handler.private = false
 
-handler.admin = false
-handler.botAdmin = true
+handler.admin = true
+handler.botAdmin = false
 
 handler.fail = null
 
