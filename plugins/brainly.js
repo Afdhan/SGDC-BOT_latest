@@ -12,6 +12,6 @@ handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = false
-handler.private = true
+handler.private = false
 
 module.exports = handler
