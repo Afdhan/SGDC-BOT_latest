@@ -1,7 +1,7 @@
-let handler = async (m, { conn }) => {
+let handler = async (m, { conn, args }) => 
 
 let linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
-handler.before = async (m, { conn }) => {
+handler.before = async (m, { conn, args }) => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
   let user = global.DATABASE._data.users[m.sender]
@@ -12,7 +12,7 @@ handler.before = async (m, { conn }) => {
       conn.groupRemove(m.chat, [user])
 })
   return true
-    }
+    
 }
 
 module.exports = handler
