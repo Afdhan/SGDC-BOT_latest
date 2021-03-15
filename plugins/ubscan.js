@@ -12,7 +12,7 @@ m.reply(`
 }
 
 handler.command = /^univ$/i
-handler.owner = true
+handler.owner = false
 handler.mods = false
 handler.premium = true
 handler.group = false
