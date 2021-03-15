@@ -11,7 +11,7 @@ m.reply(`
 `.trim()) 
 }
 
-handler.command = /^univ$/i
+handler.command = /^ouniv$/i
 handler.owner = true
 handler.mods = false
 handler.premium = false
