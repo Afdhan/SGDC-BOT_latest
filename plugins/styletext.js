@@ -1,10 +1,10 @@
 let fetch = require('node-fetch')
 let { JSDOM } = require('jsdom')
 let handler = async (m, { conn, text }) => {
-  conn.reply(m.chat, Object.entries(await stylizeText(text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text)).map(([name, value]) => `*[ • SGDC-BOT • ]*\n\n*${name}*\n${value}`).join`\n\n`, m)
+  conn.reply(m.chat, Object.entries(await stylizeText(text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text)).map(([name, value]) => `*[[[ • SGDC-BOT • ]]]*\n\n\n*╭──「  ${name} 」*\n*│* ${value}\n*╰────────*`).join`\n\n`, m)
 }
 
-handler.command = /^(style)$/i
+handler.command = /^(style|styletext|styleteks)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
