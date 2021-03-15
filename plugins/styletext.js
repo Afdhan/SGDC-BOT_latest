@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 let { JSDOM } = require('jsdom')
 let handler = async (m, { conn, text }) => {
-  conn.reply(m.chat, Object.entries(await stylizeText(text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text)).map(([name, value]) => `*[[[ • SGDC-BOT • ]]]*\n\n\n*╭──「  ${name} 」*\n*│* ${value}\n*╰────────*`).join`\n\n`, m)
+  conn.reply(m.chat, Object.entries(await stylizeText(text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text)).map(([name, value]) => `*• ꜱɢᴅᴄ-ʙᴏᴛ •*\n*───────────────*\n*╭──「  ${name} 」*\n*│*\n*┣─≽*  ${value}\n*╰──────────*`).join`\n\n`, m)
 }
 
 handler.command = /^(style|styletext|styleteks)$/i
