@@ -6,12 +6,13 @@ handler.before = async (m, { conn, args }) => {
   let chat = global.DATABASE.data.chats[m.chat]
   let user = global.DATABASE._data.users[m.sender]
   let isGroupLink = linkRegex.exec(m.text)
-}
+
   if (chat.antiLink && isGroupLink) 
       m.reply('*Link Group Terdeteksi! Anda Akan Dikeluarkan Otomatis Oleh SGDC-BOT*').then(() => {
       conn.groupRemove(m.chat, [user])
 })
   return true
+    }
 }
 
 module.exports = handler
