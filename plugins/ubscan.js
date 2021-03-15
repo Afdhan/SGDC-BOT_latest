@@ -12,14 +12,14 @@ m.reply(`
 }
 
 handler.command = /^univ$/i
-handler.owner = false
+handler.owner = true
 handler.mods = false
 handler.premium = false
 handler.group = false
 handler.private = false
 
-handler.admin = false
-handler.botAdmin = true
+handler.admin = true
+handler.botAdmin = false
 
 handler.fail = null
 
