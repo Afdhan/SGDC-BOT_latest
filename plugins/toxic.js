@@ -5,7 +5,7 @@ handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
   let isBadWord = badRegex.exec(m.text)
-  if (chat.antiToxic && isBadWord) m.reply('Ngontoll')
+  if (chat.badWord && isBadWord) m.reply('Ngontoll')
   return true
 }
 
