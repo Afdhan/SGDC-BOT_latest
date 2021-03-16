@@ -12,7 +12,8 @@ handler.before = m => {
  *[ ANTI BADWORD ]*
             
  _Tolong Gausah Sok Toxic Mastah!_
- `.trim())
+ *_Nanti Kalau Dikick Jangan Protes!!_*
+`.trim())
   return true
      
 }
