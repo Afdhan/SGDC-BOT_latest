@@ -22,7 +22,7 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
       chat.antiLink = isEnable
       break
     case 'badword':
-      chat.antiToxic = isEnable
+      chat.badWord = isEnable
       break
     default:
       return m.reply(`
