@@ -1,4 +1,7 @@
 const { MessageType } = require('@adiwajshing/baileys')
+let util = require('util')
+let path = require('path')
+let { spawn } = require('child_process')
 
 let handler = async(m, { conn, text }) => {
 var nomor = m.sender
