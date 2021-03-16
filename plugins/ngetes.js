@@ -1,8 +1,10 @@
 const { MessageType } = require('@adiwajshing/baileys')
 
-let handler = async function (m, { conn, text }) => {
+let handler = async(m, { conn, text }) => {
 var nomor = m.sender
-m.reply(`*Nomor:* https://wa.me/${nomor.split("@s.whatsapp.net")[0]}&send?text=${text}/`)
+
+conn.reply(m.chat, '*Nomor:* https://wa.me/${nomor.split("@s.whatsapp.net")[0]}&send?text=${text}/', m)
+
 }
 
 handler.command = /^wame$/i
