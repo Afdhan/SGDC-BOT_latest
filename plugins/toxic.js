@@ -1,3 +1,4 @@
+let Regex = require('url-regex')
 let handler = m => m
 let badRegex = ['anjing','kontol','bangsat','ngentot','ngewe','memek','tolol','pepek','goblok','gblk','ngeue','kntl','jancok','ajg','asu','ngntd','bgsd','bgst']
 handler.before = m => {
