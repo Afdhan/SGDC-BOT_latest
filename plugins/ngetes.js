@@ -3,9 +3,10 @@ let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
 
-let handler = async(m, { conn, text }) => {
-var nomor = m.sender
-conn.reply(m.chat, '*Nomor:* https://wa.me/${nomor.split("@s.whatsapp.net")[0]}', m)
+let handler = async(m, { conn }) => {
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+  
+conn.reply(m.chat, '*Nomor:* https://wa.me/${who.split`@`[0]}', m)
 }
 
 handler.command = /^wame$/i
