@@ -17,10 +17,10 @@ handler.command = /^(group|grup|gc)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
-handler.group = false
+handler.group = true
 handler.private = false
 handler.admin = true
 handler.botAdmin = true
 handler.fail = null
-handler.exp = 0
+
 module.exports = handler
