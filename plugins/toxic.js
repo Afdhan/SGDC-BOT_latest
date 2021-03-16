@@ -1,6 +1,6 @@
 let handler = m => m
 
-let badRegex= pickRandom(['anjing','kontol','bangsat','ngentot','ngewe','memek','tolol','pepek','goblok','gblk','ngeue',',kntl','jancok','ajg',asu',ngntd',bgsd',bgst'])
+let badRegex = pickRandom(['anjing','kontol','bangsat','ngentot','ngewe','memek','tolol','pepek','goblok','gblk','ngeue',',kntl','jancok','ajg',asu',ngntd',bgsd',bgst'])
 handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
