@@ -1,6 +1,8 @@
 let Regex = require('url-regex')
-let handler = m => m
+let handler = async (m, { conn, args }) => m
 let bad = /(anjing|kontol|bangsat|ngentot|ngewe|memek|tolol|pepek|goblo|gblk|ngeue|kntl|jancok|ajg|asu|ngntd|bgsd|bgst)/i
+let users = m.sender.filter(u => !(u.includes(conn.user.jid)))
+  for (let user of users) await conn.groupRemove(m.chat, [user])
 handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
