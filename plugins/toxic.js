@@ -1,23 +1,18 @@
-let path = require('path')
-let fs = require('fs')
 let handler = m => m
-let bad = fs.readdirSync(bad)
+
+let badRegex= pickRandom(['anjing','kontol','bangsat','ngentot','ngewe','memek','tolol','pepek','goblok','gblk','ngeue',',kntl','jancok','ajg',asu',ngntd',bgsd',bgst'])
 handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
-  let isBadWord = bad.exec(m.text)
-  if (chat.badWord && isBadWord) m.reply('*_No Toxic_*')
+  let isBadWord = badRegex.exec(m.text)
+  if (chat.antiToxic && isBadWord) m.reply('Ngontoll')
   return true
 }
 
-bad = [
-'anjing','kontol','bangsat',
-'ngentot','ngewe','memek','tolol',
-]
+function pickRandom(list) {
+  return list[Math.floor(list.length * Math.random())]
+}
 
-handler.botAdmin = true
-
-handler.fail = null
 
 module.exports = handler
 
