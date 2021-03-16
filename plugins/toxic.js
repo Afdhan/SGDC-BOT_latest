@@ -1,4 +1,4 @@
-let path = require('path)
+let path = require('path')
 let fs = require('fs')
 let handler = m => m
 let bad = fs.readdirSync(bad)
