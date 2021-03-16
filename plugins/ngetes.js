@@ -5,9 +5,7 @@ let { spawn } = require('child_process')
 
 let handler = async(m, { conn, text }) => {
 var nomor = m.sender
-
-conn.reply(m.chat, '*Nomor:* https://wa.me/${nomor.split("@s.whatsapp.net")[0]}&send?text=${text}/', m)
-
+conn.reply(m.chat, '*Nomor:* https://wa.me/${nomor.split("@s.whatsapp.net")[0]}', m)
 }
 
 handler.command = /^wame$/i
