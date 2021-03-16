@@ -1,7 +1,5 @@
-let path = require('path')
 let fs = require('fs')
 let handler = m => m
-
 let bad = fs.readdirSync(global.bad)
 handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
