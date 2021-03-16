@@ -5,8 +5,13 @@ handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
   let isBadWord = bad.exec(m.text)
-  if (chat.badWord && isBadWord) m.reply('Ngontoll')
-  return true
+  if (chat.badWord && isBadWord)
+m.reply(`
+*[ ANTI BADWORD ]*
+
+Tolong Gausah Sok Toxic Mastah🙏
+`.trim(), m)
+    return true
 }
 
 /*function pickRandom(list) {
