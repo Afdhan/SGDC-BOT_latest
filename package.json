@@ -1,7 +1,7 @@
 {
-  "name": "wabot-aq",
+  "name": "gretong",
   "version": "1.4.0",
-  "description": "Customizable WhatsApp Bot",
+  "description": "SGDC-GRETONGERS-INDONESIA",
   "depecrated": false,
   "main": "index.js",
   "directories": {
@@ -19,15 +19,15 @@
     "whatsapp",
     "js-whatsapp"
   ],
-  "homepage": "https://github.com/Nurutomo/wabot-aq",
+  "homepage": "https://github.com/Afdhan/gretong",
   "author": {
-    "name": "Nurutomo"
+    "name": "M AFDHAN"
   },
   "repository": {
-    "url": "https://github.com/Nurutomo/wabot-aq.git"
+    "url": "https://github.com/Afdhan/gretong.git"
   },
   "bugs": {
-    "url": "https://github.com/Nurutomo/wabot-aq/issues"
+    "url": "https://github.com/Afdhan/gretong/issues"
   },
   "license": "GPLv3",
   "dependencies": {
@@ -40,15 +40,15 @@
     "express": "^4.17.1",
     "file-type": "^16.1.0",
     "form-data": "^3.0.0",
-    "google-it": "^1.6.1",
+    "google-it": "^1.6.2",
     "jsdom": "^16.4.0",
     "node-fetch": "^2.6.1",
     "node-gtts": "^2.0.2",
     "qrcode": "^1.4.4",
     "syntax-error": "^1.4.0",
     "terminal-image": "^1.2.1",
+    "translate-google-api": "^1.0.4",
     "url-regex": "^5.0.0",
     "yargs": "^16.2.0",
-    "yt-search": "^2.7.3"
   }
 }
