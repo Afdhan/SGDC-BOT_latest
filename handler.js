@@ -287,7 +287,7 @@ module.exports = {
     await this.reply(m.key.remoteJid, `
 *_Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan!_*
 
-*[ • SGDC-BOT • ] Degector*
+*[ • SGDC-BOT • ] _Detector_*
 `.trim(), m.message, {
       contextInfo: {
         mentionedJid: [m.participant]
