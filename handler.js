@@ -283,7 +283,7 @@ module.exports = {
   async delete(m) {
     if (m.key.fromMe) return
     let chat = global.DATABASE._data.chats[m.key.remoteJid]
-    if (chat.delete) return
+    if (!chat.delete) return
     await this.reply(m.key.remoteJid, `
 *_Terdeteksi @${m.participant.split`@`[0]} telah menghapus pesan!_*
 
