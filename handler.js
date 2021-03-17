@@ -42,7 +42,7 @@ module.exports = {
           if (!'welcome' in chat) chat.welcome = false
           if (!'sWelcome' in chat) chat.sWelcome = ''
           if (!'sBye' in chat) chat.sBye = ''
-          if (!'delete' in chat) chat.delete = true
+          if (!'delete' in chat) chat.delete = false
           if (!'antiLink' in chat) chat.antiLink = false
           if (!'badWord' in chat) chat.badWord = false
         } else global.DATABASE._data.chats[m.chat] = {
@@ -50,7 +50,7 @@ module.exports = {
           welcome: false,
           sWelcome: '',
           sBye: '',
-          delete: true,
+          delete: false,
           antiLink: false,
           badWord: false,
         }
