@@ -24,6 +24,11 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
     case 'badword':
       chat.badWord = isEnable
       break
+    case 'option':
+      chat.badWord = isEnable
+      chat.antiLink = isEnable
+      chat.welcome = isEnable
+      break
     default:
       return m.reply(`
 List option: welcome | delete | badword | antilink
