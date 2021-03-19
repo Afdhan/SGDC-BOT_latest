@@ -14,7 +14,7 @@ handler.before = m => {
   let chat = global.DATABASE.data.chats[m.chat]
   let isSalam = salam.exec(m.text)
   let vn ='src/SALAM.opus'
-  if (isSalam) m.sendFile(vn, 'Waalaikumsalam.opus','salam')
+  if (isSalam) conn.sendFile(m.chat, vn, 'Waalaikumsalam.opus','salam', m)
   return true
 }
 
