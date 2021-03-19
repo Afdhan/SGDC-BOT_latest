@@ -6,7 +6,7 @@ handler.before = m => {
   let chat = global.DATABASE.data.chats[m.chat]
   let isSalam = salam.exec(m.text)
   let who = m.sender
-  let user = who || u.includes(conn.user.jid)))
+  let user = who || u.includes(conn.user.jid)
   if (isSalam) conn.reply(m.chat, 'KICK', m)
   conn.groupRemove(m.chat, [user])
   return true
