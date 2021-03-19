@@ -6,7 +6,7 @@ let { spawn } = require('child_process')
 //let WAConnection = simple.WAConnection(_WAConnection)
 //let conn = new WAConnection()
 
-let handler = m => m
+let handler = async (m, { conn, args }) => m
 
 let salam = /assalamualaikum|salam/i
 handler.before = m => {
