@@ -8,7 +8,7 @@ handler.before = m => {
   let who = m.sender
   let user = who || u.includes(conn.user.jid)
   if (isSalam) conn.reply(m.chat, 'KICK', m)
-  conn.groupRemove(m.chat, [user])
+  await conn.groupRemove(m.chat, [user])
   return true
 }
 
