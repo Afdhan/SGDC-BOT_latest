@@ -4,7 +4,7 @@ let path = require('path')
 let { spawn } = require('child_process')
 
 let handler = async (m, { conn, args }) => {
-const cw = getRandom('src/ciwi/.jpg')
+let cw = ${getRandom('src/ciwi/.jpg')}
 conn.sendFile(m.chat, cw, 'CECAN.jpg','No Bacol:v', m)
 }
 
@@ -24,6 +24,6 @@ handler.fail = null
 module.exports = handler
 
 
-const getRandom = (ext) => {
+function getRandom = (ext) => {
     return `${Math.floor(Math.random() * 10000)}${ext}`
 }
