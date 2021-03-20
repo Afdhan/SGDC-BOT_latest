@@ -35,8 +35,8 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
 List option: welcome | delete | badword | antilink
 
 Contoh:
-${usedPrefix}enable welcome
-${usedPrefix}disable welcome
+${usedPrefix}on welcome
+${usedPrefix}off welcome
 `.trim())
   }
   m.reply(`
