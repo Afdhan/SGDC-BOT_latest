@@ -4,13 +4,13 @@ let { spawn } = require('child_process')
 
 let handler = async (m, { conn, args }) => m
 
-let salam = /^(p?(unten|ermisi))$/i
+let asalam = /^(p|punten|permisi|samlekom|hai|halo|hallo)$/i
 handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
-  let isSalam = salam.exec(m.text)
-  let vn ='src/ASSALAM.opus'
-  if (isSalam) conn.sendFile(m.chat, vn, 'Assalam.opus','salam', m)
+  let isASalam = assalam.exec(m.text)
+  let vnn ='src/ASSALAM.opus'
+  if (isASalam) conn.sendFile(m.chat, vnn, 'Assalam.opus','salam', m)
   return true
 }
 
