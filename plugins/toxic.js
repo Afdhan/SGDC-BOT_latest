@@ -1,6 +1,6 @@
 let Regex = require('url-regex')
 let handler = m => m
-let bad = /(anjing|kontol|bangsat|ngentot|ngewe|memek|tolol|pepek|goblo|gblk|ngeue|kntl|jancok|ajg|asu|ngntd|bgsd|bgst)/i
+let bad = /^(anjing|kontol|bangsat|ngentot|ngewe|memek|tolol|pepek|goblok|gblk|ngeue|kntl|jancok|ajg|asu|ngntd|bgsd|bgst)$/i
 
 handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
