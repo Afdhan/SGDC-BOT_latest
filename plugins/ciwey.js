@@ -7,7 +7,7 @@ let handler = async (m, { conn, args }) => {
 conn.sendFile(m.chat, cw, 'CECAN.jpg','No Bacol:v', m)
 }
 
-handler.command = /^(axisconference)$/i
+handler.command = /^(ciwi|ciwey|cecan)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
