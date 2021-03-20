@@ -24,6 +24,6 @@ handler.fail = null
 module.exports = handler
 
 
-function getRandom = (ext) => {
+function getRandom(ext) => {
     return `${Math.floor(Math.random() * 10000)}${ext}`
 }
