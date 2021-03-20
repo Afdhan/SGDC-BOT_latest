@@ -1,9 +1,10 @@
+const { MessageType } = require('@adiwajshing/baileys')
 let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
 
 let handler = async (m, { conn, args }) => {
-      let cw = getRandom('src/ciwi/.jpg')
+const cw = getRandom('src/ciwi/.jpg')
 conn.sendFile(m.chat, cw, 'CECAN.jpg','No Bacol:v', m)
 }
 
