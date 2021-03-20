@@ -1,6 +1,6 @@
 let Regex = require('url-regex')
 let handler = m => m
-let bad = /^(anjing|kontol|bangsat|ngentot|ngewe|memek|tolol|pepek|goblok|gblk|ngeue|kntl|jancok|ajg|asu|ngntd|bgsd|bgst)$/i
+let bad = /^(anjing|kontol|bangsat|ngentot|ngewe|memek|tolol|pepek|goblok|goblog|gblk|ngeue|kntl|jancok|ajg|ajglah|asu|ngntd|bgsd|kntod|kntd|bgst)$/i
 
 handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
@@ -10,8 +10,9 @@ handler.before = m => {
     m.reply(`
  *[ ANTI BADWORD ]*
             
- _Tolong Gausah Sok Toxic Mastah!_
- *_Nanti Kalau Dikick Jangan Protes!!_*
+ _AMPUN BANG JAGO :(_
+
+*_Nanti Kalau Dikick Jangan Protes!!_*
 `.trim())
   return true    
 }
