@@ -1,9 +1,17 @@
-let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
+let util = require('util')
+let path = require('path')
+let { spawn } = require('child_process')
+
+let handler  = async (m, { conn, args, usedPrefix: _p }) => {
+  let name = conn.getName(m.sender)
+  let vnm ='src/MENU.opus'
+await conn.sendFile(m.chat, vnm, 'SGDC_BOT.opus','Hai!', m)
+m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
 *┃╭══════════════════╮*
-*┃║ YourName :   ${conn.getName(m.sender)}*
+*┃║ YourName :   ${name}*
 *┃║ BotName :    SGDC - BOT*
 *┃║ Version :       1.4.0 (beta)*
 *┃║ Prefix :          ( ${_p} )*
@@ -36,6 +44,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()) 
+}
 
 handler.command = /^(menu|help|helep)$/i
 handler.owner = false
