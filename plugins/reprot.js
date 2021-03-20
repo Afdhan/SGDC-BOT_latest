@@ -6,7 +6,7 @@ let handler = async(m, { conn, text }) => {
     var nomor = m.sender
     const teks1 = `*[ REPORT ]*\n*Nomor:* https://wa.me/${nomor.split("@s.whatsapp.net")[0]}\n*Laporan:* ${text}\n\n*[ • SGDC-BOT •  ]*`
     conn.sendMessage('6282252655313@s.whatsapp.net', teks1, MessageType.text)
-    conn.reply(m.chat, '*[ SUKSES ]* _Masalah telah di laporkan ke *Owner Bot!_*', m)
+    conn.reply(m.chat, '*[ SUKSES ]* _Masalah telah di laporkan ke *Owner BOT!*_', m)
 }
 
 handler.command = /^(bug|report|bugreport)$/i
