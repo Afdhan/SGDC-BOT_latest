@@ -7,15 +7,19 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃║ Version :       1.4.0 (beta)*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
-*┃══════᳀ OPTION MENU ᳀═════*
+*┃══════᳀  OWNER ONLY  ᳀═════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
 *┃╭══════════════════╮*
-*┃║★ ${_p}enable delete*
-*┃║★ ${_p}disable delete*
-*┃║★ ${_p}enable welcome*
-*┃║★ ${_p}disable welcome*
-*┃║★ ${_p}enable antilink*
-*┃║★ ${_p}disable antilink*
+*┃║★ ${_p}on delete*
+*┃║★ ${_p}off delete*
+*┃║★ ${_p}on welcome*
+*┃║★ ${_p}off welcome*
+*┃║★ ${_p}on antilink*
+*┃║★ ${_p}off antilink*
+*┃║★ ${_p}on badword*
+*┃║★ ${_p}off badword*
+*┃║★ ${_p}on alloption*
+*┃║★ ${_p}off alloption*
 *┃╰══════════════════╯*
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃═══════᳀  INGFO  ᳀═══════*
