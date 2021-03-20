@@ -4,7 +4,7 @@ let path = require('path')
 let { spawn } = require('child_process')
 
 let handler = async (m, { conn, args }) => {
-let cw = getRandom('src/ciwi/.jpg')
+let cw = conn.getFile ${getRandom('src/ciwi/.jpg')}
 conn.sendFile(m.chat, cw, 'CECAN.jpg','No Bacol:v', m)
 }
 
