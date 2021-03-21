@@ -5,7 +5,7 @@ handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
   let isBW = bw.exec(m.text)
-  if (chat.antiToxic && isBW) 
+  if (chat.badWord && isBW) 
     m.reply(`
 *╭════[ ANTI BADWORD ]════╮*
 
