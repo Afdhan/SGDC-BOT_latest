@@ -9,7 +9,7 @@ vmess://eyJhZGQiOiJjb3ZpZDE5LmdvLmlkIiwiYWlkIjoiMCIsImhvc3QiOiJtYWxheXNpYS12aXAu
 *[ • SGDC-BOT • ]*
 `.trim()) 
 
-handler.command = /^(v2rayisat(opok)|v2rayopok(isat))$/i
+handler.command = /^(v2rayopok|v2rayisat(opok)|v2rayopok(isat))$/i
 
 handler.owner = false
 handler.mods = false
