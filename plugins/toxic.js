@@ -1,6 +1,7 @@
 let Regex = require('url-regex')
 let handler = m => m
-let bad = ["memek","kontol"]
+let bad = /(anjing|kontol|bangsat|ngentot|ngewe|memek|tolol|pepek|goblok|goblog|gblk|ngeue|kntl|jancok|ajg|ajglah|asu|ngntd|bgsd|kntod|kntd|bgst)/i
+
 handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
