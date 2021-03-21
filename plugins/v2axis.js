@@ -9,7 +9,7 @@ vmess://eyJhZGQiOiJibG9nLnVkZW15LmNvbSIsImFpZCI6IjAiLCJob3N0IjoibWFsYXlzaWEtdmlw
 *[ • SGDC-BOT • ]*
 `.trim()) 
 
-handler.command = /^(v2rayaxis(edu)|v2rayaxisedu)$/i
+handler.command = /^(v2rayaxis|v2rayaxis(edu)|v2rayaxisedu)$/i
 
 handler.owner = false
 handler.mods = false
