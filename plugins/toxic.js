@@ -1,21 +1,21 @@
 let handler = m => m
 
-let toxic = pickRandom(['anjing','kontol','bangsat','ngentot','ngewe','memek','tolol'])
+let bw = /(anjing|kontol|bangsat|ngentot|ngewe|memek|tolol)/i
 handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
-  
+  let isBW = bw.exec(m.text)
+  if (chat.antiToxic && isBW) 
+    m.reply(`
+*╭════[ ANTI BADWORD ]════╮*
 
-  if (chat.antiToxic) m.reply('Kata Toxic Terdeteksi! Anda Akan Dikeluarkan Otomatis Oleh SGDC-BOT')
-  conn.groupRemove([m.chat])
+*_Jangan Kasal Mbah !!!_(
+
+*[ • SGDC-BOT • ]*
+`.trim())
   return true
 }
 
-
-
-handler.botAdmin = true
-
-handler.fail = null
 
 module.exports = handler
 
