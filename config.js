@@ -1,14 +1,15 @@
-global.owner = ['6282252655313']
+global.owner = ['6282252655313'] // Put your number here
 global.mods = ['6282252655313']
 global.prems = ['6282252655313']
 global.APIs = { 
   nrtm: 'https://nurutomo.herokuapp.com',
   xteam: 'https://api.xteam.xyz'
 }
-global.APIKeys = { 
+global.APIKeys = {
   'https://api.xteam.xyz': 'd90a9e986e18778b'
 }
-
+global.packname = 'ŠĞĎČ-BØŤ'
+global.author = 'ᴍ ᴀꜰᴅʜᴀɴ'
 
 
 
