@@ -9,7 +9,7 @@ global.APIKeys = {
   'https://api.xteam.xyz': 'd90a9e986e18778b'
 }
 global.packname = 'ŠĞĎČ-BØŤ'
-global.author = 'ᴍ ᴀꜰᴅʜᴀɴ'
+global.author = 'M AFDHAN'
 
 
 
