@@ -5,8 +5,9 @@ let { spawn } = require('child_process')
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
   let name = conn.getName(m.sender)
   let vnm ='src/MENU.opus'
-  await conn.sendFile(m.chat, vnm, 'SGDC_BOT.opus','Hai!', m)
-await m.reply(`
+ await conn.sendFile(m.chat, vnm, 'SGDC_BOT.opus','Hai!', m)
+m.reply('Untuk Menu Gretongan, Ketik *${_p}gretongmenu*')
+  await m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
@@ -152,8 +153,6 @@ await m.reply(`
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()) 
-  let _p = usedPrefix
-  conn.reply(m.chat, 'Untuk Menu Gretongan, Ketik *${_p}gretongmenu*', m)
 }
 
 handler.command = /^(menu|help|helep)$/i
