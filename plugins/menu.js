@@ -29,7 +29,7 @@ m.reply(`
 *┃║ ${_p}linkgroup*
 *┃║ ${_p}listonline*
 *┃║ ${_p}iqtest*
-*┃║ ${_p}dadu
+*┃║ ${_p}dadu*
 *┃║ ${_p}ping*
 *┃║ ${_p}katabijak*
 *┃║ ${_p}katabucin*
@@ -65,27 +65,33 @@ m.reply(`
 *┃║ ${_p}bcgc*  [Text]
 *┃║ ${_p}setbye*  [Text]
 *┃║ ${_p}setwelcome*  [Text]
-*┃║ ${_p}tts* <lang> [Text]
+*┃║ ${_p}tts* [lang] [Text]
 *┃║ ${_p}brainly*  [Soal]
 *┃║ ${_p}fetch*  [Url]
 *┃║ ${_p}ssweb*  [Url]
 *┃║ ${_p}afk*  [Reason]
 *┃║ ${_p}google*  [Search]
 *┃║ ${_p}nonton* [Judul]
-*┃║ ${_p}sticgif  [Reply]
-*┃║ ${_p}sticwm  [Reply]
+*┃║ ${_p}sticgif*  [Reply]
+*┃║ ${_p}sticwm*  [Reply]
 *┃║ ${_p}sticker*  [Reply]
+*┃║ ${_p}stimg*  [Reply]
 *┃║ ${_p}toimg*  [Reply]
 *┃║ ${_p}ninja* [Nama]
 *┃║ ${_p}artinama*  [Nama]
+*┃║ ${_p}on*  [Optiokn]
+*┃║ ${_p}off*  [Option]
 *┃║ ${_p}enable*  [Option]
 *┃║ ${_p}disable*  [Option]
 *┃║ ${_p}setpp*  [Image]
 *┃║ ${_p}anime* [Query]
 *┃║ ${_p}waktu*  [Daerah]
+*┃║ ${_p}calc*  [Angka]
 *┃║ ${_p}kalkulator*  [Angka]
 *┃║ ${_p}glitch*  [Text] | [Text]
 *┃║ ${_p}readmore*  [Text] | [Text]
+*┃║ ${_p}hidetext*  [Text] | [Text]
+*┃║ ${_p}nuduh*  [Text] [@user] [Text]
 *┃║ ${_p}fitnah*  [Text] [@user] [Text]
 *┃║ ${_p}add*  [628xx,628xx]
 *┃║ ${_p}oadd*  [628xxx]
@@ -122,6 +128,8 @@ m.reply(`
 *┃║ ${_p}odemote*  [@user]
 *┃║ ${_p}ohidetag*  [@user]
 *┃║ ${_p}setpp*  [Image]
+*┃║ ${_p}on*  [Option]
+*┃║ ${_p}off*  [Option]
 *┃║ ${_p}enable*  [Option]
 *┃║ ${_p}disable*  [Option]
 *┃║ ${_p}bc*  [Text]
