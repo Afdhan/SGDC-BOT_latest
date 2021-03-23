@@ -85,6 +85,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}disable*  [Option]
 *┃║ ${_p}setpp*  [Image]
 *┃║ ${_p}anime* [Query]
+*┃║ ${_p}wiki*  [Query]
 *┃║ ${_p}waktu*  [Daerah]
 *┃║ ${_p}calc*  [Angka]
 *┃║ ${_p}kalkulator*  [Angka]
