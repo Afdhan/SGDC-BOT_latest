@@ -51,7 +51,7 @@ let handler  = async (m, { conn, args }) => {
   ])
   .on('error', e => conn.reply(m.chat, util.format(e), m))
   .on('exit', () => {
-    conn.sendFile(m.chat, outputPath, 'nulis.jpg', 'Njirr Buriq :(\n\n*[ • SGDC - BOT • ]*', m)
+    conn.sendFile(m.chat, outputPath, 'nulis.jpg', 'Hati² ketahuan:v', m)
   })
 }
 handler.help = ['n'].map(v => v + 'ulis <teks>')
@@ -61,7 +61,7 @@ handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = false
-handler.private = true
+handler.private = false
 
 handler.admin = false
 handler.botAdmin = false
