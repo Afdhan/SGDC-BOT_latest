@@ -10,7 +10,7 @@
     "plugins": "plugins"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "node dhans.js",
     "test": "node test.js"
   },
   "keywords": [
@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/Afdhan/gretong/issues"
   },
-  "license": "GPL3",
+  "license": "GPL-3",
   "dependencies": {
     "@adiwajshing/baileys": "^3.4.1",
     "awesome-phonenumber": "^2.47.0",
