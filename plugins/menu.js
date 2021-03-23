@@ -152,7 +152,8 @@ await m.reply(`
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()) 
-conn.reply(m.chat, 'Untuk Menu Gretongan, Ketik *${usedPrefix}gretongmenu*', m)
+  let _p = usedPrefix
+  conn.reply(m.chat, 'Untuk Menu Gretongan, Ketik *${_p}gretongmenu*', m)
 }
 
 handler.command = /^(menu|help|helep)$/i
