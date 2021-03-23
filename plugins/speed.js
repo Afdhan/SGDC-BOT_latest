@@ -6,7 +6,7 @@ let handler = async (m, { conn }) => {
   m.reply(neww - old +  'ms')
 }
 
-handler.command = /^(ping|speed)$/i
+handler.command = /^(speed)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
