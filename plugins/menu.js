@@ -6,7 +6,6 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
   let name = conn.getName(m.sender)
   let vnm ='src/MENU.opus'
  await conn.sendFile(m.chat, vnm, 'SGDC_BOT.opus','Hai!', m)
-m.reply('Untuk Menu Gretongan, Ketik ${_p}gretongmenu')
   await m.reply(`
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
@@ -153,6 +152,7 @@ m.reply('Untuk Menu Gretongan, Ketik ${_p}gretongmenu')
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()) 
+  m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
 }
 
 handler.command = /^(menu|help|helep)$/i
