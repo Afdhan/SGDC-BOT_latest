@@ -151,8 +151,9 @@ m.reply(`
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
-`.trim()) 
-conn.reply(m.chat, 'Untuk Menu Gretongan, Ketik *${_p}gretongmenu*', m)
+`.trim()) {
+conn.reply(m.chat,'Untuk Menu Gretongan, Ketik *${usedPrefix}gretongmenu*', m)
+  }
 }
 
 handler.command = /^(menu|help|helep)$/i
