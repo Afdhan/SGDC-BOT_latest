@@ -1,7 +1,7 @@
 let fetch = require('node-fetch')
 
 let handler = async(m, { conn, args, usedPrefix }) => {
-    if (args.length == 0) return conn.reply(m.chat, `Untuk menggunakan *${usedPrefix}anime*\nSilahkan ketik: *${usedPrefix}anime* [Query]\nContoh: *${usedPrefix}anime random*\n\n*List Query:\n_> waifu_\n_> husbu_\n_> neko_`, m)
+    if (args.length == 0) return conn.reply(m.chat, `Untuk menggunakan *${usedPrefix}anime*\nSilahkan ketik: *${usedPrefix}anime* [Query]\nContoh: *${usedPrefix}anime random*\n\n*List Query:*\n_> waifu_\n_> husbu_\n_> neko_`, m)
     if (args[0] == 'random' || args[0] == 'waifu' || args[0] == 'husbu' || args[0] == 'neko') {
   await m.reply('*[ WAIT ]* _Searching..._')
 
