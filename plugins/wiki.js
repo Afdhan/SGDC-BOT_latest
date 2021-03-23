@@ -10,7 +10,7 @@ conn.reply(m.chat, hasil, m)
 	})
 }
 handler.command = /^(wiki|wikisearch)$/i
-handler.owner = true
+handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = false
