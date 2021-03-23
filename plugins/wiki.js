@@ -5,7 +5,7 @@ let handler = async(m, { conn, text }) => {
 
   await m.reply('Searching...')
 axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
-    let hasil = `*Menurut Wikipedia:*\n\n${res.data.result}
+    let hasil = `*Menurut Wikipedia:*\n\n${res.data.result}`
 conn.reply(m.chat, hasil, m)
 	})
 }
