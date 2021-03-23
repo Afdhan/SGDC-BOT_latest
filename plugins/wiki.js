@@ -3,8 +3,8 @@ let handler = async(m, { conn, text }) => {
 
     if (!text) return conn.reply(m.chat, 'Silahkan masukan kata kunci', m)
 
-  await m.reply('Searching...')
-axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
+  await m.reply('*[ WAIT ]* _Searching..._')
+axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${text}`).then((res) => {
     let hasil = `*Menurut Wikipedia:*\n\n${res.data.result}`
 conn.reply(m.chat, hasil, m)
 	})
