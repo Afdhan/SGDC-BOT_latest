@@ -28,7 +28,6 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}linkgroup*
 *┃║ ${_p}listonline*
 *┃║ ${_p}iqtest*
-*┃║ ${_p}dadu*
 *┃║ ${_p}ping*
 *┃║ ${_p}katabijak*
 *┃║ ${_p}katabucin*
