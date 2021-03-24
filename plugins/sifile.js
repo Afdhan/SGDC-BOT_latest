@@ -8,7 +8,7 @@ let url = "https://fzn-gaz.herokuapp.com/api/sfile?search=${text}"
 
             axios.get(url)
            .then((result) => {
-               let sfile = JSON.parse(JSON.stringify(result.data))
+               let sfile = JSON.parse(JSON.stringify(result.data.link))
                let hasil = `*SFILE SEARCH*\n\n${sfile}`
 conn.reply(m.chat, hasil, m)
 	})
