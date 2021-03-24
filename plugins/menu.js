@@ -69,6 +69,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}repeat*  [Text]
 *┃║ ${_p}bc*  [Text]
 *┃║ ${_p}bcgc*  [Text]
+*┃║ ${_p}jhuruf*  [Text]
 *┃║ ${_p}setbye*  [Text]
 *┃║ ${_p}setwelcome*  [Text]
 *┃║ ${_p}tts* [lang] [Text]
