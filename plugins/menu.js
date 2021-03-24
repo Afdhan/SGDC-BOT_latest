@@ -98,6 +98,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}waktu*  [Daerah]
 *┃║ ${_p}calc*  [Angka]
 *┃║ ${_p}kalkulator*  [Angka]
+*┃║ ${_p}8bit*  [Text] | [Text]
 *┃║ ${_p}tiktokfx*  [Text] | [Text]
 *┃║ ${_p}wanted*  [Text] | [Text]
 *┃║ ${_p}readmore*  [Text] | [Text]
