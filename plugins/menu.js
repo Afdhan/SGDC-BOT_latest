@@ -48,6 +48,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}sgdc*  [Text]
 *┃║ ${_p}nulis*  [Text]
 *┃║ ${_p}nulis2*  [Text]
+*┃║ ${_p}komiku*  [Text]
 *┃║ ${_p}hidetag*  [Text]
 *┃║ ${_p}simi*  [Text]
 *┃║ ${_p}halah*  [Text]
