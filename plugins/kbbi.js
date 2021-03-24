@@ -5,7 +5,7 @@ let handler = async(m, { conn, text }) => {
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
 axios.get(`https://videfikri.com/api/kbbi/?query=${text}`).then((res) => {
-    let hasil = `*${res.data.result}`
+    let hasil = `*Menurut KBBI*\n\n${res.data.result.hasil}`
 conn.reply(m.chat, hasil, m)
 	})
 }
