@@ -5,7 +5,7 @@ let handler = async(m, { conn, text }) => {
 
 //  await m.reply('*[ WAIT ]* _Seda..._')
 axios.get(`https://xnxx-tbot.herokuapp.com/api/short/tiny?url=${text}&apikey=tbot`).then((res) => {
-    let hasil = `*Link:* ${text}\n*Short:* ${res.data.message}`
+    let hasil = `*Link:* ${text}\n*Short:* ${res.data.result.link}`
 conn.reply(m.chat, hasil, m)
 	})
 }
