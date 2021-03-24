@@ -5,7 +5,7 @@ let handler = async(m, { conn, text }) => {
 
   await m.reply('*[ WAIT ]* _Searching..._')
 axios.get(`https://fzn-gaz.herokuapp.com/api/sfile?search=${text}`).then((res) => {
-    let hasil = Object.entries, `     *SFILE SEARCH*\n\n${res.data.result}*.join`\n\n`, m)
+    let hasil = Object.entries, `*SFILE SEARCH*\n\n${res.data.result}*.join`\n\n`, m)
 conn.reply(m.chat, hasil, m)
 	})
 }
