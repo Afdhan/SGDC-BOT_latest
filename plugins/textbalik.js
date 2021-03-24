@@ -5,11 +5,11 @@ let handler = async(m, { conn, text }) => {
 
   //await m.reply('*[ WAIT ]* _Sedang Diproses..._')
 axios.get(`https://videfikri.com/api/hurufterbalik/?query=${text}`).then((res) => {
-    let hasil = `*${res.data.result.kata}`
+    let hasil = `*${res.data.result.kata}*`
 conn.reply(m.chat, hasil, m)
 	})
 }
-handler.command = /^(teksbalik)$/i
+handler.command = /^(hurufbalik|teksbalik)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
