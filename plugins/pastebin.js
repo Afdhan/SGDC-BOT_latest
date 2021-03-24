@@ -5,7 +5,7 @@ let handler = async(m, { conn, text }) => {
 
 //  await m.reply('*[ WAIT ]* _Seda..._')
 axios.get(`https://lindow-api.herokuapp.com/api/pastebin?query=${text}`).then((res) => {
-    let hasil = `*Teks:* ${text}\n*Link:* ${res.data.message}`
+    let hasil = `*Teks:* ${text}\n*Link:* ${res.data.result}`
 conn.reply(m.chat, hasil, m)
 	})
 }
