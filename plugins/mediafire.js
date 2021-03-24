@@ -12,7 +12,7 @@ axios.get(`https://videfikri.com/api/mediafire/?query=${text}`).then((res) => {
 *Upload:* ${res.data.result.uploaded_on}
 *Download:* ${res.data.result.download}
 
-_Download sendiri, jangan manja:v
+_Download sendiri, jangan manja:v_
 `.trim()
 conn.reply(m.chat, hasil, m)
 //conn.sendFile(m.chat, `file`, m)
