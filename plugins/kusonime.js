@@ -5,7 +5,7 @@ let handler = async(m, { conn, text }) => {
 
   await m.reply('*[ WAIT ]* _Searching..._')
 axios.get(`https://st4rz.herokuapp.com/api/kuso?q=${text}`).then((res) => {
-    let hasil = `*${res.data.result}`
+    let hasil = `*${res.data.info.sinopsis}`
 conn.reply(m.chat, hasil, m)
 	})
 }
