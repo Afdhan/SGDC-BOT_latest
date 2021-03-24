@@ -4,9 +4,8 @@ let { spawn } = require('child_process')
 
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
   let name = conn.getName(m.sender)
-  //let vnm ='src/MENU.opus'
- //await conn.sendFile(m.chat, vnm, 'SGDC_BOT.opus','Hai!', m)
-  await m.reply(`
+  let img ='src/SGDC_BOT.jpg'
+  let mn = `
 *┏━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┣━━━━━━━━━━━━━━━━━━━━┛*
@@ -187,7 +186,8 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┣━━━━━━━━━━━━━━━━━━━━┓*
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
-`.trim()) 
+`.trim()
+ await conn.sendFile(m.chat, img, 'SGDC.jpg', mn, m)
   m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
 }
 
