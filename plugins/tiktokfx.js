@@ -10,10 +10,10 @@ let [s1, s2] = text.split `|`
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
 let link = 'https://videfikri.com/api/textmaker/tiktokeffect/?text1=' + s1 + '&text2=' + s2
 
-conn.sendFile(m.chat, link, 'KEMTOD.png', 'Nihh Cukk', m)
+conn.sendFile(m.chat, link, 'SGDC.png', 'Nihh Cukk', m)
 }
 
-handler.command = /^(tiktokfx)$/i
+handler.command = /^(glitch|tiktokfx)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
