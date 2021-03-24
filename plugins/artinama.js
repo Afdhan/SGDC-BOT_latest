@@ -1,11 +1,11 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
-
+let name = conn.getName(m.sender)
     if (!text) return conn.reply(m.chat, 'Silahkan masukan nama yang akan diartikan', m)
 
   await m.reply('Searching...')
-	axios.get(`https://mnazria.herokuapp.com/api/arti?nama=${text}`).then ((res) => {
-	 	let hasil = `Arti Namamu Adalah\n\n${res.data.result}`
+	axios.get(`https://videfikri.com/api/primbon/artinama/?nama=${text}`).then ((res) => {
+	 	let hasil = `*ARTI NAMA ${name}*\n${res.data.result.arti}\n\n*Deskripsi:*\n${res.data.result.desk}`
 
     conn.reply(m.chat, hasil, m)
 	})
