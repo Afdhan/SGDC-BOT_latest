@@ -1,8 +1,8 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
 
-axios.get(`https://covid19.mathdro.id/api/countries/id`)
-    let hasil = `*Positif: ${confirmed.value}*\n*Sembuh: ${recovered.value}*\n*Meninggal: ${deaths.value}*\n*Update: ${lastUpdate}*`
+let cvd = axios.get(`https://covid19.mathdro.id/api/countries/id`)
+    let hasil = `*Positif: ${cvd.confirmed.value}*\n*Sembuh: ${cvd.recovered.value}*\n*Meninggal: ${cvd.deaths.value}*\n*Update: ${cvd.lastUpdate}*`
 conn.reply(m.chat, hasil, m)
 }
 
