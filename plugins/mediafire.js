@@ -5,14 +5,15 @@ let handler = async(m, { conn, text }) => {
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
 axios.get(`https://videfikri.com/api/mediafire/?query=${text}`).then((res) => {
-    let hasil = `
+let file = await axios.get(`${res.data.result.download}`)
+	let hasil = `
 *FileName:* ${res.data.result.filename}
 *Size:* ${res.data.result.size}
 *Upload: ${res.data.result.uploaded_on}
 *Download:* ${res.data.result.download}
 `.trim()
-
 conn.reply(m.chat, hasil, m)
+	conn.sendFile(m.chat, `file`, m)
 	})
 }
 handler.command = /^(mediafire)$/i
