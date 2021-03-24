@@ -4,8 +4,12 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Apa Yang Mau Dicari?!', m)
 
   await m.reply('*[ WAIT ]* _Searching..._')
-axios.get(`https://fzn-gaz.herokuapp.com/api/sfile?search=${text}`).then((res) => {
-    let hasil = Object.entries, `*SFILE SEARCH*\n\n${res.data.result}*.join`\n\n`, m)
+let url = "https://fzn-gaz.herokuapp.com/api/sfile?search=" + ${teks};
+
+            axios.get(url)
+           .then((result) => {
+               let sfile = JSON.parse(JSON.stringify(result.data))
+               let hasil = `*SFILE SEARCH*\n\n${sfile}`
 conn.reply(m.chat, hasil, m)
 	})
 }
