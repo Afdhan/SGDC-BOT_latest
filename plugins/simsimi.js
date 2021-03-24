@@ -11,8 +11,8 @@ let handler = async (m, { text }) => {
 }
                                                                        
 
-//handler.customPrefix = /a|b|/i
-handler.command = /^(!|?|)$/i
+handler.customPrefix = /(\?$)/ 
+handler.command = /^(s)$/i
 
 module.exports = handler
 
