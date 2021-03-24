@@ -19,7 +19,7 @@ Nihh Cantik kan? Jangan dijadiin Bacol ya tod:v
             (response) => {
 	let buf = Buffer.from(response, 'base64'); // Ta-da
 
-    conn.sendFile(m.chat, buf, 'foto.jpg', str, m)
+    conn.sendFile(m.chat, buf, 'Cecan-SGDC.jpg', str, m)
             }
         )
         .catch(
