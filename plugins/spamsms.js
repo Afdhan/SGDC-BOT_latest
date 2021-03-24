@@ -7,7 +7,7 @@ let handler = async(m, { conn, text }) => {
 
 await m.reply('*[ WAIT ]* _Sedang Di Proses_')
 axios.get(`https://mhankbarbar.herokuapp.com/api/spamsms?no=${no}&jum=${jo}`).then((res) => {
-    let hasil = `${res.data.result}`
+    let hasil = `${res.data.logs}`
 conn.reply(m.chat, hasil, m)
 	})
 }
