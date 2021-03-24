@@ -8,7 +8,7 @@ let [s1, s2] = text.split `|`
    if (s2 > 10) return conn.reply(m.chat, '*Teks2 Terlalu Panjang!* _Maksimal 10 huruf!_', m)
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-let link = 'https://videfikri.com/api/textmaker/tiktokeffect/?text1=${s1}&text2=${s2}'
+let link = 'https://videfikri.com/api/textmaker/tiktokeffect/?text1=' + s1 + '&text2=' + s2
 
 conn.sendFile(m.chat, link, 'KEMTOD.png', 'Nihh Cukk', m)
 }
