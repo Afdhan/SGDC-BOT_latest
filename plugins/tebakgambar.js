@@ -9,7 +9,7 @@ let handler = async(m, { conn, text }) => {
         .then(
           (ress) => {
             let buf = Buffer.from(ress, 'base64')
-            let str = `Jawaban :\n${res.data.result.jawaban}`
+            let str = `_Apa Hayoo_`
 
      conn.sendFile(m.chat, buf, 'TG.jpg', str, m)
         })
