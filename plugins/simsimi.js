@@ -12,7 +12,7 @@ let handler = async (m, { text }) => {
                                                                        
 
 //handler.customPrefix = /(\?$)/ 
-handler.command = /^(simi|a|?)$/i
+handler.command = /^(si(mi)?(m)?)$/i
 
 module.exports = handler
 
