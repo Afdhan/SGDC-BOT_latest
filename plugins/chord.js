@@ -4,7 +4,7 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Masukkan Chord Yang Akan Dicari!', m)
 
   await m.reply('*[ WAIT ]* _Searching..._')
-axios.get(`https://st4rz.herokuapp.com/api/chord?q=${teks}`).then((res) => {
+axios.get(`https://st4rz.herokuapp.com/api/chord?q=${text}`).then((res) => {
     let hasil = `${res.data.result}`
 conn.reply(m.chat, hasil, m)
 	})
