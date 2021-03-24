@@ -91,6 +91,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}brainly*  [Soal]
 *┃║ ${_p}fetch*  [Url]
 *┃║ ${_p}ssweb*  [Url]
+*┃║ ${_p}tinyurl*  [Url]
 *┃║ ${_p}mediafire*  [Url]
 *┃║ ${_p}afk*  [Reason]
 *┃║ ${_p}google*  [Search]
