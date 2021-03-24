@@ -72,6 +72,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}ssweb*  [Url]
 *┃║ ${_p}afk*  [Reason]
 *┃║ ${_p}google*  [Search]
+*┃║ ${_p}chord* [Judul]
 *┃║ ${_p}nonton* [Judul]
 *┃║ ${_p}sticgif*  [Reply]
 *┃║ ${_p}sticwm*  [Reply]
