@@ -7,7 +7,7 @@ let d = new Date
   let tgl = d.toLocaleDateString('id-Id')
   let hari = d.toLocaleDateString('id-Id', { weekday: 'long' })
  let [teks, wm] = text.split('|')
-await conn.sendFile(m.chat, global.API('xteam', '/quotemaker', { text, wm: conn.getName(m.sender) }, 'abba3220ce4a347f'), 'SGDC.jpg', '*[ • SGDC-BOT • ]*', m)
+await conn.sendFile(m.chat, global.API('xteam', '/quotemaker', { text, wm: conn.getName(m.sender) }, 'APIKEY=abba3220ce4a347f'), 'SGDC.jpg', '*[ • SGDC-BOT • ]*', m)
 //m.reply('Apikeynya gaada mbah!')
  }
 
