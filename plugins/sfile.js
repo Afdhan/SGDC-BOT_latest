@@ -6,7 +6,7 @@ let handler = async(m, { conn, text }) => {
 
 //  await m.reply('*[ WAIT ]* _Seda..._')
 data = fetchJson(`https://fzn-gaz.herokuapp.com/api/sfile?search=${text}`, {method: 'get'})
-    let hasil = `*Title:* ${data.result.title}\n*Size:* ${data.result.size}\n*Link:* ${data.result.link}\n==================\n`
+    let hasil = `*Title:*\n*Size:* ${data.result.size}\n*Link:* ${data.result.link}\n==================\n`
 conn.reply(m.chat, hasil, m)
 	
 }
