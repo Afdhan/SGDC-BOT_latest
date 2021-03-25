@@ -23,7 +23,7 @@ let handler = async(m, { conn, text }) => {
     })
 }
 
-handler.command = /^(tebakgambar)$/i
+handler.command = /^(igstalk)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
