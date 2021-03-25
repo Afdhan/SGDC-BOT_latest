@@ -10,7 +10,7 @@
     "plugins": "plugins"
   },
   "scripts": {
-    "start": "node dhans.js",
+    "start": "node index.js",
     "test": "node test.js"
   },
   "keywords": [
