@@ -21,6 +21,9 @@ function pickRandom(list) {
 }
 
 global.randomssh = [
+*SSH BELUM UPDATE!*
+ ] 
+ /*
 'Hostname: sg1.ssh30.hostname.cc\nUsername: akunssh-ayam666\nPassword: STRESS\nOpenSSH: 22\nDropbear: 143, 80\nStunnel: 443, 444 (SSL/TLS)\nUdpgw Port: 7100, 7200, 7300 (For VoIP)\nCreated date: 20-Feb-2021\nExpired date: 22-Mar-2021',
 'Hostname: sg1.ssh30.hostname.cc\nUsername: akunssh-sgdc\nPassword: BOT\nOpenSSH: 22\nDropbear: 143, 80\nStunnel: 443 (SSL/TLS)\nUdpgw Port: 7100, 7200, 7300 (For VoIP)\nCreated date: 19-Feb-2021\nExpired date: 21-Mar-2021',
 'Host Server: vip-30-1.sshstores.vip\nNama pengguna: Bdbbsxc\nKata sandi: hshbdbx\nPort SSL / TLS: 443,445\nKedaluwarsa: 2021-03-20\nPelabuhan Squid: 80.3128\nDropbear: 442.143\nPort UDPGW : 7313,7300,7390,7385,7376',
@@ -32,6 +35,6 @@ global.randomssh = [
 'Host : ssh-30-7.sshstores.net\nUsername : Awpkaoek\nPassword : kontolll\nSSL/TLS Port : 443,445\nExpired : 2021-03-26\nSquid Port: 80,3128\nDropbear: 442,143\nUDPGW Port : 7313,7300,7390,7385,7376 ',
 'Host: us1.ssl30.cloudssh.host / 54.227.86.164\nUsername: cloudssh.host-welotwelot\nPassword: kangcomot\nOpenSSH: 22\nDropbear:80\nStunnel:443, 444\nUdpgw Port: 7300\nCreated date: 23-Feb-2021\nExpired date: 25-Mar-2021 ',
 'Hostname: sg1.ssh30.hostname.cc\nUsername: akunssh-welotwelot\nPassword: angcomot\nOpenSSH: 22\nDropbear: 143, 80\nStunnel: 443, 444 (SSL/TLS)\nUdpgw Port: 7100, 7200, 7300 (For VoIP)\nCreated date: 23-Feb-2021\nExpired date: 25-Mar-2021 ',
-]
+]*/
 
 //Muhammad Afdhan
