@@ -21,8 +21,9 @@ function pickRandom(list) {
 }
 
 global.randomssh = [
-*SSH BELUM UPDATE!*
- ] 
+"*SSH BELUM UPDATE!*",
+"*SSH BELUM UPDATE!*",
+] 
  /*
 'Hostname: sg1.ssh30.hostname.cc\nUsername: akunssh-ayam666\nPassword: STRESS\nOpenSSH: 22\nDropbear: 143, 80\nStunnel: 443, 444 (SSL/TLS)\nUdpgw Port: 7100, 7200, 7300 (For VoIP)\nCreated date: 20-Feb-2021\nExpired date: 22-Mar-2021',
 'Hostname: sg1.ssh30.hostname.cc\nUsername: akunssh-sgdc\nPassword: BOT\nOpenSSH: 22\nDropbear: 143, 80\nStunnel: 443 (SSL/TLS)\nUdpgw Port: 7100, 7200, 7300 (For VoIP)\nCreated date: 19-Feb-2021\nExpired date: 21-Mar-2021',
