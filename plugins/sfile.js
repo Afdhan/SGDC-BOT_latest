@@ -9,7 +9,9 @@ let handler = async(m, { conn, text }) => {
     let hasil = `*Title:*\n*Size:* ${res.data.result.size}\n*Link:* ${res.data.result.link}\n==================\n`
 conn.reply(m.chat, hasil, m)
 	
-}
+
+	    )}}
+							     
 handler.command = /^(sfilem)$/i
 handler.owner = false
 handler.mods = false
