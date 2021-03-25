@@ -17,7 +17,7 @@ axios.get(`https://api.zeks.xyz/api/jadwalsholat?apikey=apivinz&daerah=${text}`)
 conn.reply(m.chat, hasil, m)
 	})
 }
-handler.command = /^(jadwal(sholat|shalat|solat)?)$/i
+handler.command = /^(jadwal(sholat)?(shalat)?(solat)?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
