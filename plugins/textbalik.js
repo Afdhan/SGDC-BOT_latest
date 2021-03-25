@@ -4,10 +4,10 @@ let txt = m.quoted ? m.quoted.text ? m.quoted.text : text ? text : m.text : text
     if (!txt) return conn.reply(m.chat, 'Silahkan masukan kata kunci', m)
 
   //await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-axios.get('https://videfikri.com/api/hurufterbalik/?query=' + txt).then((res) => {
+axios.get(`https://videfikri.com/api/hurufterbalik/?query=${txt}`).then((res) => {
     let hasil = `${res.data.result.kata}`
 conn.reply(m.chat, hasil, m)
-	})
+   })
 }
 handler.command = /^(hurufbalik|teksbalik)$/i
 handler.owner = false
