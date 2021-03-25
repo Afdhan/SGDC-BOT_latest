@@ -8,7 +8,7 @@ let handler = async(m, { conn, text }) => {
     axios.get(`https://fzn-gaz.herokuapp.com/api/sfile?search=${text}`).then((res) => {
     let hasil = `*Title:*\n*Size:* ${res.data.result}\n*Link:* ${res.data.result}\n==================\n`
     conn.reply(m.chat, hasil, m)
-  }
+  })
 }
 							     
 handler.command = /^(sfilem)$/i
