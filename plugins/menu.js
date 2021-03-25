@@ -107,6 +107,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}fetch*  [Url]
 *┃║ ${_p}ssweb*  [Url]
 *┃║ ${_p}bitly*  [Url]
+*┃║ ${_p}cuttly*  [Url]
 *┃║ ${_p}tinyurl*  [Url]
 *┃║ ${_p}mediafire*  [Url]
 *┃║ ${_p}afk*  [Reason]
