@@ -7,7 +7,7 @@ SIMPLE WHATSAPP BOT GRETONGAN
        [`Telegram`](https://t.me/SGDC_TEAM)
        [`Channel`](https://t.me/SobatGretong)
 
- Powered by MUHAMMAD AFDHAN
+ # MUHAMMAD AFDHAN
  Donate
  [`Saweria`](https://saweria.co/AFD11)
 [`Nyawer`](https://nyawer.co/SGDC)
