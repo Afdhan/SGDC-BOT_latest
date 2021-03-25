@@ -200,3 +200,13 @@ if (!global.support.ffmpeg) conn.logger.warn('Please install ffmpeg for sending 
 if (!global.support.ffmpegWebp) conn.logger.warn('Stickers may not animated without libwebp on ffmpeg (--emable-ibwebp while compiling ffmpeg)')
 if (!global.support.convert) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt isntalled (pkg install imagemagick)')
 
+/*
+* MUHAMMAD AFDHAN
+* JANGAN HAPUS INI
+* GUA COLOK MATA LO ANJING
+* KALAU MAU RECODE 
+* IZIN DULU ANJIINNGG
+* 
+* ORIGINAL SCRIPT BY Nurutomo
+* Big Thanks To Nurutomo
+*/
