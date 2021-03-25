@@ -1,6 +1,6 @@
 # SGDC-BOT@^1.4.2
 
-SIMPLE WHATSAPP BOT GRETONGAN MODE
+SIMPLE WHATSAPP BOT GRETONGAN
 
  JOIN
   [`WhatsApp`](https://chat.whatsapp.com/JTqD3cJLmrlJPfxYZMtju8)
