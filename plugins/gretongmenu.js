@@ -98,7 +98,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()) 
 
-handler.command = /^(gretongmenu)$/i
+handler.command = /^(gretongmenu|gretonger(s)?menu|gretonganmenu|gretong)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
