@@ -8,7 +8,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃╰══════════════════╯*
 *┃                    Configuration (HC)*
 *┃╭══════════════════╮*
-*┃║  ${_p}axisgame*
+*┃║ ${_p}axisgame*
 *┃║ ${_p}axisedukasi*
 *┃║ ${_p}axischat*
 *┃║ ${_p}axismusic*
