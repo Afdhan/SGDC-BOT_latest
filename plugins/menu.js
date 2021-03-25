@@ -34,6 +34,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}puitis*
 *┃║ ${_p}tebakgambar*
 *┃║ ${_p}cecan*
+*┃║ ${_p}hentai*
 *┃║ ${_p}owner*
 *┃║ ${_p}bacotan*  
 *┃║ ${_p}donasi*
@@ -130,6 +131,8 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}setpp*  [Image]
 *┃║ ${_p}anime* [Query]
 *┃║ ${_p}wiki*  [Query]
+*┃║ ${_p}githubstalk*  [Username]
+*┃║ ${_p}twitterstalk*  [Username]
 *┃║ ${_p}igstalk*  [Username]
 *┃║ ${_p}waktu*  [Daerah]
 *┃║ ${_p}calc*  [Angka]
