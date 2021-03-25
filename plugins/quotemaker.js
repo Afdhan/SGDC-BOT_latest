@@ -9,7 +9,7 @@ let handler  = async(m, { conn, text }) => {
  // let hari = d.toLocaleDateString('id-Id', { weekday: 'long' })
  // let [teks, wm] = text.split('|')
   //let mm = [ • SGDC-BOT • ]
-  let quot = 'https://api.xteam.xyz/quotemaker?text=' + text + '&wm=[ • SGDC-BOT • ]&APIKEY=abba3220ce4a347f'
+  let quot = 'https://api.xteam.xyz/quotemaker?text=' + text + '&wm=[%20•%20SGDC-BOT%20•%20]&APIKEY=abba3220ce4a347f'
 conn.sendFile(m.chat, quot, 'SGDC.jpg', '*[ • SGDC-BOT • ]*', m)
 //m.reply('Apikeynya gaada mbah!')
  }
