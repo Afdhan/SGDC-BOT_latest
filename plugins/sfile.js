@@ -6,7 +6,7 @@ let handler = async(m, { conn, text }) => {
 
     await m.reply('*[ WAIT ]* _Sedang diproses..._')
     axios.get(`https://fzn-gaz.herokuapp.com/api/sfile?search=${text}`).then((res) => {
-    let hasil = `${res.data.result}\n==================\n`
+    let hasil = `${res.data.result.object}\n==================\n`
     conn.reply(m.chat, hasil, m)
   })
 }
