@@ -2,7 +2,7 @@ const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async(m, { conn, args, text }) => {
     if(!text) return conn.reply(m.chat, 'Masukkan link undangan grup!', m)
-    if(!text = 'https://chat.whatsapp.com/([0-9A-Za-z]{20,24})') return m.reply('Link Tidak Vaid!')
+    if(!text = 'https://chat.whatsapp.com/([0-9A-Za-z]{20,24})') return conn.reply(m.chat, 'Link Tidak Vaid!', m)
     var nomor = m.sender
     const teks1 = `*[ UNDANGAN GROUP ]*\n*DARI:* wa.me/${nomor.split("@s.whatsapp.net")[0]}\n*LINK:* ${text}`
     if(text == 'https://chat.whatsapp.com/([0-9A-Za-z]{20,24})') return true
