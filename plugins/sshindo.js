@@ -5,9 +5,10 @@ let { spawn } = require('child_process')
 
 
 let handler = async (m, { conn, args }) => {
-  let sshindo ='src/ssh1.jpg'
+/*  let sshindo ='src/ssh1.jpg'
   await m.reply('*[ WAIT ]* _Media Sedang Dikirim..._')
-  conn.sendFile(m.chat, sshindo, 'AkunSsh.jpg','Bagi Akun SSH Mbah!, Buat Gantiin Yg Ini', m)
+  conn.sendFile(m.chat, sshindo, 'AkunSsh.jpg','Bagi Akun SSH Mbah!, Buat Gantiin Yg Ini', m)*/
+  m.reply('*SSH BELUM UPDATE!*')
 }
 
 handler.command = /^(sshindo)$/i
