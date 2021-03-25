@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/Afdhan/gretong/issues"
   },
-  "license": "GPL-3",
+  "license": "GPLv3",
   "dependencies": {
     "@adiwajshing/baileys": "^3.4.1",
     "awesome-phonenumber": "^2.47.0",
@@ -38,11 +38,11 @@
     "cfonts": "^2.9.1",
     "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.5",
-    "cloudconvert": "^2.1.5",
     "express": "^4.17.1",
     "file-type": "^16.3.0",
     "form-data": "^3.0.1",
     "gulp-webp": "^4.0.1",
+    "got": "^11.8.0",
     "google-it": "^1.6.2",
     "image-to-base64": "^2.1.1",
     "jsdom": "^16.5.1",
@@ -51,7 +51,6 @@
     "qrcode": "^1.4.4",
     "syntax-error": "^1.4.0",
     "terminal-image": "^1.2.1",
-    "urlencode": "^1.1.0",
     "url-regex": "^5.0.0",
     "yargs": "^16.2.0"
   }
