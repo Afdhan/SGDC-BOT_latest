@@ -9,12 +9,13 @@ let handler  = async(m, { conn, text }) => {
  // let hari = d.toLocaleDateString('id-Id', { weekday: 'long' })
  // let [teks, wm] = text.split('|')
   //let mm = [ • SGDC-BOT • ]
+ await m.reply('*[ WAIT ]* _Sedang Di Proses..._')
   let quot = 'https://api.xteam.xyz/quotemaker?text=' + text + '&wm=SGDC-BOT&APIKEY=abba3220ce4a347f'
 conn.sendFile(m.chat, quot, 'SGDC.jpg', '*[ • SGDC-BOT • ]*', m)
 //m.reply('Apikeynya gaada mbah!')
  }
 
-handler.command = /^quotemaker$/i
+handler.command = /^(quote(maker)?)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
