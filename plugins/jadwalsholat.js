@@ -31,14 +31,4 @@ handler.fail = null
 
 
 module.exports = handler
-
-
-
-
-
-
-
-
-
-
-https://api.zeks.xyz/api/jadwalsholat?apikey=apivinz&daerah=bengkulu
+//https://api.zeks.xyz/api/jadwalsholat?apikey=apivinz&daerah=bengkulu
