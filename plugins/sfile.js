@@ -8,7 +8,7 @@ let handler = async(m, { conn, text }) => {
 data = fetchJson(`https://fzn-gaz.herokuapp.com/api/sfile?search=${text}`, {method: 'get'})
     let hasil = `*Title:* ${data.result.title}\n*Size:* ${data.result.size}\n*Link:* ${data.result.link}\n==================\n`
 conn.reply(m.chat, hasil, m)
-	})
+	
 }
 handler.command = /^(sfilem)$/i
 handler.owner = false
