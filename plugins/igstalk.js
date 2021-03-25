@@ -18,7 +18,7 @@ let handler = async(m, { conn, text }) => {
 *Following:* ${res.data.Jumlah_Following}
 *Bio:* ${res.data.Biodata}
 `.trim()
-     conn.sendFile(m.chat, buf, 'SGDC.jpg', str, m)
+     conn.sendFile(m.chat, buf, 'SGDC.png', str, m)
         })
     })
 }
