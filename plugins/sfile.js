@@ -5,7 +5,7 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Mau cari apa?', m)
 
 //  await m.reply('*[ WAIT ]* _Seda..._')
-let res = fetchJson(`https://fzn-gaz.herokuapp.com/api/sfile?search=${text}`, {method: 'get'})
+let res = axios.get(`https://fzn-gaz.herokuapp.com/api/sfile?search=${text}`)
     let hasil = `*Title:*\n*Size:* ${res.data.result.size}\n*Link:* ${res.data.result.link}\n==================\n`
 conn.reply(m.chat, hasil, m)
 	
