@@ -1,6 +1,6 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
-let text = m.quoted ? m.quoted.text ? m.quoted.text : text ? text : m.text : text ? text : m.text
+//let text = m.quoted ? m.quoted.text ? m.quoted.text : text ? text : m.text : text ? text : m.text
     if (!text) return conn.reply(m.chat, 'Silahkan masukan kata kunci', m)
 
   //await m.reply('*[ WAIT ]* _Sedang Diproses..._')
