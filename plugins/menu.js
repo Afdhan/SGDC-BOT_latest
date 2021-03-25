@@ -134,6 +134,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}githubstalk*  [Username]
 *┃║ ${_p}twitterstalk*  [Username]
 *┃║ ${_p}igstalk*  [Username]
+*┃║ ${_p}jadwalsholat*  [Daerah]
 *┃║ ${_p}waktu*  [Daerah]
 *┃║ ${_p}calc*  [Angka]
 *┃║ ${_p}kalkulator*  [Angka]
