@@ -107,6 +107,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}tinyurl*  [Url]
 *┃║ ${_p}mediafire*  [Url]
 *┃║ ${_p}afk*  [Reason]
+*┃║ ${_p}join*  [LinkGC]
 *┃║ ${_p}pinterest*  [Search]
 *┃║ ${_p}google*  [Search]
 *┃║ ${_p}chord* [Judul]
