@@ -3,9 +3,11 @@ let handler = async(m, { conn, text }) => {
 
     if (!text) return conn.reply(m.chat, 'Silahkan masukan nama daerah', m)
 
-//  await m.reply('*[ WAIT ]* _Seda..._')
+ await m.reply('*[ WAIT ]* _Sedang diproses..._')
 axios.get(`https://api.zeks.xyz/api/jadwalsholat?apikey=apivinz&daerah=${text}`).then((res) => {
     let hasil = `
+
+*Nama Daerah:* ${text}
 *Shubuh:* ${res.data.data.object.Shubuh}
 *Dzuhur:* ${res.data.data.object.Dzuhur}
 *Ashar:* ${res.data.data.object.Ashr}
