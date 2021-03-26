@@ -1,12 +1,21 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
 
-let cvd = axios.get(`https://covid19.mathdro.id/api/countries/id`)
-    let hasil = `*Positif: ${cvd.confirmed.value}*\n*Sembuh: ${cvd.recovered.value}*\n*Meninggal: ${cvd.deaths.value}*\n*Update: ${cvd.lastUpdate}*`
+  axios.get(`https://videfikri.com/api/covidindo/`).then((res) => {
+    let hasil = `
+*Country:* _${res.data.result.country}_
+*Positif:* _${res.data.result.positif}_
+*Sembuh:* _${res.data.result.sembuh}_
+*Meninggal:* _${res.data.result.meninggal}_
+*Dirawat:* _${res.data.result.dalam_perawatan}_
+
+*[ • SGDC-BOT • ]*
+`.trim()
 conn.reply(m.chat, hasil, m)
+    })
 }
 
-handler.command = /^infocovid$/i
+handler.command = /^(infocovid|covid)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -20,3 +29,5 @@ handler.fail = null
 
 
 module.exports = handler
+
+//   MUHAMMAD AFDHAN
