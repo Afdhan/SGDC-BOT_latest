@@ -150,6 +150,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}oadd*  [628xxx]
 *┃║ ${_p}spamsms*  [No] | [Jmlh]
 *┃║ ${_p}spamcall*  [8xxx]
+*┃║ ${_p}spam  [@userText]
 *┃║ ${_p}profil*  [@user]
 *┃║ ${_p}bann* [@user]
 *┃║ ${_p}unbann* [@user]
