@@ -12,7 +12,7 @@ await conn.reply(m.chat, `
 *║•  Aplikasi : HTTP Injector*
 *║•  Version : HI (Playstore)*
 *║•  Expires : LifeTime*
-*║•  Mode : Direct SSH Payload*
+*║•  Mode : SSH / SSL*
 *║•  Note : Ganti SSH*
 *┣════════════════*
 *║ [ • WAIT • ]* _Config Sedang Dikirim..._
