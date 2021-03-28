@@ -150,7 +150,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃║ ${_p}oadd*  [628xxx]
 *┃║ ${_p}spamsms*  [No] | [Jmlh]
 *┃║ ${_p}spamcall*  [8xxx]
-*┃║ ${_p}spam  [@userText]
+*┃║ ${_p}spam*  [@userText]
 *┃║ ${_p}profil*  [@user]
 *┃║ ${_p}bann* [@user]
 *┃║ ${_p}unbann* [@user]
@@ -207,7 +207,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
 *┃══════᳀ SGDC - BOT ᳀══════*
 *┗━━━━━━━━━━━━━━━━━━━━┛*
 `.trim()
- await conn.sendFile(m.chat, img, 'SGDC.jpg', mn, m)
+ await conn.sendFile(m.chat, img, 'SGDC-BY-M_AFDHAN.jpg', mn, m)
   m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
 }
 
