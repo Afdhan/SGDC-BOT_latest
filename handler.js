@@ -146,7 +146,7 @@ module.exports = {
             fail('mods', m, this)
             continue
           }
-          if (plugin.premium && !isPrems) { 
+          if (plugin.premium /*&& !isPrems*/) { 
             fail('premium', m, this)
             continue
           }
@@ -173,7 +173,7 @@ module.exports = {
           let xp = 'exp' in plugin ? parseInt(plugin.exp) : 9 
           if (xp > 99) m.reply('Ngecit -_-') 
           else m.exp += xp
-          if (!isPrems && plugin.limit && global.DATABASE._data.users[m.sender].limit < plugin.limit * 1) {
+          if (/*!isPrems && */plugin.limit && global.DATABASE._data.users[m.sender].limit < plugin.limit * 1) {
             this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
             continue 
           }
@@ -198,7 +198,7 @@ module.exports = {
            //   isPrems,
               chatUpdate,
             })
-            if (!isPrems) m.limit = m.limit || plugin.limit || false
+            /*if (!isPrems) */m.limit = m.limit || plugin.limit || false
           } catch (e) {
             m.error = e
             console.log(e)
