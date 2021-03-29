@@ -216,7 +216,7 @@ _if you violate, your account will be banned permanently!_
 
 Powered by *SGDC-BOT@^1.5.1*
 `.trim()
- await conn.sendFile(m.chat, mn, m)
+ await conn.reply(m.chat, mn, m)
   m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
 }
 
