@@ -26,7 +26,7 @@ module.exports = {
           if (!isNumber(user.afk)) user.afk = -1
           if (!'afkReason' in user) user.afkReason = ''
           if (!'banned' in user) user.banned = false
-          if (!'prems' in user) user.prems = false
+          if (!'prem' in user) user.prem = false
         } else global.DATABASE._data.users[m.sender] = {
           exp: 0,
           limit: 10,
@@ -38,7 +38,7 @@ module.exports = {
           afk: -1,
           afkReason: '',
           banned: false,
-          prems: false,
+          prem: false,
         }
     
         let chat
@@ -74,7 +74,7 @@ module.exports = {
       let isROwner = [global.conn.user.jid, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
       let isOwner = isROwner || m.fromMe
       let isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-     // let isPrems = isOwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+      let isPrems = isOwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
       let groupMetadata = m.isGroup ? await this.groupMetadata(m.chat) : {}
       let participants = m.isGroup ? groupMetadata.participants : []
       let user = m.isGroup ? participants.find(u => u.jid == m.sender) : {} // User Data
@@ -146,7 +146,7 @@ module.exports = {
             fail('mods', m, this)
             continue
           }
-          if (plugin.premium /*&& !isPrems*/) { 
+          if (plugin.premium && !isPrems) { 
             fail('premium', m, this)
             continue
           }
@@ -173,7 +173,7 @@ module.exports = {
           let xp = 'exp' in plugin ? parseInt(plugin.exp) : 9 
           if (xp > 99) m.reply('Ngecit -_-') 
           else m.exp += xp
-          if (/*!isPrems && */plugin.limit && global.DATABASE._data.users[m.sender].limit < plugin.limit * 1) {
+          if (!isPrems && plugin.limit && global.DATABASE._data.users[m.sender].limit < plugin.limit * 1) {
             this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
             continue 
           }
@@ -195,10 +195,10 @@ module.exports = {
               isOwner,
               isAdmin,
               isBotAdmin,
-           //   isPrems,
+              isPrems,
               chatUpdate,
             })
-            /*if (!isPrems) */m.limit = m.limit || plugin.limit || false
+            if (!isPrems) m.limit = m.limit || plugin.limit || false
           } catch (e) {
             m.error = e
             console.log(e)
