@@ -37,7 +37,7 @@ module.exports = {
           regTime: -1,
           afk: -1,
           afkReason: '',
-          banned: false
+          banned: false,
           prems: false
         }
     
