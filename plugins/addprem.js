@@ -16,3 +16,5 @@ let who
 
 handler.command = /^addprems$/i
 handler.owner = true
+
+module.exports = handler
