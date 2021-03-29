@@ -191,6 +191,7 @@ module.exports = {
               groupMetadata,
               user,
               bot,
+              prem,
               isROwner,
               isOwner,
               isAdmin,
