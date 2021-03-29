@@ -5,8 +5,8 @@ let handler = async (m, { conn, text}) => {
     if (m.isGroup) who = m.mentionedJid[0]
     else who = m.chat
     if (!who) throw '_Tag salah satu mbah!_'
-    /*let users =*/ global.DATABASE._data.users.[who].prems = true
-    //users[who].prems = true
+    let users = global.DATABASE._data.users
+    users[who].prems = true
     var nomor = m.mentionedJid[0]
     m.reply(`*_Berhasil Menambahkan User!_*\n*Nomor : https://wa.me/${nomor.split("@s.whatsapp.net")[0]}*`)
 
