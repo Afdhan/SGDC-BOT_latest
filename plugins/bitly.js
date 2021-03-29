@@ -1,11 +1,11 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
 
-    if (!text) return conn.reply(m.chat, 'Silahkan masukan link', m)
+    if (!text) return conn.reply(m.chat, 'Silahkan masukkan link', m)
 
-//  await m.reply('*[ WAIT ]* _Seda..._')
+
 axios.get(`https://api.xteam.xyz/shorturl/bitly?url=${text}&APIKEY=abba3220ce4a347f`).then((res) => {
-    let hasil = `*Link:* ${text}\n*Short:* ${res.data.result.link}`
+    let hasil = `*Link:* ${text}\n*Short:* ${res.data.result.link}\n\n*[ • SGDC-BOT • ]*`
 conn.reply(m.chat, hasil, m)
 	})
 }
@@ -21,5 +21,6 @@ handler.botAdmin = false
 
 handler.fail = null
 
-
 module.exports = handler
+
+// MUHAMMAD AFDHAN

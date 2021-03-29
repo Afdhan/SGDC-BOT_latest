@@ -3,16 +3,16 @@ let handler = async(m, { conn, text }) => {
 
     if (!text) return conn.reply(m.chat, 'Silahkan masukan kata kunci', m)
 
-  await m.reply('*[ WAIT ]* _Searching..._')
+  await m.reply('*[ WAIT ]* _Sedang Diproses..._')
 axios.get(`https://mhankbarbar.herokuapp.com/api/dewabatch?q=${text}`).then((res) => {
-    let hasil = `${res.data.result.sinopsis}`
+    let hasil = `${res.data.result.sinopsis}\n\n*[ • SGDC-BOT • ]*`
 conn.reply(m.chat, hasil, m)
 	})
 }
 handler.command = /^(dewabatch)$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.group = false
 handler.private = false
 
@@ -23,3 +23,5 @@ handler.fail = null
 
 
 module.exports = handler
+
+//  MUHAMMAD AFDHAN

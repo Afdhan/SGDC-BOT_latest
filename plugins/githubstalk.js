@@ -1,7 +1,8 @@
 let imageToBase64 = require('image-to-base64');
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
-
+let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {
  if (!text) return conn.reply(m.chat, 'Masukkan Username Github', m)
   await m.reply('*[ WAIT ]* _Searching..._')
 
@@ -18,23 +19,23 @@ let handler = async(m, { conn, text }) => {
 *Following:* ${res.data.result.following}
 *Repository:* ${res.data.result.public_repository}
 *Profile Url:* ${res.data.result.profile_url}
+
+*[ • SGDC-BOT • ]*
 `.trim()
-     conn.sendFile(m.chat, buf, 'SGDC.png', str, m)
+     conn.sendFile(m.chat, buf, 'SGDC-BOT.png', str, m)
         })
     })
+   } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
 handler.command = /^(github(stalk)?)$/i
 handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
 
-handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.limit = false
 
 module.exports = handler
+
+
+// MUHAMMAD AFDHAN

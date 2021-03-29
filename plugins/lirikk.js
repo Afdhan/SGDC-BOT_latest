@@ -1,19 +1,22 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
 
-    if (!text) return conn.reply(m.chat, 'Silahkan masukan kata kunci', m)
+    if (!text) return conn.reply(m.chat, 'Masukkan Judul Lagu!', m)
 
-//  await m.reply('*[ WAIT ]* _Searching..._')
-axios.get(`https://videfikri.com/api/jumlahhuruf/?query=${text}`).then((res) => {
+  await m.reply('*[ WAIT ]* _Searching..._')
+axios.get(`https://videfikri.com/api/liriklagu/?query=${text}`).then((res) => {
     let hasil = `
-_JUMLAH ADA:_ *${res.data.result.jumlah}*
+*Judul:* ${res.data.result.title}
+*Artist:* ${res.data.result.artist}
+*Lirik:* 
+${res.data.result.lirik}
 
 *[ • SGDC-BOT • ]*
 `.trim()
 conn.reply(m.chat, hasil, m)
 	})
 }
-handler.command = /^(jhuruf)$/i
+handler.command = /^(lirik)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -28,4 +31,5 @@ handler.fail = null
 
 module.exports = handler
 
-//  MUHAMMAD AFDHAN
+
+// MUHAMMAD AFDHAN

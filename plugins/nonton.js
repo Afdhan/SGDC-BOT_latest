@@ -4,9 +4,16 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Masukan Judul Filmnya', m)
 
 	axios.get(`https://tobz-api.herokuapp.com/api/film?q=${text}&apikey=BotWeA`).then ((res) => {
-	 	let hasil = `*[ NONTON FILM ]*\n\nJudul : ${res.data.result.judul}\nGenre : ${res.data.result.genre_negara}\nRating : ${res.data.result.rating}\nLink : ${res.data.result.link}`
+	/* 	let hasil = `
+*[ NONTON FILM ]*
 
-    conn.reply(m.chat, hasil, m)
+Judul : ${res.data.result.judul}
+Genre : ${res.data.result.genre_negara}
+Rating : ${res.data.result.rating}
+Link : ${res.data.result.link}
+`.trim()
+    conn.reply(m.chat, hasil, m)*/
+m.reply('NOT FOUND')
 	})
 }
 
@@ -21,7 +28,7 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.exp = 0
-handler.limit = true
 
 module.exports = handler
+
+//  MUHAMMAD AFDHAN

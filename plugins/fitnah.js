@@ -1,5 +1,7 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, text }) => {
+let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {
   if (!text) return
   let cm = copy(m)
   let who
@@ -16,6 +18,7 @@ let handler = async (m, { conn, text }) => {
       mentionedJid: conn.parseMention(real.join(sp).trim())
     }
   })
+   } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 handler.command = /^(fitnah|fakereply|nuduh)$/
 

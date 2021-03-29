@@ -6,13 +6,13 @@ let handler = async(m, { conn, text }) => {
 
     let link = 'https://arugaz.my.id/api/textpro/bokehtext?text=' + text
 
-    conn.sendFile(m.chat, link, 'bokeh.jpg', 'Tobat tod!', m)
+    conn.sendFile(m.chat, link, 'Ngentot.jpg', 'Tobat tod!', m)
 }
 
 handler.command = /^(bokehtext|bokeh)$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.group = false
 handler.private = false
 
@@ -23,3 +23,5 @@ handler.fail = null
 
 
 module.exports = handler
+
+//  MUHAMMAD AFDHAN

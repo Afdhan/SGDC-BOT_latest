@@ -3,8 +3,6 @@ let handler = function (m) {
 let pp_owner ='src/Owner.jpg'
 conn.sendFile(m.chat, pp_owner, 'My Owner.jpg', '*This is my owner ᴍ ᴀꜰᴅʜᴀɴ*\n*Contact: https://wa.me/6282252655313*', m)
 }
-  //this.sendContact(m.chat, '0', 'Insert Owner Number Here', m)
-
 
 handler.command = /^(owner|creator)$/i
 handler.owner = false

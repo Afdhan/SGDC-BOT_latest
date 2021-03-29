@@ -5,7 +5,12 @@ let handler = async(m, { conn, text }) => {
 
 //  await m.reply('*[ WAIT ]* _Seda..._')
 axios.get(`https://xnxx-tbot.herokuapp.com/api/kodepos?kota=${text}&apikey=tbot`).then((res) => {
-    let hasil = `*KODE POSTAL*\n\n${res.data.result.data.postalcode}`
+    let hasil = `
+*KODE POSTAL*
+${res.data.result.data.postalcode}
+
+*[ • SGDC-BOT • ]*
+`.trim()
 conn.reply(m.chat, hasil, m)
 	})
 }

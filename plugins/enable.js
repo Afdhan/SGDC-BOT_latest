@@ -25,7 +25,7 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
       chat.badWord = isEnable
       break
     case 'alloption':
-      chat.badWord = isEnable
+   //   chat.badWord = isEnable
       chat.antiLink = isEnable
       chat.welcome = isEnable
       chat.delete = isEnable
@@ -59,4 +59,4 @@ handler.fail = null
 module.exports = handler
 
 
-module.exports = handler
+// MUHAMMAD AFDHAN

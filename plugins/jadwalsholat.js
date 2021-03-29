@@ -6,7 +6,6 @@ let handler = async(m, { conn, text }) => {
  await m.reply('*[ WAIT ]* _Sedang diproses..._')
 axios.get(`https://api.zeks.xyz/api/jadwalsholat?apikey=apivinz&daerah=${text}`).then((res) => {
     let hasil = `
-
 *Nama Daerah:* ${text}
 *Shubuh:* ${res.data.data.object.Shubuh}
 *Dzuhur:* ${res.data.data.object.Dzuhur}
@@ -15,6 +14,8 @@ axios.get(`https://api.zeks.xyz/api/jadwalsholat?apikey=apivinz&daerah=${text}`)
 *Isya:* ${res.data.data.object.Isya}
 
 *Source:* ${res.data.source}
+
+*[ • SGDC-BOT • ]*
 `.trim()
 conn.reply(m.chat, hasil, m)
 	})
@@ -33,4 +34,5 @@ handler.fail = null
 
 
 module.exports = handler
-//https://api.zeks.xyz/api/jadwalsholat?apikey=apivinz&daerah=bengkulu
+
+//  MUHAMMAD AFDHAN

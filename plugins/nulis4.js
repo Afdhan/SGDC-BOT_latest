@@ -1,21 +1,15 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
 
-    if (!text) return conn.reply(m.chat, 'Silahkan masukan kata kunci', m)
+    if (!text) return conn.reply(m.chat, 'Silahkan Masukan Teks!', m)
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-axios.get(`https://videfikri.com/api/kbbi/?query=${text}`).then((res) => {
-    let hasil = `
-*Menurut KBBI*
+let link = 'https://lindow-api.herokuapp.com/api/nulis?text=' + text + '&apikey=LindowGanteng'
 
-${res.data.result.hasil}
-
-*[ • SGDC-BOT • ]*
-`.trim()
-conn.reply(m.chat, hasil, m)
-	})
+conn.sendFile(m.chat, link, 'SGDC-BOT.png', '*[ • SGDC-BOT • ]*', m)
 }
-handler.command = /^(kbbi)$/i
+
+handler.command = /^(nulis4)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -30,4 +24,5 @@ handler.fail = null
 
 module.exports = handler
 
-//  MUHAMMAD AFDHAN
+
+//   MUHAMMAD AFDHAN

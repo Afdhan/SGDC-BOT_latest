@@ -1,217 +1,224 @@
+let fs = require ('fs')
 let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
-
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
-  let name = conn.getName(m.sender)
-  let img ='src/SGDC_BOT.jpg'
-  let mn = `
-*┏━━━━━━━━━━━━━━━━━━━━┓*
-*┃══════᳀ SGDC - BOT ᳀══════*
-*┣━━━━━━━━━━━━━━━━━━━━┛*
-*┃╭══════════════════╮*
-*┃║ YourName :  ${name}*
-*┃║ BotName :    SGDC - BOT*
-*┃║ Version :       1.4.2 (beta)*
-*┃║ Prefix :           ( ${_p} )*
-*┃╰══════════════════╯*
-*┣━━━━━━━━━━━━━━━━━━━━┓*
-*┃══════᳀ LIST MENU ᳀══════*
-*┣━━━━━━━━━━━━━━━━━━━━┛*
-*┃╭══════════════════╮*
-*┃║ ${_p}ban*
-*┃║ ${_p}unban*
-*┃║ ${_p}reset*
-*┃║ ${_p}restart*
-*┃║ ${_p}deletechat*
-*┃║ ${_p}mutechat*
-*┃║ ${_p}linkgroup*
-*┃║ ${_p}listonline*
+    let name = conn.getName(m.sender)
+    let versi = 1.5.1
+    let d = new Date
+    let locale = 'id'
+    let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
+    let weton = ['Pahing', 'Pon','Wage','Kliwon','Legi'][Math.floor(((d * 1) + gmt) / 84600000) % 5]
+    let week = d.toLocaleDateString(locale, { weekday: 'long' })
+    let date = d.toLocaleDateString(locale, {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    })
+    let time = d.toLocaleTimeString(locale, {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    })
+    let _uptime = process.uptime() * 1000
+    let uptime = clockString(_uptime)
+    let img ='src/SGDC_BOT.jpg'
+    let mn = `
+*━━━━━━━━━━━━━━━━━━━━━*
+_Hey *${name}* you will using *SGDC-BOT!*_
+_before you using this features,_ 
+_please follow the rules *SGDC-BOT.*_
+_if you violate, your account will be banned permanently!_
+
+*Rules:*
+*> Don't Spam !!!*
+*> Don't Calling !!!*
+*> Don't Video Calls !!!*
+*━━━━━━━━━━━━━━━━━━━━━*
+*┏━━━━━━━━━━━━━━━━━━━┓*
+*┃                      [ • SGDC-BOT • ]*
+*┃╭═════════════════╮*
+*┃║ Name :        ${name}*
+*┃║ Date :          ${week}, ${date}*
+*┃║ Time :         ${time}*
+*┃║ Uptime :      ${uptime}*
+*┃║ Version :     ${versi}*
+*┃║ Prefix :       「 ${_p} 」*
+*┃╰═════════════════╯*
+*┃                 MENU ON SGDC-BOT*
+*┃╭═════════════════╮*
+*┃║ ${_p}exo*
+*┃║ ${_p}bts*
+*┃║ ${_p}cum*
+*┃║ ${_p}feet*
+*┃║ ${_p}loli*
+*┃║ ${_p}tits*
+*┃║ ${_p}neko*
+*┃║ ${_p}husbu*
+*┃║ ${_p}kanna*
+*┃║ ${_p}cecan*
+*┃║ ${_p}cogan*
+*┃║ ${_p}meme*
+*┃║ ${_p}hentai*
+*┃║ ${_p}shota*
+*┃║ ${_p}waifu*
+*┃║ ${_p}sagiri*
+*┃║ ${_p}shinobu*
+*┃║ ${_p}darkjoke*
+*┃║ ${_p}owner*
+*┃║ ${_p}puitis*
 *┃║ ${_p}iqtest*
 *┃║ ${_p}ping*
+*┃║ ${_p}bacotan*
+*┃║ ${_p}donasi*
+*┃║ ${_p}covid*
+*┃║ ${_p}nickepep*
 *┃║ ${_p}katabijak*
 *┃║ ${_p}katabucin*
-*┃║ ${_p}puitis*
-*┃║ ${_p}tebakgambar*
-*┃║ ${_p}cecan*
-*┃║ ${_p}hentai*
-*┃║ ${_p}owner*
-*┃║ ${_p}bacotan*  
-*┃║ ${_p}donasi*
 *┃║ ${_p}grouplist*
-*┃║ ${_p}qr*  [Text]
-*┃║ ${_p}ttp*  [Text]
-*┃║ ${_p}attp*  [Text]
-*┃║ ${_p}style*  [Text]
-*┃║ ${_p}tahta*  [Text]
-*┃║ ${_p}tahta2*  [Text]
-*┃║ ${_p}sgdc*  [Text]
-*┃║ ${_p}nulis*  [Text]
-*┃║ ${_p}nulis2*  [Text]
-*┃║ ${_p}nulis3*  [Text]
-*┃║ ${_p}komiku*  [Text]
-*┃║ ${_p}teksbalik*  [Text]
-*┃║ ${_p}hidetag*  [Text]
-*┃║ ${_p}simi*  [Text]
-*┃║ ${_p}artimimpi*  [Text]
-*┃║ ${_p}halah*  [Text]
-*┃║ ${_p}hilih*  [Text]
-*┃║ ${_p}huluh*  [Text]
-*┃║ ${_p}heleh*  [Text]
-*┃║ ${_p}holoh*  [Text]
-*┃║ ${_p}setwelcome*  [Text]
-*┃║ ${_p}setbye*  [Text]
-*┃║ ${_p}report*  [Text]
-*┃║ ${_p}base64*  [Text]
-*┃║ ${_p}run*  [Text]
-*┃║ ${_p}kbbi*  [Text]
-*┃║ ${_p}pastebin*  [Text]
-*┃║ ${_p}randompict*  [Text]
-*┃║ ${_p}otakudesu*  [Text]
-*┃║ ${_p}dewabatch*  [Text]
-*┃║ ${_p}kusonime*  [Text]
-*┃║ ${_p}bokeh*  [Text]
-*┃║ ${_p}say*  [Text]
-*┃║ ${_p}repeat*  [Text]
-*┃║ ${_p}bc*  [Text]
-*┃║ ${_p}bcgc*  [Text]
-*┃║ ${_p}dropwater*  [Text]
-*┃║ ${_p}futuristic*  [Text]
-*┃║ ${_p}sand*  [Text]
-*┃║ ${_p}neon*  [Text]
-*┃║ ${_p}zuan*  [Text]
-*┃║ ${_p}burn*  [Text]
-*┃║ ${_p}wolf*  [Text]
-*┃║ ${_p}candy*  [Text]
-*┃║ ${_p}smoke*  [Text]
-*┃║ ${_p}shine*  [Text]
-*┃║ ${_p}night*  [Text]
-*┃║ ${_p}metall*  [Text]
-*┃║ ${_p}graffiti*  [Text]
-*┃║ ${_p}silverbutton*  [Text]
-*┃║ ${_p}goldbutton*  [Text]
-*┃║ ${_p}candle*  [Text]
-*┃║ ${_p}naruto*  [Text]
-*┃║ ${_p}paper*  [Text]
-*┃║ ${_p}dark*  [Text]
-*┃║ ${_p}coffe*   [Text]
-*┃║ ${_p}coffe2*   [Text]
-*┃║ ${_p}coffe3*  [Text]
-*┃║ ${_p}matrix*  [Text]
-*┃║ ${_p}quotemaker*  [Text]
-*┃║ ${_p}teksbalik*   [Text]
-*┃║ ${_p}jhuruf*  [Text]
-*┃║ ${_p}setbye*  [Text]
-*┃║ ${_p}setwelcome*  [Text]
-*┃║ ${_p}tts* [lang] [Text]
-*┃║ ${_p}brainly*  [Soal]
-*┃║ ${_p}fetch*  [Url]
-*┃║ ${_p}ssweb*  [Url]
-*┃║ ${_p}bitly*  [Url]
-*┃║ ${_p}cuttly*  [Url]
-*┃║ ${_p}tinyurl*  [Url]
-*┃║ ${_p}mediafire*  [Url]
-*┃║ ${_p}afk*  [Reason]
-*┃║ ${_p}join*  [LinkGC]
-*┃║ ${_p}pinterest*  [Search]
-*┃║ ${_p}google*  [Search]
-*┃║ ${_p}chord* [Judul]
-*┃║ ${_p}nonton* [Judul]
-*┃║ ${_p}sticgif*  [Reply]
-*┃║ ${_p}sticwm*  [Reply]
-*┃║ ${_p}sticker*  [Reply]
-*┃║ ${_p}stimg*  [Reply]
-*┃║ ${_p}toimg*  [Reply]
-*┃║ ${_p}ninja* [Nama]
-*┃║ ${_p}artinama*  [Nama]
-*┃║ ${_p}on*  [Optiokn]
-*┃║ ${_p}off*  [Option]
-*┃║ ${_p}enable*  [Option]
-*┃║ ${_p}disable*  [Option]
-*┃║ ${_p}setpp*  [Image]
-*┃║ ${_p}anime* [Query]
-*┃║ ${_p}wiki*  [Query]
-*┃║ ${_p}githubstalk*  [Username]
-*┃║ ${_p}twitterstalk*  [Username]
-*┃║ ${_p}igstalk*  [Username]
-*┃║ ${_p}jadwalsholat*  [Daerah]
-*┃║ ${_p}waktu*  [Daerah]
-*┃║ ${_p}calc*  [Angka]
-*┃║ ${_p}kalkulator*  [Angka]
-*┃║ ${_p}8bit*  [Text] | [Text]
-*┃║ ${_p}glitch*  [Text] | [Text]
-*┃║ ${_p}wanted*  [Text] | [Text]
-*┃║ ${_p}readmore*  [Text] | [Text]
-*┃║ ${_p}hidetext*  [Text] | [Text]
-*┃║ ${_p}maknajadian*  [Tgl] | [Bln] | [Thn]
-*┃║ ${_p}nuduh*  [Text] [@user] [Text]
-*┃║ ${_p}fitnah*  [Text] [@user] [Text]
-*┃║ ${_p}add*  [628xx,628xx]
-*┃║ ${_p}oadd*  [628xxx]
-*┃║ ${_p}spamsms*  [No] | [Jmlh]
-*┃║ ${_p}spamcall*  [8xxx]
-*┃║ ${_p}spam*  [@userText]
-*┃║ ${_p}profil*  [@user]
-*┃║ ${_p}bann* [@user]
-*┃║ ${_p}unbann* [@user]
-*┃║ ${_p}addprem* [@user]
-*┃║ ${_p}delprem* [@user]
-*┃║ ${_p}okick*  [@user]
-*┃║ ${_p}opromote*  [@user]
-*┃║ ${_p}odemote*  [@user]
-*┃║ ${_p}ohidetag*  [@user]
-*┃║ ${_p}demote*  [@user]
-*┃║ ${_p}promote*  [@user]
-*┃║ ${_p}kick*  [@user]
-*┃╰══════════════════╯*
-*┃                        OWNER ONLY*
-*┃╭══════════════════╮*
+*┃║ ${_p}linkgroup*
+*┃║ ${_p}tebakgambar*
 *┃║ ${_p}ban*
 *┃║ ${_p}unban*
 *┃║ ${_p}reset*
 *┃║ ${_p}restart*
 *┃║ ${_p}deletechat*
 *┃║ ${_p}mutechat*
-*┃║ ${_p}bann* [@user]
-*┃║ ${_p}unbann* [@user]
-*┃║ ${_p}addprem* [@user]
-*┃║ ${_p}delprem* [@user]
-*┃║ ${_p}oadd*  [628xxx]
-*┃║ ${_p}spamcall*  [8xxx]
-*┃║ ${_p}okick*  [@user]
-*┃║ ${_p}opromote*  [@user]
-*┃║ ${_p}odemote*  [@user]
-*┃║ ${_p}ohidetag*  [@user]
-*┃║ ${_p}setpp*  [Image]
-*┃║ ${_p}on*  [Option]
-*┃║ ${_p}off*  [Option]
-*┃║ ${_p}enable*  [Option]
-*┃║ ${_p}disable*  [Option]
-*┃║ ${_p}bc*  [Text]
-*┃║ ${_p}bcgc*  [Text]
-*┃║ ${_p}setbye*  [Text]
-*┃║ ${_p}setwelcome*  [Text]
-*┃╰══════════════════╯*
-*┣━━━━━━━━━━━━━━━━━━━━┓*
-*┃═══════᳀  INGFO  ᳀═══════*
-*┣━━━━━━━━━━━━━━━━━━━━┛*
-*┃╭══════════════════╮*
-*┃║ Grup: t.me/SGDC_TEAM*
-*┃║ Grup: t.me/DesaConfig*
-*┃║ Channel: t.me/SobatGretong*
-*┃║ Channel: t.me/DesaConfigCh*
-*┃║ Donate: nyawer.co/SGDC*
-*┃║ Donate: saweria.co/AFD11*
-*┃╰══════════════════╯*
-*┣━━━━━━━━━━━━━━━━━━━━┓*
-*┃══════᳀ SGDC - BOT ᳀══════*
-*┗━━━━━━━━━━━━━━━━━━━━┛*
+*┃║ ${_p}afk* _Reason_
+*┃║ ${_p}mediafire* _Url_
+*┃║ ${_p}join* _Url_
+*┃║ ${_p}fetch* _Url_
+*┃║ ${_p}ssweb* _Url_
+*┃║ ${_p}bitly* _Url_
+*┃║ ${_p}cuttly* _Url_
+*┃║ ${_p}tinyurl* _Url_
+*┃║ ${_p}nsfw* _Query_
+*┃║ ${_p}anime* _Query_
+*┃║ ${_p}bc* _Text_
+*┃║ ${_p}bcgc* _Text_
+*┃║ ${_p}run* _Teks_
+*┃║ ${_p}say* _Teks_
+*┃║ ${_p}ttp* _Teks_
+*┃║ ${_p}ttp2* _Teks_
+*┃║ ${_p}ttp3* _Teks_
+*┃║ ${_p}attp* _Teks_
+*┃║ ${_p}attp2* _Teks_
+*┃║ ${_p}style* _Teks_
+*┃║ ${_p}tahta* _Teks_
+*┃║ ${_p}tahta2* _Teks_
+*┃║ ${_p}sgdc* _Teks_
+*┃║ ${_p}nulis* _Teks_
+*┃║ ${_p}nulis2* _Teks_
+*┃║ ${_p}nulis3* _Teks_
+*┃║ ${_p}nulis4* _Teks_
+*┃║ ${_p}halah* _Teks_
+*┃║ ${_p}hilih* _Teks_
+*┃║ ${_p}huluh* _Teks_
+*┃║ ${_p}heleh* _Teks_
+*┃║ ${_p}holoh* _Teks_
+*┃║ ${_p}simi* _Teks_
+*┃║ ${_p}wiki* _Teks_
+*┃║ ${_p}kbbi* _Teks_
+*┃║ ${_p}bokeh* _Teks_
+*┃║ ${_p}qrcode* _Teks_
+*┃║ ${_p}komiku* _Teks_
+*┃║ ${_p}hidetag* _Teks_
+*┃║ ${_p}base64* _Teks_
+*┃║ ${_p}decode64* _Teks_
+*┃║ ${_p}report* _Teks_
+*┃║ ${_p}google* _Teks_
+*┃║ ${_p}gimage* _Teks_
+*┃║ ${_p}jhuruf* _Teks_
+*┃║ ${_p}repeat* _Teks_
+*┃║ ${_p}brainly* _Teks_
+*┃║ ${_p}teksbalik* _Teks_
+*┃║ ${_p}otakudesu* _Teks_
+*┃║ ${_p}randompict* _Teks_
+*┃║ ${_p}dewabatch* _Teks_
+*┃║ ${_p}kusonime* _Teks_
+*┃║ ${_p}pastebin* _Teks_
+*┃║ ${_p}pinterest* _Teks_
+*┃║ ${_p}artimimpi* _Teks_
+*┃║ ${_p}teksbalik* _Teks_
+*┃║ ${_p}tts* _lang Text_
+*┃║ ${_p}dropwater* _Teks_
+*┃║ ${_p}futuristic* _Teks_
+*┃║ ${_p}sand* _Teks_
+*┃║ ${_p}neon* _Teks_
+*┃║ ${_p}zuan* _Teks_
+*┃║ ${_p}burn* _Teks_
+*┃║ ${_p}wolf* _Teks_
+*┃║ ${_p}candy* _Teks_
+*┃║ ${_p}smoke* _Teks_
+*┃║ ${_p}shine* _Teks_
+*┃║ ${_p}night* _Teks_
+*┃║ ${_p}metall* _Teks_
+*┃║ ${_p}graffiti* _Teks_
+*┃║ ${_p}candle* _Teks_
+*┃║ ${_p}naruto* _Teks_
+*┃║ ${_p}paper* _Teks_
+*┃║ ${_p}dark* _Teks_
+*┃║ ${_p}coffe* _Teks_
+*┃║ ${_p}coffe2* _Teks_
+*┃║ ${_p}coffe3* _Teks_
+*┃║ ${_p}matrix* _Teks_
+*┃║ ${_p}silverbutton* _Teks_
+*┃║ ${_p}goldbutton* _Teks_
+*┃║ ${_p}quotemaker* _Teks_
+*┃║ ${_p}setbye* _Text_
+*┃║ ${_p}setwelcome* _Text_
+*┃║ ${_p}8bit* _Text|Text_
+*┃║ ${_p}glitch* _Text|Text_
+*┃║ ${_p}wanted* _Text|Text_
+*┃║ ${_p}photooxy* _Effect|Text_
+*┃║ ${_p}readmore* _Text|Text_
+*┃║ ${_p}maknajadian* _Tgl|Bln|Thn_
+*┃║ ${_p}fitnah* _Text @user Text_
+*┃║ ${_p}igstalk* _Username_
+*┃║ ${_p}githubstalk* _Username
+*┃║ ${_p}twitterstalk* _Username_
+*┃║ ${_p}spamsms* _08xxx|Jmlh_
+*┃║ ${_p}spamcall* _8xxxx_
+*┃║ ${_p}add* _628xxxx_
+*┃║ ${_p}promote* _@user_
+*┃║ ${_p}demote* _@user_
+*┃║ ${_p}kick* _@user_
+*┃║ ${_p}opromote* _@user_
+*┃║ ${_p}odemote* _@user_
+*┃║ ${_p}ohidetag* _@user_
+*┃║ ${_p}okick* _@user_
+*┃║ ${_p}bann* _@user_
+*┃║ ${_p}unbann* _@user_
+*┃║ ${_p}addprem* _@user_
+*┃║ ${_p}delprem* _@user_
+*┃║ ${_p}getpp* _@user_
+*┃║ ${_p}spam* _@user|Teks_
+*┃║ ${_p}santet* _@user|Teks_
+*┃║ ${_p}jadwalsholat* _Daerah_
+*┃║ ${_p}cuaca* _Daerah_
+*┃║ ${_p}waktu* _Daerah_
+*┃║ ${_p}ninja* _Nama_
+*┃║ ${_p}artinama* _Nama_
+*┃║ ${_p}calc* _Angka_
+*┃║ ${_p}lirik* _Judul Lagu_
+*┃║ ${_p}chord* _Judul Lagu_
+*┃║ ${_p}nonton* _Judul Film_
+*┃║ ${_p}enable* _Option_
+*┃║ ${_p}disable* _Option_
+*┃║ ${_p}sticgif* _Image/Reply_ (error)
+*┃║ ${_p}sticker* _Image/Reply_
+*┃║ ${_p}toimg* _Reply Sticker_
+*┃╰═════════════════╯*
+*┃                    [ • SGDC-BOT • ]*
+*┗━━━━━━━━━━━━━━━━━━━┛*
+
+Powered by *SGDC-BOT@^1.5.1*
 `.trim()
- await conn.sendFile(m.chat, img, 'SGDC-BY-M_AFDHAN.jpg', mn, m)
+ await conn.sendFile(m.chat, img, 'SGDC-BOT.jpg', mn, m)
   m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
 }
 
-handler.command = /^(menu|help|helep)$/i
+handler.command = /^(menu|help|start|bot|helep)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
@@ -225,3 +232,13 @@ handler.fail = null
 
 
 module.exports = handler
+
+function clockString(ms) {
+  let h = Math.floor(ms / 3600000)
+  let m = Math.floor(ms / 60000) % 60
+  let s = Math.floor(ms / 1000) % 60
+  console.log({ms,h,m,s})
+  return [h, m, s].map(v => v.toString().padStart(2, 0) ).join(':')
+}
+
+// Muhammad afdhan

@@ -1,10 +1,11 @@
 let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
-
+   
 // Font By MFarelS:V
 let fontPath = 'src/font/Zahraaa.ttf'
 let handler  = async (m, { conn, args }) => {
+ await m.reply('*[ WAIT ]* _Sedang Diproses..._')
   let inputPath ='src/kertas/magernulis1.jpg'
   let outputPath = 'tmp/hasil.jpg'
   let d = new Date
@@ -51,11 +52,10 @@ let handler  = async (m, { conn, args }) => {
   ])
   .on('error', e => conn.reply(m.chat, util.format(e), m))
   .on('exit', () => {
-    conn.sendFile(m.chat, outputPath, 'nulis.jpg', 'Hati² ketahuan:v', m)
+    conn.sendFile(m.chat, outputPath, 'SGDC-BOT.jpg', '*[ • SGDC-BOT • ]*', m)
   })
 }
-handler.help = ['n'].map(v => v + 'ulis <teks>')
-handler.tags = ['tools']
+
 handler.command = /^nulis$/i
 handler.owner = false
 handler.mods = false

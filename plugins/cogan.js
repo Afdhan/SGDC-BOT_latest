@@ -4,25 +4,23 @@ let handler = async(m, { conn, text }) => {
 let user = global.DATABASE._data.users[m.sender]
 if (user.prems) {
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-    let items = ["ullzang girl", "cewe cantik", "hijab cantik", "korean girl", "remaja cantik", "cewek korea", "cewek jepang"];
-    let cewe = items[Math.floor(Math.random() * items.length)];
-    let url = "https://api.fdci.se/rep.php?gambar=" + cewe;
+    let items = ["cowok idaman", "cowo ganteng", "cowok personil bts", "korean boy", "artis cowok korea", "cowok korea", "cowok jepang"];
+    let cowo = items[Math.floor(Math.random() * items.length)];
+    let url = "https://api.fdci.se/rep.php?gambar=" + cowo;
     let str = `
-Jangan Ngaceng :v
-
-*[ • SGDC-BOT • ]*
+ *[ • SGDC-BOT • ]*
 `.trim()
     
     axios.get(url)
       .then((result) => {
         let b = JSON.parse(JSON.stringify(result.data));
-        let cewek =  b[Math.floor(Math.random() * b.length)];
-        imageToBase64(cewek)
+        let cowok =  b[Math.floor(Math.random() * b.length)];
+        imageToBase64(cowok)
         .then(
             (response) => {
 	let buf = Buffer.from(response, 'base64');
 
-    conn.sendFile(m.chat, buf, 'CIWEY-SGDC.jpg', str, m)
+    conn.sendFile(m.chat, buf, 'JanganGay.jpg', str, m)
             }
         )
         .catch(
@@ -35,7 +33,7 @@ Jangan Ngaceng :v
   } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
-handler.command = /^(cecan|ciwi|cewek)$/i
+handler.command = /^(cogan|cowok)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = true

@@ -1,4 +1,6 @@
 let handler = async(m, { conn, text }) => {
+let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {
     let [l, r] = text.split `|`
 
     if (!l) return conn.reply(m.chat, 'Silahkan masukan text1', m)
@@ -9,16 +11,11 @@ let handler = async(m, { conn, text }) => {
 
     let link = 'https://arugaz.my.id/api/textpro/glitchtext?text1=' + l + '&text2=' + r
 
-    conn.sendFile(m.chat, link, 'glitchtext.png', 'Nihh Cuk', m)
+    conn.sendFile(m.chat, link, 'glitchtext.png', '*[ • SGDC-BOT • ]*', m)
+   } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
-handler.help = ['glitchtext', 'glitch'].map(v => v + ' <teks|teks>')
-handler.tags = ['sticker']
-handler.command = /^(glitchtext|glitch)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
+
+handler.command = /^(glitch2|glitchtext)$/i
 
 handler.admin = false
 handler.botAdmin = false

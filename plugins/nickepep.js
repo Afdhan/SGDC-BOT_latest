@@ -1,15 +1,15 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
 
-    if (!text) return conn.reply(m.chat, 'Masukkan Judul!', m)
+//    if (!text) return conn.reply(m.chat, 'Masukkan Judul!', m)
 
   await m.reply('*[ WAIT ]* _Searching..._')
-axios.get(`https://st4rz.herokuapp.com/api/chord?q=${text}`).then((res) => {
+axios.get(`https://api.zeks.xyz/api/nickepep?apikey=apivinz`).then((res) => {
     let hasil = `${res.data.result}\n\n*[ • SGDC-BOT • ]*`
 conn.reply(m.chat, hasil, m)
 	})
 }
-handler.command = /^(chord)$/i
+handler.command = /^(nickff|nickepep|nikepep|nikff)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
