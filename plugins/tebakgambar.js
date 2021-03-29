@@ -20,7 +20,7 @@ Ketik ${usedPrefix}hint untuk menjawab
     `.trim()
     conn.tebakgambar[id] = [
       await conn.sendFile(m.chat, json.url, 'tebakgambar.jpg', caption, m),
-      json, poin,
+      json,
       setTimeout(() => {
         if (conn.tebakgambar[id]) conn.reply(m.chat, `_Waktu habis! Jawabannya adalah *${json.jawaban}*_`, conn.tebakgambar[id][0])
         delete conn.tebakgambar[id]
