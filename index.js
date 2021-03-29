@@ -4,7 +4,7 @@ let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
-CFonts.say('SGDC-TEAM', {
+CFonts.say('SGDC-BOT', {
   font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']
@@ -45,7 +45,7 @@ function start(file) {
       start(file)
     })
   })
-  // console.log(p)
+
 }
 
 start('dhans.js')
