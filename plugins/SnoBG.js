@@ -91,7 +91,7 @@ if (user.prems) {
   } catch (e) {
     console.log(e)
   }
-    } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*'
+    } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 handler.command = /^(sgif2|snobg)$/i
 
