@@ -8,7 +8,7 @@ let handler = async (m, { conn, text}) => {
     let user = global.DATABASE._data.users[m.sender]
     user.prem = true
     var nomor = m.sender
-    m.reply(`*_Berhasil Menambahkan User!_*\n*Nomor : https://wa.me/${nomor.split("@s.whatsapp.net")[0]}*`)
+    m.reply(`*_Berhasil Jadi User Premium!_*\n*Nomor : https://wa.me/${nomor.split("@s.whatsapp.net")[0]}*`)
 
 }
 
