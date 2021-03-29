@@ -5,12 +5,11 @@ let handler = async(m, { conn, text }) => {
 
 	axios.get(`https://tobz-api.herokuapp.com/api/spamcall?no=${text}&apikey=BotWeA`).then ((res) => {
 	 	let hasil = `${res.data.logs}`
-
-    conn.reply(m.chat, hasil, m)
+m.reply('*FITUR NONAKTIF')
+  //  conn.reply(m.chat, hasil, m)
 	})
 }
-handler.help = ['spamcall'].map(v => v + ' <no hp>')
-handler.tags = ['tools']
+
 handler.command = /^(spamcall)$/i
 handler.owner = true
 handler.mods = false

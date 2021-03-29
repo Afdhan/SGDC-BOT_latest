@@ -7,8 +7,7 @@ let handler = async (m, { conn, command, args }) => {
   conn.sendFile(m.chat, ss, 'screenshot.png', url, m)
   conn.reply(m.chat, '*[ WAIT ]* *_Sedang Di Proses..._*', m)
 }
-handler.help = ['ss', 'ssf'].map(v => v + ' <url>')
-handler.tags = ['internet']
+
 handler.command = /^(ssweb)$/i
 handler.owner = false
 handler.mods = false

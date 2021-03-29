@@ -7,8 +7,12 @@ let [tgl, bln, th] = text.split `|`
     if (!th) return conn.reply(m.chat, 'Tahun tidak boleh kosong', m)
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-axios.get(`https://videfikri.com/api/primbon/tgljadian/?tgl=${tgl}&bln=${bln}&thn=${th}`).then((res) => {
-    let hasil = `${res.data.result.hasil}`
+  axios.get(`https://videfikri.com/api/primbon/tgljadian/?tgl=${tgl}&bln=${bln}&thn=${th}`).then((res) => {
+    let hasil = `
+${res.data.result.hasil}
+
+*[ • SGDC-BOT • ]*
+`.trim()
 conn.reply(m.chat, hasil, m)
 	})
 }

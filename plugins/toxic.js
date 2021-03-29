@@ -9,7 +9,7 @@ handler.before = m => {
     m.reply(`
 *╭════[ ANTI BADWORD ]════╮*
 
-*_Jangan Kasal Mbah !!!_(
+*_Jangan Kasar Mbah !!!_(
 
 *[ • SGDC-BOT • ]*
 `.trim())

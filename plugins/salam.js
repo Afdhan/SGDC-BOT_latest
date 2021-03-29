@@ -4,7 +4,7 @@ let { spawn } = require('child_process')
 
 let handler = async (m, { conn, args }) => m
 
-let salam = /^(assalamualaikum|asalamualaikum|assalamualikum|salamualaikum|salam)$/i
+let salam = /^(assalamualaikum|asalamualaikum|assalamualikum|salamualaikum|salam|assallamuallaikum)$/i
 handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]

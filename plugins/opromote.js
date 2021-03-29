@@ -4,7 +4,7 @@ let handler = async (m, { conn, args }) => {
   conn.reply(m.chat, '*_Berhasil Menambahkan Beliau Sebagai Admin!_*', m)
 }
 
-handler.command = /^(opromote|oadmin|o\^)$/i
+handler.command = /^(opromote)$/i
 handler.owner = true
 handler.mods = false
 handler.premium = false

@@ -1,8 +1,7 @@
 let handler  = async (m, { conn }) => {
-  conn.reply(m.chat,`“${pickRandom(global.puisi)}”`, m)
+  conn.reply(m.chat,`${pickRandom(global.puisi)}\n\n*[ • SGDC-BOT • ]*`, m)
 }
-handler.help = ['puisi','syair']
-handler.tags = ['quotes']
+
 handler.command = /^(puitis|puisi|syair)$/i
 handler.owner = false
 handler.mods = false
@@ -34,3 +33,4 @@ global.puisi = [
 'Sebutir Debu\n\nAku hanya sebutir debu yang memburamkan kilau tak pantas berada diatas suci tak bisa menghindar saat angin hembuskan aku untukmu, lalu terbang Aq hanya kecewa bagai hampa mengharap udara, atau debu ditengah gersang mengharap hujan hentikan angin membawaku terbang.',
 'Kesabaran\n\nGubung bambu istana baginya, Perut yang selalu bernyanyi dalam hidupnya, Walau pahit telan untuk manis, Bersyukur kunci agar tak menangis, Melangkah kaki ini hingga membentuk garis pecahan, Duri-duri selalu menghadang raga, Wajah menahan kesakitan, Menyebut namaNya dalam jiwa.',
 ]
+//  MUHAMMAD AFDHAN

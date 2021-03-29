@@ -1,5 +1,6 @@
 let handler = async (m, { conn, text }) => {
-	
+let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {
     if (!text) return conn.reply(m.chat, 'Harap Masukan Teks yang akan direpeat!', m)
 	
   conn.reply(m.chat, `
@@ -1004,18 +1005,11 @@ ${text}
 ${text}
 ${text}
 `.trim(), m)
+  } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
-handler.help = ['repeat <teks>']
-handler.tags = ['tools']
-handler.command = /^(repeat)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
 
-handler.admin = false
-handler.botAdmin = false
+handler.command = /^(repeat)$/i
+
 
 handler.fail = null
 handler.limit = false

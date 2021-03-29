@@ -4,15 +4,10 @@ let path = require('path')
 let { spawn } = require('child_process')
 
 let handler  = async(m, { conn, text }) => {
-//let d = new Date
- // let tgl = d.toLocaleDateString('id-Id')
- // let hari = d.toLocaleDateString('id-Id', { weekday: 'long' })
- // let [teks, wm] = text.split('|')
-  //let mm = [ • SGDC-BOT • ]
- await m.reply('*[ WAIT ]* _Sedang Di Proses..._')
+ await m.reply('*[ WAIT ]* _Sedang Diproses..._')
   let quot = 'https://api.xteam.xyz/quotemaker?text=' + text + '&wm=SGDC-BOT&APIKEY=abba3220ce4a347f'
-conn.sendFile(m.chat, quot, 'SGDC.jpg', '*[ • SGDC-BOT • ]*', m)
-//m.reply('Apikeynya gaada mbah!')
+conn.sendFile(m.chat, quot, 'SGDC-BOT.jpg', '*[ • SGDC-BOT • ]*', m)
+
  }
 
 handler.command = /^(quote(maker)?)$/i
@@ -27,5 +22,5 @@ handler.botAdmin = false
 
 handler.fail = null
 
-
+//  MUHAMMAD AFDHAN
 module.exports = handler

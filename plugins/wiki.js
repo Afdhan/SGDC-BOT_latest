@@ -1,11 +1,17 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
 
-    if (!text) return conn.reply(m.chat, 'Silahkan masukan kata kunci', m)
+    if (!text) return conn.reply(m.chat, 'Apa yang mau dicari?', m)
 
   await m.reply('*[ WAIT ]* _Searching..._')
 axios.get(`https://st4rz.herokuapp.com/api/wiki?q=${text}`).then((res) => {
-    let hasil = `*Menurut Wikipedia:*\n\n${res.data.result}`
+    let hasil = `
+*WIKIPEDIA SEARCH*
+
+${res.data.result}
+
+*[ • SGDC-BOT • ]*
+`.trim()
 conn.reply(m.chat, hasil, m)
 	})
 }
@@ -20,6 +26,6 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-
+//  MUHAMMAD AFDHAN
 
 module.exports = handler

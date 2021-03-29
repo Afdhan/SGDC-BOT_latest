@@ -5,8 +5,8 @@ let handler = async(m, { conn, text }) => {
 
 	axios.get(`https://tobz-api.herokuapp.com/api/jamdunia?lokasi=${text}&apikey=BotWeA`).then ((res) => {
 	 	let hasil = `[[ Waktu Daerah *${text}* ]]\n\nJam: ${res.data.time}\nTanggal: ${res.data.date}\nInfo: ${res.data.title}`
-
-    conn.reply(m.chat, hasil, m)
+m.reply('*FITUR NONAKTIF!*')
+//    conn.reply(m.chat, hasil, m)
 	})
 }
 

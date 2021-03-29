@@ -1,7 +1,8 @@
 let imageToBase64 = require('image-to-base64');
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
-
+let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {
  if (!text) return conn.reply(m.chat, 'Masukkan Username Twitter', m)
   await m.reply('*[ WAIT ]* _Searching..._')
 
@@ -17,19 +18,20 @@ let handler = async(m, { conn, text }) => {
 *Followers:* ${res.data.result.followers}
 *Following:* ${res.data.result.following}
 *Tweets:* ${res.data.result.tweets}
+
+*[ • SGDC-BOT • ]*
 `.trim()
      conn.sendFile(m.chat, buf, 'SGDC.png', str, m)
         })
     })
+  } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
 handler.command = /^(twitter(stalk)?)$/i
 handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
 
+handler.private = false
+//  MUHAMMAD AFDHAN
 handler.admin = false
 handler.botAdmin = false
 

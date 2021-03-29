@@ -1,17 +1,18 @@
 const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async(m, { conn, text }) => {
+let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {
 let [nmr, psn] = text.split `|`
-
-    if (!nmr) return conn.reply(m.chat, 'Silahkan masukan nomor whatsapp yang ingin dispam', m)
-    if (!psn) return conn.reply(m.chat, 'Silahkan masukan pesannya', m)
+    if (!nmr) return conn.reply(m.chat, 'Siapa yang mau di spam?', m)
+    if (!psn) return conn.reply(m.chat, 'Silahkan masukan teks pesan', m)
     if (text > 500) return conn.reply(m.chat, 'Teks Kepanjangan!', m)
 
-    let kr = `${nmr}`
- //   var nmor = m.mentionedJid[0]
+    var kn = m.mentionedJid[0]
+    let kr = kn.split("@s.whatsapp.net")[0]
     var nomr = m.sender
-    let s1 = `*「 WhatsApp Spammer 」*\n\n*Dari:* wa.me/${nomr.split("@s.whatsapp.net")[0]}\n*Pesan:* ${psn}\n\n*[ • SGDC-BOT • ]*`
-    let s2 = `*「 WhatsApp Spammer 」*\n\n*Dari:* wa.me/${nomr.split("@s.whatsapp.net")[0]}\n*Pesan:* ${psn}\n\n*[ • SGDC-BOT • ]*`
+    let ss = `*「 WhatsApp Spammer 」*\n\n*Dari:* wa.me/${nomr.split("@s.whatsapp.net")[0]}\n*Pesan:* ${psn}\n\n*[ • SGDC-BOT • ]*`
+    let sn = `*「 WhatsApp Spammer 」*\n\n*Dari:* wa.me/${nomr.split("@s.whatsapp.net")[0]}\n*Pesan:* ${psn}\n\n*[ • SGDC-BOT • ]*`
     let s3 = `*「 WhatsApp Spammer 」*\n\n*Dari:* wa.me/${nomr.split("@s.whatsapp.net")[0]}\n*Pesan:* ${psn}\n\n*[ • SGDC-BOT • ]*`
     let s4 = `*「 WhatsApp Spammer 」*\n\n*Dari:* wa.me/${nomr.split("@s.whatsapp.net")[0]}\n*Pesan:* ${psn}\n\n*[ • SGDC-BOT • ]*`
     let s5 = `*「 WhatsApp Spammer 」*\n\n*Dari:* wa.me/${nomr.split("@s.whatsapp.net")[0]}\n*Pesan:* ${psn}\n\n*[ • SGDC-BOT • ]*`
@@ -27,8 +28,8 @@ let [nmr, psn] = text.split `|`
     let s15 = `*「 WhatsApp Spammer 」*\n\n*Dari:* wa.me/${nomr.split("@s.whatsapp.net")[0]}\n*Pesan:* ${psn}\n\n*[ • SGDC-BOT • ]*`
 
 
-    conn.sendMessage(kr + '@s.whatsapp.net', s1, MessageType.text)                                                                                                                                                                                                          conn.sendMessage(korban + '@s.whatsapp.net', spam2, MessageType.text)
-    conn.sendMessage(kr + '@s.whatsapp.net', s2, MessageType.text)
+   // conn.sendMessage(kr + '@s.whatsapp.net', ss, MessageType.text)                                                                                                                                                                                                          conn.sendMessage(korban + '@s.whatsapp.net', spam2, MessageType.text)
+    conn.sendMessage(kr + '@s.whatsapp.net', sn, MessageType.text)
     conn.sendMessage(kr + '@s.whatsapp.net', s3, MessageType.text)
     conn.sendMessage(kr + '@s.whatsapp.net', s4, MessageType.text)
     conn.sendMessage(kr + '@s.whatsapp.net', s5, MessageType.text)
@@ -42,22 +43,16 @@ let [nmr, psn] = text.split `|`
     conn.sendMessage(kr + '@s.whatsapp.net', s13, MessageType.text)
     conn.sendMessage(kr + '@s.whatsapp.net', s14, MessageType.text)
     conn.sendMessage(kr + '@s.whatsapp.net', s15, MessageType.text)
-
+    conn.sendMessage(kr + '@s.whatsapp.net', ss, MessageType.text)
 
 
     let logs = `_Berhasil mengirim pesan spam ke nomor ${kr} sebanyak 15 kali_`
     conn.reply(m.chat, logs, m)
+    } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
 handler.command = /^(spam|spamwa)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
 
-handler.admin = false
-handler.botAdmin = false
 
 handler.fail = null
 handler.limit = false
