@@ -26,7 +26,7 @@ module.exports = {
           if (!isNumber(user.afk)) user.afk = -1
           if (!'afkReason' in user) user.afkReason = ''
           if (!'banned' in user) user.banned = false
-          if (!'prem' in user) user.prem = false
+          if (!'prems' in user) user.prem = false
         } else global.DATABASE._data.users[m.sender] = {
           exp: 0,
           limit: 10,
@@ -38,7 +38,7 @@ module.exports = {
           afk: -1,
           afkReason: '',
           banned: false,
-          prem: false,
+          prems: false,
         }
     
         let chat
