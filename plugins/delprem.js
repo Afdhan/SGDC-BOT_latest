@@ -6,7 +6,7 @@ let handler = async (m, { conn, text}) => {
     else who = m.chat
     if (!who) throw '_Tag salah satu mbah!_'
     let users = global.DATABASE._data.users
-    users[who].prems = false
+    users[who].prem = false
     var nomor = m.mentionedJid[0]
     m.reply(`*_Berhasil Menghapus User!_*\n*Nomor : https://wa.me/${nomor.split("@s.whatsapp.net")[0]}*`)
 
