@@ -22,7 +22,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
     })
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
-    let img ='src/SGDC_BOT.jpg'
+   // let img ='src/SGDC_BOT.jpg'
     let mn = `
 *━━━━━━━━━━━━━━━━━━━━━*
 _Hey *${name}* you will using *SGDC-BOT!*_
@@ -216,7 +216,7 @@ _if you violate, your account will be banned permanently!_
 
 Powered by *SGDC-BOT@^1.5.1*
 `.trim()
- await conn.sendFile(m.chat, img, 'SGDC-BOT.jpg', mn, m)
+ await conn.sendFile(m.chat, mn, m)
   m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
 }
 
