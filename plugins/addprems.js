@@ -6,7 +6,7 @@ let handler = async (m, { conn, text}) => {
     else who = m.chat
     if (!who) throw '_Tag salah satu mbah!_'*/
     let user = global.DATABASE._data.users[m.sender]
-    user.prem = true
+    user.prems = true
     var nomor = m.sender
     m.reply(`*_Berhasil Jadi User Premium!_*\n*Nomor : https://wa.me/${nomor.split("@s.whatsapp.net")[0]}*`)
 
