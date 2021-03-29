@@ -1,19 +1,19 @@
 let { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, text}) => {
-    if (!text) throw '_Usernya Mana?_'
+    /*if (!text) throw '_Usernya Mana?_'
     let who
     if (m.isGroup) who = m.mentionedJid[0]
     else who = m.chat
-    if (!who) throw '_Tag salah satu mbah!_'
+    if (!who) throw '_Tag salah satu mbah!_'*/
     let user = global.DATABASE._data.users[m.mentionedJid[0]]
     user.prem = true
-    var nomor = m.mentionedJid[0]
+    var nomor = m.sender
     m.reply(`*_Berhasil Menambahkan User!_*\n*Nomor : https://wa.me/${nomor.split("@s.whatsapp.net")[0]}*`)
 
 }
 
 handler.command = /^addprem$/i
-handler.owner = true
+handler.owner = false
 handler.mods = false
 handler.premium = false
 handler.group = false
