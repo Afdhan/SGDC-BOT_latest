@@ -4,7 +4,7 @@ let path = require('path')
 let { spawn } = require('child_process')
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
     let name = conn.getName(m.sender)
-    let versi = 1.5.1
+  //  let versi = 1.5.1
     let d = new Date
     let locale = 'id'
     let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
@@ -42,7 +42,7 @@ _if you violate, your account will be banned permanently!_
 *┃║ Date :          ${week}, ${date}*
 *┃║ Time :         ${time}*
 *┃║ Uptime :      ${uptime}*
-*┃║ Version :     ${versi}*
+*┃║ Version :     1.5.1*
 *┃║ Prefix :       「 ${_p} 」*
 *┃╰═════════════════╯*
 *┃                 MENU ON SGDC-BOT*
@@ -205,6 +205,8 @@ _if you violate, your account will be banned permanently!_
 *┃║ ${_p}nonton* _Judul Film_
 *┃║ ${_p}enable* _Option_
 *┃║ ${_p}disable* _Option_
+*┃║ ${_p}snobg* _Image/Reply_
+*┃║ ${_p}sgif2* _Image/Reply_
 *┃║ ${_p}sticgif* _Image/Reply_ (error)
 *┃║ ${_p}sticker* _Image/Reply_
 *┃║ ${_p}toimg* _Reply Sticker_
