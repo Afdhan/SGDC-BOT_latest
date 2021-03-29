@@ -10,8 +10,10 @@ handler.before = m => {
   let chat = global.DATABASE.data.chats[m.chat]
   let isASalam = assalam.exec(m.text)
   let vnn ='src/ASSALAM.opus'
-  if (isASalam) conn.sendFile(m.chat, vnn, 'Assalam.opus','salam', m)
+  if (isASalam) conn.sendFile(m.chat, vnn, 'Assaalamualaikum.opus','salam', m)
   return true
 }
 
 module.exports = handler
+
+// MUHAMMAD AFDHAN

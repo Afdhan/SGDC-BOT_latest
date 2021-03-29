@@ -4,7 +4,7 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, '*Masukkan Text!*', m)
 
 	axios.get(`https://api.terhambar.com/bpk?kata=${text}`).then ((res) => {
-	 	let hasil = `${res.data.text}`
+	 	let hasil = `${res.data.text}\n\n*[ • SGDC-BOT • ]*`
 
     conn.reply(m.chat, hasil, m)
 	})
@@ -21,7 +21,6 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.exp = 0
-handler.limit = false
+
 
 module.exports = handler

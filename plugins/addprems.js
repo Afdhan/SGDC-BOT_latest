@@ -1,20 +1,18 @@
-const { MessageType } = require('@adiwajshing/baileys')
-
-let handler = async(m, { conn, text }) => {
-let who
-  if (m.isGroup) who = m.mentionedJid[0]
-  else who = m.chat
-  if (!who) throw 'Tag salah satu lah,dan masukkan nomor untuk di verivikasi !'
-  let participants = m.mentionedJid[0]
-  if (participants.map(v=>v.jid).includes(global.conn.user.jid)) {
-    global.DATABASE._data.chats[m.chat].premium = true
-  var nomor = m.mentionedJid[0]
+let { MessageType } = require('@adiwajshing/baileys')
+let handler = async (m, { conn, text}) => {
+    if (!text) throw '_Usernya Mana?_'
+    let who
+    if (m.isGroup) who = m.mentionedJid[0]
+    else who = m.chat
+    if (!who) throw '_Tag salah satu mbah!_'
+    let users = global.DATABASE._data.users
+    users[who].prems = true
+    var nomor = m.mentionedJid[0]
     m.reply(`*_Berhasil Menambahkan User!_*\n*Nomor : https://wa.me/${nomor.split("@s.whatsapp.net")[0]}*`)
-   } else m.reply('Ada nomor host disini...')
+
 }
-  
+
 handler.command = /^addprem$/i
-handler.rowner = false
 handler.owner = true
 handler.mods = false
 handler.premium = false

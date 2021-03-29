@@ -5,7 +5,13 @@ let handler = async(m, { conn, text }) => {
 
   await m.reply('Searching...')
 	axios.get(`https://videfikri.com/api/primbon/artimimpi/?mimpi=${text}`).then ((res) => {
-	 	let hasil = `*TAFSIR MIMPI*\n\n${res.data.result.artimimpi}`
+	 	let hasil = `
+*TAFSIR MIMPI*
+
+${res.data.result.artimimpi}
+
+*[ • SGDC-BOT • ]*
+`.trim()
 
     conn.reply(m.chat, hasil, m)
 	})
