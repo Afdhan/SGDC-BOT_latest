@@ -38,7 +38,7 @@ module.exports = {
           afk: -1,
           afkReason: '',
           banned: false,
-          prems: false
+          prems: false,
         }
     
         let chat
