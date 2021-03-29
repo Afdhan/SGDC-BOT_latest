@@ -15,8 +15,9 @@ let handler  = async (m, { conn, usedPrefix }) => {
     let caption = `
 Apa Hayoo :v
 
-Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik ${usedPrefix}hint untuk menjawab
+Timeout *${(timeout / 1000).toFixed(2)} Detik!*
+
+*[ • SGDC-BOT • ]*
     `.trim()
     conn.tebakgambar[id] = [
       await conn.sendFile(m.chat, json.url, 'tebakgambar.jpg', caption, m),
