@@ -3,10 +3,11 @@ let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
+    let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
+    let bname = package.name
+    let vers = package.version
     let name = conn.getName(m.sender)
-    let bname = 'SGDC-BOT'
-    let vers = '1.5.1'
-    let desc = 'Powered by *SGDC-BOT@^1.5.1*'
+    let desc = 'Powered by'
     let d = new Date
     let locale = 'id'
     let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
@@ -218,7 +219,7 @@ _if you violate, your account will be banned permanently!_
 *┃                    [ • SGDC-BOT • ]*
 *┗━━━━━━━━━━━━━━━━━━━┛*
 
-${desc}
+${desc} *${bname}@^${vers}*
 `.trim()
  await conn.reply(m.chat, mn, m)
   m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
