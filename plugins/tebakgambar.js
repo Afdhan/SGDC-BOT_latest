@@ -21,7 +21,7 @@ _Timeout:_ *${(timeout / 1000).toFixed(2)} Detik!*
 *[ • SGDC-BOT • ]*
     `.trim()
     conn.tebakgambar[id] = [
-      await conn.sendFile(m.chat, json.url, 'tebakgambar.jpg', caption, m),
+      await conn.sendFile(m.chat, json.url, 'SGDC-TG.jpg', caption, m),
       json,
       setTimeout(() => {
         if (conn.tebakgambar[id]) conn.reply(m.chat, `_Waktu habis! Jawabannya adalah *${json.jawaban}*_`, conn.tebakgambar[id][0])
