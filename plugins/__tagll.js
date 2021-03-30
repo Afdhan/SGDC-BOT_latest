@@ -2,7 +2,7 @@ let handler = async (m, { conn, text }) => {
 
 let mem = (await conn.groupMetadata(m.chat)).participants.map(u => u.jid)
 //let siapa = member[Math.floor(Math.random() * member.length)]
-let jawab = `@${mem.replace(/@.+/, '')}\n`
+let jawab = `@${mem.replace("@s.whatsapp.net")}\n`
 
     let mentionedJid = [mem]
     conn.reply(m.chat, jawab, m, { contextInfo: { mentionedJid }})
