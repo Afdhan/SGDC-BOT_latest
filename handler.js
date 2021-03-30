@@ -26,7 +26,6 @@ module.exports = {
           if (!isNumber(user.afk)) user.afk = -1
           if (!'afkReason' in user) user.afkReason = ''
           if (!'banned' in user) user.banned = false
-          if (!'prems' in user) user.prem = false
         } else global.DATABASE._data.users[m.sender] = {
           exp: 0,
           limit: 10,
@@ -38,7 +37,6 @@ module.exports = {
           afk: -1,
           afkReason: '',
           banned: false,
-          prems: false,
         }
     
         let chat
@@ -71,7 +69,7 @@ module.exports = {
     	let usedPrefix
       let _user = global.DATABASE.data && global.DATABASE.data.users && global.DATABASE.data.users[m.sender]
 
-      let isROwner = [global.conn.user.jid/*, ...global.owner*/].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+      let isROwner = [global.conn.user.jid, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
       let isOwner = isROwner || m.fromMe
       let isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
       let isPrems = isOwner || global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
@@ -313,12 +311,12 @@ global.dfail = (type, m, conn) => {
   let msg = {
     //rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
     owner: '_*Command Khusus Owner SGDC-BOT*_',
-    mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
+    mods: '_*Command Khusus Moderator SGDC-BOT*_',
     premium: '*Command Premium!* _Hubungi Owner jika ingin jadi user premium_!',
-    group: 'Perintah ini hanya dapat digunakan di grup!',
-    private: '*Command ini hanya dapat digunakan di Chat Pribadi!*',
+    group: '_*Command Khusus Di Group!*_',
+    private: '_*Command Khusus Di Chat Pribadi!*_',
     admin: '_Command ini hanya untuk *Admin* grup!_',
-    botAdmin: 'BOT harus jadi *Admin* untuk menggunakan Command ini!',
+    botAdmin: '*SGDC-BOT* harus jadi *Admin* untuk menggunakan Command ini!',
    // unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*'
   }[type]
   if (msg) return m.reply(msg)
