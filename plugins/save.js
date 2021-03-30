@@ -4,7 +4,7 @@ let handler = function (m, { conn, text }) {
 var no = m.sender
 let nom = no.split("@s.whatsapp.net")[0]
     this.sendContact(m.chat, `${nom}`, `${text}`, m)
-
+}
 
 handler.command = /^(save(me)?)$/i
 handler.owner = false
