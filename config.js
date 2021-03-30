@@ -11,7 +11,7 @@ global.APIKeys = {
   'https://api.xteam.xyz': 'abba3220ce4a347f'
 }
 
-
+global.rowner = ['6282252655313']
 let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
