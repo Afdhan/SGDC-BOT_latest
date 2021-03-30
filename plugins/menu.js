@@ -205,7 +205,12 @@ _if you violate, your account will be banned permanently!_
 *┃║ ${_p}save* _Nama_
 *┃║ ${_p}ninja* _Nama_
 *┃║ ${_p}artinama* _Nama_
+*┃║ ${_p}infomotor* _Nama Motor_
+*┃║ ${_p}infomobil* _Nama Mobil_
+*┃║ ${_p}infoalamat* _Alamat_
+*┃║ ${_p}whois* _IP Adress_
 *┃║ ${_p}calc* _Angka_
+*┃║ ${_p}quran* _Nomor Surah_
 *┃║ ${_p}lirik* _Judul Lagu_
 *┃║ ${_p}chord* _Judul Lagu_
 *┃║ ${_p}nonton* _Judul Film_
