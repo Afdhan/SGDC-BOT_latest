@@ -5,7 +5,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃                   SGDC-BOT@^1.5.1*
 *┃*
 *┃╭═════════════════╮*
-*┃║                GRETONG MENU*
+*┃                 GRETONG MENU*
 *┃╰═════════════════╯*
 *┃                   Configuration (HC)*
 *┃╭═════════════════╮*
