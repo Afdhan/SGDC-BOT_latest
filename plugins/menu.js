@@ -4,7 +4,7 @@ let path = require('path')
 let { spawn } = require('child_process')
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
     let name = conn.getName(m.sender)
-    let bname = 'SGDC-BOT
+    let bname = 'SGDC-BOT'
     let vers = '1.5.1'
     let desc = 'Powered by *SGDC-BOT@^1.5.1*'
     let d = new Date
