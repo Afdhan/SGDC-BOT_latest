@@ -3,7 +3,7 @@ let handler = async (m, { conn, args }) => {
  conn.groupLeave(m.chat)
 }
 
-handler.command = /^leave$/i
+handler.command = /^(leave)$/i
 handler.owner = true
 
 handler.fail = null
