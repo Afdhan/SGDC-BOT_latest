@@ -120,6 +120,7 @@ _if you violate, your account will be banned permanently!_
 *┃║ ${_p}simi* _Teks_
 *┃║ ${_p}wiki* _Teks_
 *┃║ ${_p}kbbi* _Teks_
+*┃║ ${_p}siapa* _Teks_
 *┃║ ${_p}bokeh* _Teks_
 *┃║ ${_p}qrcode* _Teks_
 *┃║ ${_p}komiku* _Teks_
@@ -198,6 +199,7 @@ _if you violate, your account will be banned permanently!_
 *┃║ ${_p}jadwalsholat* _Daerah_
 *┃║ ${_p}cuaca* _Daerah_
 *┃║ ${_p}waktu* _Daerah_
+*┃║ ${_p}save* _Nama_
 *┃║ ${_p}ninja* _Nama_
 *┃║ ${_p}artinama* _Nama_
 *┃║ ${_p}calc* _Angka_
