@@ -13,9 +13,10 @@ let handler  = async (m, { conn, usedPrefix }) => {
     let json = await res.json()
     if (!json.status) throw json
     let caption = `
-Apa Hayoo :v
+_Apa Hayoo? :v_
 
-Timeout *${(timeout / 1000).toFixed(2)} Detik!*
+Silahkan Dijawab!
+_Timeout:_ *${(timeout / 1000).toFixed(2)} Detik!*
 
 *[ • SGDC-BOT • ]*
     `.trim()
@@ -31,7 +32,7 @@ Timeout *${(timeout / 1000).toFixed(2)} Detik!*
 handler.command = /^(tebakgambar)$/i
 handler.owner = false
 handler.mods = false
-handler.premium = false
+handler.premium = true
 handler.group = false
 handler.private = false
 
