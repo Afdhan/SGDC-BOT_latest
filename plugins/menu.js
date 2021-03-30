@@ -6,6 +6,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
     let bname = package.name
     let vers = package.version
+    let dsci = package.description
     let name = conn.getName(m.sender)
     let desc = 'Powered by'
     let d = new Date
@@ -220,6 +221,7 @@ _if you violate, your account will be banned permanently!_
 *┗━━━━━━━━━━━━━━━━━━━┛*
 
 ${desc} *${bname}@^${vers}*
+${dsci}
 `.trim()
  await conn.reply(m.chat, mn, m)
   m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
