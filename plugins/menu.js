@@ -4,6 +4,7 @@ let path = require('path')
 let { spawn } = require('child_process')
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
     let name = conn.getName(m.sender)
+    let bname = 'SGDC-BOT
     let vers = '1.5.1'
     let desc = 'Powered by *SGDC-BOT@^1.5.1*'
     let d = new Date
@@ -26,9 +27,9 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
    // let img ='src/SGDC_BOT.jpg'
     let mn = `
 *━━━━━━━━━━━━━━━━━━━━━*
-_Hey *${name}* you will using *SGDC-BOT!*_
+_Hey *${name}* you will using *${bname}!*_
 _before you using this features,_ 
-_please follow the rules *SGDC-BOT.*_
+_please follow the rules *${bname}.*_
 _if you violate, your account will be banned permanently!_
 
 *Rules:*
