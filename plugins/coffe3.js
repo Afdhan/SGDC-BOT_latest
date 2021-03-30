@@ -1,6 +1,6 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
-/,let user = global.DATABASE._data.users[m.sender]
+/*let user = global.DATABASE._data.users[m.sender]
 if (user.prems) {*/
     if (!text) return conn.reply(m.chat, 'Silahkan Masukan Teks!', m)
 
