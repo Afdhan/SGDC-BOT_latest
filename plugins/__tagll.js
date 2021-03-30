@@ -3,7 +3,7 @@ let handler = async (m, { conn, text }) => {
 let member = (await conn.groupMetadata(m.chat)).participants.map(u => u.jid)
 let tt = member.length
 let jawab = `
-*Siapa ${text}? Jawabannya si* @${tt.replace(/@.+/, '')}\n
+*Siapa ${text}? Jawabannya si* @${member[tt].replace(/@.+/, '')}\n
 `.trim()
 
     let mentionedJid = [tt]
