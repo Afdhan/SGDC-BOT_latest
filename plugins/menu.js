@@ -221,6 +221,7 @@ _if you violate, your account will be banned permanently!_
 *┗━━━━━━━━━━━━━━━━━━━┛*
 
 ${desc} *${bname}@^${vers}*
+
 ${dsci}
 `.trim()
  await conn.reply(m.chat, mn, m)
