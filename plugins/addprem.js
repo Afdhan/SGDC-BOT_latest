@@ -10,11 +10,11 @@ let who
   let user = `${who.split("@s.whatsapp.net")[0]}`
   let up = global.prems.push(user)
   fs.writeFileSync('./config.js',JSON.stringify(up))
-    m.reply(`*Berhasil Add Premium✅*\n\nNomor : wa.me/${who.split("@s.whatsapp.net")[0]}\nExpired : 30 Hari\n\nTerimakasih telah beli Premium!`)
+    m.reply(`*_Berhasil Add User Premium!_*\n*Nomor:* wa.me/${who.split("@s.whatsapp.net")[0]}`)
  // } else m.reply('Ada nomor host disini...')
 }
 
-handler.command = /^addprems$/i
+handler.command = /^(addprem|prem|addprems)$/i
 handler.owner = true
 
 module.exports = handler
