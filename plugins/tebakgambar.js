@@ -8,7 +8,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
         conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.tebakgambar[id][0])
         throw false
     }
-    let res = await /*fetch*/ axios.get(`https://api.xteam.xyz/game/tebakgambar?APIKEY=abba3220ce4a347f`)
+    let res = await fetch(`https://api.xteam.xyz/game/tebakgambar?APIKEY=abba3220ce4a347f`)
     if (res.status !== 200) throw await res.text()
     let json = await res.json()
     if (!json.status) throw json
