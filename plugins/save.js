@@ -3,7 +3,7 @@ let handler = function (m, { conn, text }) {
 	if (text > 15) return conn.reply(m.chat, 'Nama Kepanjangan!', m)
 var nomor = m.sender
 //let nom = no.split("@s.whatsapp.net")[0]
-    this.sendContact(m.chat, '${nomor.split("@s.whatsapp.net")[0]}', `${text}`, m)
+    this.sendContact(m.chat, 'nomor.split("@s.whatsapp.net")[0]', `${text}`, m)
 }
 
 handler.command = /^(save(me)?)$/i
