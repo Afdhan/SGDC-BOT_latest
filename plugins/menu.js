@@ -225,7 +225,10 @@ ${dsci}
 `.trim()
  await conn.reply(m.chat, mn, m)
   m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
-}
+    } catch (e) {
+    conn.fakeReply(m.chat, 'Terjadi Kesalahan Saat Memuat Menu!', '0@s.whatsapp.net', '*SYSTEM ERROR!*')
+    throw e
+ }
 
 handler.command = /^(menu|help|start|bot|helep)$/i
 handler.owner = false
