@@ -4,8 +4,8 @@ let handler = async (m, { conn, args }) => {
 }
 
 handler.command = /^(leave|out)$/i
-handler.owner = true
-
+handler.rowner = true
+handler.group = true
 handler.fail = null
 
 
