@@ -1,10 +1,10 @@
-console.log('Starting SGDC-BOT...')
+console.log('Connecting SGDC-BOT...')
 let { spawn } = require('child_process')
 let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
-CFonts.say(`${package.name}@^${package.version`, {
+CFonts.say(`${package.name}@^${package.version}`, {
   font: 'console',
   align: 'center',
   gradient: ['red', 'magenta']
@@ -26,7 +26,7 @@ function start(file) {
     stdio: ['inherit', 'inherit', 'inherit', 'ipc']
   })
   p.on('message', data => {
-    console.log('[ RECEIVED ]', data)
+    console.log('[ SGDC-BOT RECEIVED DATA ]', data)
     switch (data) {
       case 'reset':
         p.kill()
