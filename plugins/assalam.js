@@ -9,8 +9,8 @@ handler.before = m => {
   if (m.isBaileys && m.fromMe) return true
   let chat = global.DATABASE.data.chats[m.chat]
   let isASalam = assalam.exec(m.text)
-  let vnn ='src/ASSALAM.opus'
-  if (isASalam) conn.sendFile(m.chat, vnn, 'Assaalamualaikum.opus','salam', m)
+  let vnn ='src/ASSALAM.m4a'
+  if (isASalam) conn.sendFile(m.chat, vnn, 'Assaalamualaikum.m4a','salam', m)
   return true
 }
 
