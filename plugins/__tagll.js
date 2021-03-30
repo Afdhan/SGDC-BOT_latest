@@ -7,7 +7,7 @@ let jawab = `
 `.trim()
 
     let mentionedJid = [tt]
-    conn.reply(m.chat, jawab, m, { contextInfo: { mentionedJid }})
+    conn.reply(m.chat, `@${member[tt].replace(/@.+/, '')}\n`, m, { contextInfo: { mentionedJid }})
 }
 
 handler.command = /^tes$/i
