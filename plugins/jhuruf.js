@@ -1,10 +1,10 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
-
-    if (!text) return conn.reply(m.chat, 'Silahkan masukan kata kunci', m)
+let txt = m.quoted ? m.quoted.text ? m.quoted.text : text ? text : m.text : text ? text : m.text
+    if (!txt) return conn.reply(m.chat, 'Silahkan masukan kata kunci', m)
 
 //  await m.reply('*[ WAIT ]* _Searching..._')
-axios.get(`https://videfikri.com/api/jumlahhuruf/?query=${text}`).then((res) => {
+axios.get(`https://videfikri.com/api/jumlahhuruf/?query=${txt}`).then((res) => {
     let hasil = `
 _JUMLAH ADA:_ *${res.data.result.jumlah}*
 
