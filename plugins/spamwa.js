@@ -1,8 +1,8 @@
 const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async(m, { conn, text }) => {
-let user = global.DATABASE._data.users[m.sender]
-if (user.prems) {
+/*let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {*/
 let [nmr, psn] = text.split `|`
     if (!nmr) return conn.reply(m.chat, 'Siapa yang mau di spam?', m)
     if (!psn) return conn.reply(m.chat, 'Silahkan masukan teks pesan', m)
@@ -48,13 +48,23 @@ let [nmr, psn] = text.split `|`
 
     let logs = `_Berhasil mengirim pesan spam ke nomor ${kr} sebanyak 15 kali_`
     conn.reply(m.chat, logs, m)
-    } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
+  //  } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
 handler.command = /^(spam|spamwa)$/i
 
 
+handler.owner = false
+handler.mods = false
+handler.premium = true
+handler.group = false
+handler.private = false
+
+handler.admin = false
+handler.botAdmin = false
+
 handler.fail = null
-handler.limit = false
+
+//  MUHAMMAD AFDHAN
 
 module.exports = handler

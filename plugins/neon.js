@@ -1,7 +1,7 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
-let user = global.DATABASE._data.users[m.sender]
-if (user.prems) {
+/*let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {*/
     if (!text) return conn.reply(m.chat, 'Silahkan Masukan Teks!', m)
 
    if (text > 10) return conn.reply(m.chat, '*Teks Terlalu Panjang!* _Maksimal 10 huruf!_', m)
@@ -11,12 +11,14 @@ if (user.prems) {
 let link = 'https://fzn-gaz.herokuapp.com/api/textpro/neon?text=' + text
 
 conn.sendFile(m.chat, link, 'SGDC-BOT.png', '*[ • SGDC-BOT • ]*', m)
-   } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
+   //} else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
 handler.command = /^(neon(teks|text)?)$/i
 handler.owner = false
-
+handler.mods = false
+handler.premium = true
+handler.group = false
 handler.private = false
 
 handler.admin = false
@@ -24,6 +26,6 @@ handler.botAdmin = false
 
 handler.fail = null
 
-module.exports = handler
-
 //  MUHAMMAD AFDHAN
+
+module.exports = handler

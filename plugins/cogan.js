@@ -1,8 +1,8 @@
 let imageToBase64 = require('image-to-base64');
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
-let user = global.DATABASE._data.users[m.sender]
-if (user.prems) {
+/*let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {*/
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
     let items = ["cowok idaman", "cowo ganteng", "cowok personil bts", "korean boy", "artis cowok korea", "cowok korea", "cowok jepang"];
     let cowo = items[Math.floor(Math.random() * items.length)];
@@ -30,7 +30,7 @@ if (user.prems) {
         )
     
     });
-  } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
+//  } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
 handler.command = /^(cogan|cowok)$/i

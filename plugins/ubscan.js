@@ -1,8 +1,8 @@
 let handler  = async (m, { conn }) => {
-let user = global.DATABASE._data.users[m.sender]
+//let user = global.DATABASE._data.users[m.sender]
 let no = pickRandom(global.number)
 let unive = pickRandom(global.univ)
-if (user.prems) {
+//if (user.prems) {
 m.reply(`
 *╭══════════════════╮*
                    *Random Univ Scanner*
@@ -13,12 +13,23 @@ m.reply(`
 
 *[  • SGDC-BOT • ]*
 `.trim()) 
-    } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
+//    } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
 handler.command = /^univ$/i
 
+handler.owner = false
+handler.mods = false
+handler.premium = true
+handler.group = false
+handler.private = false
+
+handler.admin = false
+handler.botAdmin = false
+
 handler.fail = null
+
+//  MUHAMMAD AFDHAN
 
 module.exports = handler
 

@@ -1,17 +1,27 @@
 let handler = async (m, { conn, text }) => {
-let user = global.DATABASE._data.users[m.sender]
-if (user.prems) {
+/*let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {*/
   let q
   try { q = m.quoted.download() }
   catch (e) { q = m.download() }
   m.reply('_Sedang membuat...!_*Mohon tunggu sekitar 1 menit*')
   running(await q).then(vid => conn.sendFile(m.chat, vid, 'run.mp4', '*[ • SGDC-BOT • ]*', m))
-  } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
+ // } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
 handler.command = /^run$/i
-handler.limit = false
-handler.premium = false
+handler.owner = false
+handler.mods = false
+handler.premium = true
+handler.group = false
+handler.private = false
+
+handler.admin = false
+handler.botAdmin = false
+
+handler.fail = null
+
+//  MUHAMMAD AFDHAN
 
 module.exports = handler
 
