@@ -4,7 +4,8 @@ let path = require('path')
 let { spawn } = require('child_process')
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
     let name = conn.getName(m.sender)
-  //  let versi = 1.5.1
+    let vers = '1.5.1'
+    let desc = 'Powered by *SGDC-BOT@^1.5.1*'
     let d = new Date
     let locale = 'id'
     let gmt = new Date(0).getTime() - new Date('1 January 1970').getTime()
@@ -42,7 +43,7 @@ _if you violate, your account will be banned permanently!_
 *┃║ Date :          ${week}, ${date}*
 *┃║ Time :         ${time}*
 *┃║ Uptime :      ${uptime}*
-*┃║ Version :     1.5.1*
+*┃║ Version :     ${vers}*
 *┃║ Prefix :       「 ${_p} 」*
 *┃╰═════════════════╯*
 *┃                 MENU ON SGDC-BOT*
@@ -214,7 +215,7 @@ _if you violate, your account will be banned permanently!_
 *┃                    [ • SGDC-BOT • ]*
 *┗━━━━━━━━━━━━━━━━━━━┛*
 
-Powered by *SGDC-BOT@^1.5.1*
+${desc}
 `.trim()
  await conn.reply(m.chat, mn, m)
   m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
