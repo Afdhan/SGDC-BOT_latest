@@ -1,7 +1,7 @@
 const { spawn } = require('child_process')
 const util = require('util')
 const { MessageType } = require('@adiwajshing/baileys')
-
+let { err } = require('syntax-error')
 let handler  = async (m, { conn }) => {
   if (!m.quoted) return conn.reply(m.chat, 'Tag stikernya!', m)
   let q = { message: { [m.quoted.mtype]: m.quoted }}
