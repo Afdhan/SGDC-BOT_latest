@@ -19,6 +19,7 @@ let handler  = async (m, { conn }) => {
       conn.sendFile(m.chat, Buffer.concat(bufs),'Stiker.png', '*• SGDC-BOT •*', m)
     })
   } if (err) { m.reply('*Eror*')
+  }
 }
 
 handler.command = /^(toimg|stimg)$/i
