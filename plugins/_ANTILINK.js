@@ -7,14 +7,14 @@ let handler = async function(m, { conn , args, isAdmin, isBotAdmin }) {
   let users = m.sender
   let chat = global.DATABASE.data.chats[m.chat]
  if (chat.antiLink) { 
-   conn.reply(m.chat, `
+ await conn.reply(m.chat, `
 *[ CHAT ANTI LINK ]*
 
 _Terdeteksi *${usname}* telah mengirim link group!_
 
 Maaf Kamu akan dikick oleh *SGDC-BOT*
 `.trim(), m)
- await conn.groupRemove(m.chat, [users])
+ conn.groupRemove(m.chat, [users])
     }
  }
 
