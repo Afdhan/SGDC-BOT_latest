@@ -3,7 +3,7 @@ let handler = async(m, { conn, text }) => {
 
     if (!text) return conn.reply(m.chat, 'Silahkan masukan parameter! contoh *!artimimpi ular*', m)
 
-  await m.reply('Searching...')
+  await m.reply('*[ WAIT ]* _Searching..._')
 	axios.get(`https://videfikri.com/api/primbon/artimimpi/?mimpi=${text}`).then ((res) => {
 	 	let hasil = `
 *TAFSIR MIMPI*
@@ -28,7 +28,5 @@ handler.admin = false
 handler.botAdmin = false
 
 handler.fail = null
-handler.exp = 0
-handler.limit = true
 
 module.exports = handler
