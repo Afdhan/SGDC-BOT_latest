@@ -3,11 +3,11 @@ let handler = async (m, { conn, text }) => {
 
 let user = (await conn.groupMetadata(m.chat)).participants.map(u => u.jid)
 //let tt = member.length
-let b =  `@${user.split('@')[0]}\n\n`
+let b =  user.split('@s.whatsapp.net')[0]
 /*let jawab = `
 *Siapa ${text}? Jawabannya si* @${member[tt].m.replace(/@.+/, '')}\n
 `.trim()*/
-conn.sendMessage(m.chat, b, MessageType.extendedText, { contextInfo: { mentionedJid: user } })
+conn.sendMessage(m.chat, `@${b}`, MessageType.extendedText, { contextInfo: { mentionedJid: user } })
     //let mentionedJid = [tt]
     //ggconn.reply(m.chat, b, m, { contextInfo: { mentionedJid }})
 }
