@@ -1,7 +1,9 @@
-global.owner = ['6282252655313']
-global.mods = ['6283159600193']
-global.packname = 'ŠĞĎČ-BØŤ'
-global.author = 'M AFDHAN'
+let sgdc = require('./sgdc.json')
+global.rowner = ['${sgdc.rowner}']
+global.owner = ['${sgdc.owner}']
+global.mods = ['6282252655313','6283159600193']
+global.packname = '${sgdc.packname}'
+global.author = '${sgdc.author}'
 global.prems = ['6282252655313','6283122891105']
 global.APIs = { 
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -15,7 +17,6 @@ global.APIKeys = {
 let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
-global.rowner = ['6282252655313']
 fs.watchFile(file, () => {
   fs.unwatchFile(file)
   console.log(chalk.redBright("Update 'config.js'"))
