@@ -19,8 +19,8 @@ let handler  = async (m, { conn }) => {
      // conn.reply(m.chat, '*[ WAIT ]* *_Sedang di proses..._*', m)
       conn.sendFile(m.chat, Buffer.concat(bufs),'SGDC-BOT.png', '*[ • SGDC-BOT • ]*', m)
     })
- /* } if (err) { m.reply('*Eror*')
-  }*/
+ //} if (err) { m.reply('*Eror*')
+  }
 }
 //util.format(e)
 handler.command = /^(toimg|stimg|img)$/i
