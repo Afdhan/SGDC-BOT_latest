@@ -309,7 +309,7 @@ module.exports = {
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    //rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
+    rowner: '_*Command Khusus Owner Script SGDC-BOT*_',
     owner: '_*Command Khusus Owner SGDC-BOT*_',
     mods: '_*Command Khusus Moderator SGDC-BOT*_',
     premium: '*Command Premium!* _Hubungi Owner jika ingin jadi user premium_!',
