@@ -3,8 +3,8 @@ let fetch = require('node-fetch')
 let handler = async (m, { text }) => {
 let chat = global.DATABASE.data.chats[m.chat]
 if (chat.simi) {
- axios.get(`https://videfikri.com/api/simsimi/?teks=${text}`).then((res) => {
-  let hh = `${res.data.result.jawaban}`
+ axios.get(`https://api.xteam.xyz/simsimi?kata=${text}&APIKEY=abba3220ce4a347f`).then((res) => {
+  let hh = `${res.data.jawaban}`
 conn.reply(m.chat, hh, m)
   }) 
  } else if (!chat.simi) m.reply('*MODE SIMI BELUM DIAKTIFKAN!*')
