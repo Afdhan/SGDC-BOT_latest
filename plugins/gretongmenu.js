@@ -1,4 +1,5 @@
-let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
+let handler  = async (m, { conn, usedPrefix: _p }) =>  {
+  let pepek = `
 *┏━━━━━━━━━━━━━━━━━━━┓*
 *┃                      [ • SGDC-BOT • ]*
 *┃╭═════════════════╮*
@@ -85,13 +86,13 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃╰═════════════════╯*
 *┃                     [ • SGDC-BOT • ]*
 *┗━━━━━━━━━━━━━━━━━━━┛*
-`.trim()) 
+`.trim()
 
+conn.fakeReply(m.chat, pepek, '0@s.whatsapp.net', '*JANGAN LUPA BACA DESKRIPSI*')
+}
+               
 handler.command = /^(gretongmenu|gretonger(s)?(an)?menu|gretong)$/i
-
-
 handler.fail = null
-
 
 module.exports = handler
 ///     MUHAMMAD  AFDHAN
