@@ -10,7 +10,7 @@ conn.reply(m.chat, `${res.data.result}`, m)
  } else if (!chat.simi) m.reply('*MODE SIMI BELUM DIAKTIFKAN!*')
 }
                       
-handler.customPrefix = /(a|b|c|d|e|f|g|h|i)/i
+handler.customPrefix = /!/i
 handler.command = new RegExp
 //handler.command = /(?:)/i
 handler.rowner = false
