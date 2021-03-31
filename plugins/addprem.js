@@ -15,6 +15,6 @@ let who
 }
 
 handler.command = /^(addprem|prem|addprems)$/i
-handler.owner = true
+handler.rowner = true
 
 module.exports = handler
