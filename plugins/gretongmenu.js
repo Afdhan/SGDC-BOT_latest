@@ -5,7 +5,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 *┃                   SGDC-BOT@^1.5.1*
 *┃*
 *┃╭═════════════════╮*
-*┃                  GRETONG MENU*
+*┃                    GRETONG MENU*
 *┃╰═════════════════╯*
 *┃                   Configuration (HC)*
 *┃╭═════════════════╮*
@@ -88,14 +88,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => m.reply(`
 `.trim()) 
 
 handler.command = /^(gretongmenu|gretonger(s)?(an)?menu|gretong)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
 
-handler.admin = false
-handler.botAdmin = false
 
 handler.fail = null
 
