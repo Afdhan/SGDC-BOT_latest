@@ -5,12 +5,15 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
   let isAll = false
   switch (type) {
     case 'welcome':
+    case 'wel':
       chat.welcome = isEnable
       break
     case 'delete':
+    case 'del':
       chat.delete = isEnable
       break
     case 'public':
+    case 'self':
       isAll = true
       if (!isROwner) {
         global.dfail('rowner', m, conn)
@@ -22,9 +25,12 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
       chat.antiLink = isEnable
       break
     case 'simsimi':
+    case 'simi':
       chat.simi = isEnable
       break
     case 'alloption':
+    case 'option':
+      //chat.badWord = isEnable
       chat.simi = isEnable
       chat.antiLink = isEnable
       chat.welcome = isEnable
@@ -46,13 +52,6 @@ ${usedPrefix}off welcome
 
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff))$/i
 handler.owner = true
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.admin = false
-handler.botAdmin = false
 
 handler.fail = null
 
@@ -60,3 +59,4 @@ module.exports = handler
 
 
 // MUHAMMAD AFDHAN
+// SC BY NURUTOMO
