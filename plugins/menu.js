@@ -3,6 +3,7 @@ let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
+    await m.reply('_L o a d i n g . . ._')
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
     let bname = package.name
     let vers = package.version
@@ -26,7 +27,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
     })
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
-   // let img ='src/SGDC_BOT.jpg'
+    let img ='src/SGDC_BOT.jpg'
     let mn = `
 *━━━━━━━━━━━━━━━━━━━━━*
 _Hey *${name}* you will using *${bname}!*_
@@ -228,7 +229,7 @@ ${desc} *${bname}@^${vers}*
 
 ${dsci}
 `.trim()
- await conn.reply(m.chat, mn, m)
+ await conn.reply(m.chat, img, 'SGDC-BOT.jpg', mn, m)
   m.reply('Untuk Menu Gretongan, Ketik *!gretongmenu*')
   /*  } catch (e) {
     conn.fakeReply(m.chat, 'Terjadi Kesalahan Saat Memuat Menu!', '0@s.whatsapp.net', '*SYSTEM ERROR!*')
