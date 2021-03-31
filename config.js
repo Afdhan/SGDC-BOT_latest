@@ -11,10 +11,11 @@ global.APIKeys = {
   'https://api.xteam.xyz': 'abba3220ce4a347f'
 }
 
-global.rowner = ['6282252655313']
+
 let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
+global.rowner = ['6282252655313']
 fs.watchFile(file, () => {
   fs.unwatchFile(file)
   console.log(chalk.redBright("Update 'config.js'"))
