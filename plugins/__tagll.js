@@ -1,13 +1,15 @@
+let { MessageType } = require('@adiwajshing/baileys')
 let handler = async (m, { conn, text }) => {
 
-let member = (await conn.groupMetadata(m.chat)).participants.map(u => u.jid)
-let tt = member.length
+let user = (await conn.groupMetadata(m.chat)).participants.map(u => u.jid)
+//let tt = member.length
+let b =  `@${user.split('@')[0]}\n\n`
 /*let jawab = `
 *Siapa ${text}? Jawabannya si* @${member[tt].m.replace(/@.+/, '')}\n
 `.trim()*/
-
-    let mentionedJid = [tt]
-    conn.reply(m.chat, `@${member[tt].replace(/@.+/, '')}\n`, m, { contextInfo: { mentionedJid }})
+conn.sendMessage(m.chat, b, MessageType.extendedText, { contextInfo: { mentionedJid: user } })
+    //let mentionedJid = [tt]
+    //ggconn.reply(m.chat, b, m, { contextInfo: { mentionedJid }})
 }
 
 handler.command = /^tes$/i
