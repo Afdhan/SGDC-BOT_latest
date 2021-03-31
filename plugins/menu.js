@@ -230,7 +230,7 @@ ${desc} *${bname}@^${vers}*
 ${dsci}
 `.trim()
  await conn.fakeReply(m.chat, mn, '0@s.whatsapp.net', '*SGDC-BOT BY SGDC-TEAM*')
-  conn.fakeReply(m.chat, 'Untuk Menu Gretongan, Ketik *!gretongmenu*', '0@s.whatsapp.net', '*MENU GRETONGAN SGDC*')
+  conn.fakeReply(m.chat, 'Untuk Menu Gretongan, Ketik *!gretongmenu*', '0@s.whatsapp.net', '*MENU GRETONGAN SGDC-TEAM*')
   /*  } catch (e) {
     conn.fakeReply(m.chat, 'Terjadi Kesalahan Saat Memuat Menu!', '0@s.whatsapp.net', '*SYSTEM ERROR!*')
     throw e*/
