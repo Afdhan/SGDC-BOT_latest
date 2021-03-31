@@ -5,7 +5,7 @@ let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
 CFonts.say(`${package.name}@^${package.version}`, {
-  font: 'console',
+  font: 'chrome',
   align: 'center',
   gradient: ['red', 'magenta']
 })
