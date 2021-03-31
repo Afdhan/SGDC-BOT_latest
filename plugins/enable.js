@@ -21,11 +21,11 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
     case 'antilink':
       chat.antiLink = isEnable
       break
-    case 'badword':
-      chat.badWord = isEnable
+    case 'simsimi':
+      chat.simi = isEnable
       break
     case 'alloption':
-   //   chat.badWord = isEnable
+      chat.simi = isEnable
       chat.antiLink = isEnable
       chat.welcome = isEnable
       chat.delete = isEnable
