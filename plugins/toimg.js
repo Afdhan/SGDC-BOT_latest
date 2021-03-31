@@ -4,6 +4,7 @@ const { MessageType } = require('@adiwajshing/baileys')
 //let { err } = require('syntax-error')
 let handler  = async (m, { conn }) => {
   if (!m.quoted) return conn.reply(m.chat, 'Tag stikernya!', m)
+  await conn.reply(m.chat, '*[ WAIT ]* *_Sedang di proses..._*', m)
   let q = { message: { [m.quoted.mtype]: m.quoted }}
   if (/sticker/.test(m.quoted.mtype)) {
     let sticker = await conn.downloadM(q)
@@ -15,7 +16,7 @@ let handler  = async (m, { conn }) => {
     im.stdin.write(sticker)
     im.stdin.end()
     im.on('exit', () => {
-      conn.reply(m.chat, '*[ WAIT ]* *_Sedang di proses..._*', m)
+     // conn.reply(m.chat, '*[ WAIT ]* *_Sedang di proses..._*', m)
       conn.sendFile(m.chat, Buffer.concat(bufs),'SGDC-BOT.png', '*• SGDC-BOT •*', m)
     })
   } /*if (err) { m.reply('*Eror*')
