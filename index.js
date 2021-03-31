@@ -7,7 +7,7 @@ const CFonts  = require('cfonts')
 CFonts.say(`${package.name}@^${package.version}\n${package.description}`, {
   font: 'console',
   align: 'center',
-  gradient: ['red']
+  gradient: ['red', 'green']
 })
 CFonts.say('MUHAMMAD AFDHAN', {
   font: 'console',
