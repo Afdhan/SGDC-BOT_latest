@@ -2,8 +2,8 @@ const fetch = require('node-fetch')
 const FormData = require('form-data')
 
 let handler = async (m) => {
-let user = global.DATABASE._data.users[m.sender]
-if (user.prems) {
+/*let user = global.DATABASE._data.users[m.sender]
+if (user.prems) {*/
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
   if (!mime) throw 'Tidak ada foto'
@@ -17,9 +17,9 @@ if (user.prems) {
   })
   if (res.status !== 200) throw await res.json()
   await conn.sendFile(m.chat, await res.buffer(), 'hd.jpg', 'Nih HD ga?\n\n*[ • SGDC-BOT • ]*', m)
-   } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
+  // } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
 handler.command = /^(fullhd|hd|enhance)$/i
-
+handler.premium = true
 module.exports = handler
