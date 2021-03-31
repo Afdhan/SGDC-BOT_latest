@@ -195,7 +195,6 @@ _if you violate, your account will be banned permanently!_
 *┃║ ${_p}bann* _@user_
 *┃║ ${_p}unbann* _@user_
 *┃║ ${_p}addprem* _@user_
-*┃║ ${_p}delprem* _@user_
 *┃║ ${_p}getpp* _@user_
 *┃║ ${_p}spam* _@user|Teks_
 *┃║ ${_p}santet* _@user|Teks_
@@ -237,14 +236,6 @@ ${dsci}
  }
 
 handler.command = /^(menu|help|start|bot|helep)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.admin = false
-handler.botAdmin = false
 
 handler.fail = null
 
@@ -260,3 +251,5 @@ function clockString(ms) {
 }
 
 // Muhammad afdhan
+
+//NO DELETE
