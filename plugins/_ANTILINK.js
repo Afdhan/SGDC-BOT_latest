@@ -8,7 +8,7 @@ let handler = async function(m, { conn , args, isAdmin, isBotAdmin }) {
   let chat = global.DATABASE.data.chats[m.chat]
  if (chat.antiLink) { 
    conn.reply(m.chat, `
-*「 ANTI LINK 」*
+*[ CHAT ANTI LINK ]*
 
 _Terdeteksi *${usname}* telah mengirim link group!_
 
