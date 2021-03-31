@@ -11,15 +11,7 @@ let handler = async (m, { conn, text}) => {
 }
 
 handler.command = /^unbann$/i
-handler.rowner = false
-handler.owner = true
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.admin = false
-handler.botAdmin = false
+handler.rowner = true
 
 handler.fail = null
 
