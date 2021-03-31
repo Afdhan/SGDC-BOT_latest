@@ -7,21 +7,13 @@ if (chat.simi) {
  // let hh = `${res.data.result}`
 conn.reply(m.chat, `${res.data.result}`, m)
   }) 
- } else if (!chat.simi) m.reply('*MODE SIMI BELUM DIAKTIFKAN!*')
+ } else if (!chat.simi) m.reply('*SIMI BELUM DIAKTIFKAN UNTUK CHAT INI!*')
 }
                       
-handler.customPrefix = /!/i
-handler.command = new RegExp
-//handler.command = /(?:)/i
-handler.rowner = false
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
+handler.customPrefix = /^! /
+//handler.command = new RegExp
+handler.command = /(?:)/i
 
-handler.admin = false
-handler.botAdmin = false
 
 handler.fail = null
 
