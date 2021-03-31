@@ -9,8 +9,20 @@ conn.reply(m.chat, hh, m)
   }) 
  } else if (!chat.simi) m.reply('*MODE SIMI BELUM DIAKTIFKAN!*')
 }
-                                                                       
-handler.command = /^(si(mi)?(m)?)$/i
+                      
+handler.customPrefix = /^!/
+handler.command = /(?:)/i
+handler.rowner = false
+handler.owner = false
+handler.mods = false
+handler.premium = false
+handler.group = false
+handler.private = false
+
+handler.admin = false
+handler.botAdmin = false
+
+handler.fail = null
 
 module.exports = handler
 
