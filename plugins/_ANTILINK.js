@@ -12,7 +12,7 @@ let handler = async function(m, { conn , args, isAdmin, isBotAdmin }) {
 
 _Terdeteksi *${usname}* telah mengirim link group!_
 
-Maaf Kamu akan dikick oleh *[ • SGDC-BOT • ]*
+Maaf Kamu akan dikick oleh *SGDC-BOT*
 `.trim(), m)
  await conn.groupRemove(m.chat, [users])
     }
