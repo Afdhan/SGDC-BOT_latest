@@ -1,7 +1,7 @@
 const { spawn } = require('child_process')
 const util = require('util')
 const { MessageType } = require('@adiwajshing/baileys')
-let { err } = require('syntax-error')
+//let { err } = require('syntax-error')
 let handler  = async (m, { conn }) => {
   if (!m.quoted) return conn.reply(m.chat, 'Tag stikernya!', m)
   let q = { message: { [m.quoted.mtype]: m.quoted }}
@@ -10,18 +10,18 @@ let handler  = async (m, { conn }) => {
     if (!sticker) throw sticker
     let bufs = []
     let im = spawn('convert', ['webp:-', 'png:-'])
-    im.on('error',e =>  conn.reply(m.chat, util.format(e), m))
+    im.on('error',e =>  conn.reply(m.chat, '*SYSTEM ERROR*', m))
     im.stdout.on('data', chunk => bufs.push(chunk))
     im.stdin.write(sticker)
     im.stdin.end()
     im.on('exit', () => {
       conn.reply(m.chat, '*[ WAIT ]* *_Sedang di proses..._*', m)
-      conn.sendFile(m.chat, Buffer.concat(bufs),'Stiker.png', '*• SGDC-BOT •*', m)
+      conn.sendFile(m.chat, Buffer.concat(bufs),'SGDC-BOT.png', '*• SGDC-BOT •*', m)
     })
-  } if (err) { m.reply('*Eror*')
-  }
+  } /*if (err) { m.reply('*Eror*')
+  }*/
 }
-
+//util.format(e)
 handler.command = /^(toimg|stimg)$/i
 handler.owner = false
 handler.mods = false
