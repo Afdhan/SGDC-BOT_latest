@@ -3,7 +3,7 @@ let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
-    await m.reply('_L o a d i n g . . ._')
+    await conn.fakeReply(m.chat, '_L o a d i n g . . ._', '0@s.whatsapp.net', '*MEMUAT LIST MENU*')
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
     let bname = package.name
     let vers = package.version
