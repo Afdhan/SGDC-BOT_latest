@@ -4,10 +4,10 @@ let path = require('path')
 let fs = require('fs')
 let package = require('./package.json')
 const CFonts  = require('cfonts')
-CFonts.say(`${package.name}@^${package.version}`, {
-  font: 'chrome',
+CFonts.say(`${package.name}@^${package.version}\n${package.description}`, {
+  font: 'console',
   align: 'center',
-  gradient: ['red', 'magenta']
+  gradient: ['red']
 })
 CFonts.say('MUHAMMAD AFDHAN', {
   font: 'console',
