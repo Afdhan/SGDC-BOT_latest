@@ -17,7 +17,7 @@ conn.sendFile(m.chat, link, 'SGDC-BOT.png', '*[ • SGDC-BOT • ]*', m)
 }
 
 handler.command = /^(photooxy)$/i
-
+handler.premium = true
 
 handler.fail = null
 
