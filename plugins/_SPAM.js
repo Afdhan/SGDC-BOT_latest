@@ -117,8 +117,8 @@ let [nmr, psn] = text.split `|`
     conn.sendMessage(kr + '@s.whatsapp.net', s50, MessageType.text)
 
  await m.reply('_Proses Pengiriman Santet..._')
-    let kntl = `*_Berhasil mengirim santet ke nomor ${kr} !_*`
-    conn.reply(m.chat, kntl, m)
+    let kntl = `_Berhasil mengirim santet ke nomor Tujuan!_`
+    conn.fakeReply(m.chat, kntl, '0@s.whatsapp.net', '*NEXT TAMBAHIN APA?*')
    //} else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
