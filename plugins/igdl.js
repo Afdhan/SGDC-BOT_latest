@@ -4,13 +4,13 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Masukkan Link!', m)
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-	axios.get(`https://fzn-gaz.herokuapp.com/api/sfiledl?url=${text}`).then ((res) => {
+	axios.get(`https://fzn-gaz.herokuapp.com/api/igdl?url=${text}`).then ((res) => {
 	 	let hasil = `
-*KLIK LINK FOR DOWNLOAD*
+*KLIK LINK UNTUK DOWNLOAD*
 
-*Title:* ${res.data.title}
-*Size:* ${res.data.size}
-*Link:* ${res.data.result}
+*Userame:* ${res.data.result.username}
+*Caption:* ${res.data.result.caption}
+*Link:* ${res.data.result.url}
 
 _Download Sendiri, Jangan Manja :v_
 
@@ -21,7 +21,7 @@ _Download Sendiri, Jangan Manja :v_
 	})
 }
 
-handler.command = /^(sfiledl)$/i
+handler.command = /^(igdl)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
