@@ -152,7 +152,7 @@ global.simi = [
 '!help',
 '!menu',
 '!start',
-'''tau',
+'tau',
 'Gak tau?',
 'Apa?',
 'Apa apa?',
