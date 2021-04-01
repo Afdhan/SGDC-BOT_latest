@@ -5,11 +5,10 @@ let handler = async(m, { conn, text }) => {
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
 	axios.get(`https://fzn-gaz.herokuapp.com/api/sfiledl?url=${text}`).then ((res) => 
-let ayam = res.data.result
-let goyeng = `${res.data.title}`
-conn.sendFile(m.chat, ayam, goyeng, 'ini', m)
-
-/*let hasil = `
+//let ayam = res.data.result
+//let goyeng = `${res.data.title}`
+//conn.sendFile(m.chat, res.data.result, goyeng, 'ini', m)
+let hasil = `
 *KLIK LINK UNTUK DOWNLOAD*
 
 *Title:* ${res.data.title}
@@ -19,8 +18,9 @@ conn.sendFile(m.chat, ayam, goyeng, 'ini', m)
 _Download Sendiri, Jangan Manja :v_
 
 *[ • SGDC-BOT • ]*
-`.trim()**/
- // conn.reply(m.chat, hasil, m)
+`.trim()
+
+ conn.reply(m.chat, hasil, m)
 	})
 }
 
