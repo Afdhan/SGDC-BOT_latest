@@ -2,7 +2,7 @@ let PhoneNumber = require('awesome-phonenumber')
 let handler = async (m, { conn }) => {
 /*let user = global.DATABASE._data.users[m.sender]
 if (user.prems) {*/
-conn.reply(m.chat, '*[ WAIT ]* _Sedang di proses..._', m)
+await conn.reply(m.chat, '*[ WAIT ]* _Sedang di proses..._', m)
   let pp = './src/avatar_contact.png'
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted : m.fromMe ? conn.user.jid : m.sender 
   try {
