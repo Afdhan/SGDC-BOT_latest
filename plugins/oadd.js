@@ -1,6 +1,7 @@
 let handler = async (m, { conn, text }) => {
   let users = text.split`,`.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v.length > 20)
-  conn.groupAdd(m.chat, users)
+  await conn.groupAdd(m.chat, users)
+  m.reply('_Berhasil Nenambahkan Beliau!_')
 }
 
 handler.command = /^(oadd|o\+)$/i
