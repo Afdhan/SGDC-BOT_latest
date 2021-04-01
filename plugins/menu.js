@@ -94,6 +94,7 @@ _if you violate, your account will be banned permanently!_
 *┃║ ${_p}join* _Url_
 *┃║ ${_p}fetch* _Url_
 *┃║ ${_p}ssweb* _Url_
+*┃║ ${_p}igdl* _Url_
 *┃║ ${_p}sfiledl* _Url_
 *┃║ ${_p}bitly* _Url_
 *┃║ ${_p}cuttly* _Url_
