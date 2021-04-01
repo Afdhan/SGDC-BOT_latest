@@ -5,7 +5,7 @@ let handler = async(m, { conn, text }) => {
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
 	axios.get(`https://fzn-gaz.herokuapp.com/api/sfiledl?url=${text}`).then ((res) => {
-	 	let hasil = `
+	 /*let hasil = `
 *HASIL*
 
 *Title:* ${res.data.title}
@@ -15,10 +15,10 @@ let handler = async(m, { conn, text }) => {
 _Download Sendiri, Jangan Manja :v_
 
 *[ • SGDC-BOT • ]*
-`.trim()
+`.trim()*/
 
  //  await m.reply(hasil)
-conn.sendFile(m.chat, `${res.data.title}`,'ini', m)
+conn.sendFile(m.chat, '${res.data.title}','ini', m)
 	})
 }
 
