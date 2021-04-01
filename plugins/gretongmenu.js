@@ -88,7 +88,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) =>  {
 *┗━━━━━━━━━━━━━━━━━━━┛*
 `.trim()
 
-conn.fakeReply(m.chat, pepek, '0@s.whatsapp.net', '*JANGAN LUPA BACA DESKRIPSI*')
+conn.fakeReply(m.chat, pepek, 'status@s.whatsapp.net', '*JANGAN LUPA BACA DESKRIPSI*')
 }
                
 handler.command = /^(gretongmenu|gretonger(s)?(an)?menu|gretong)$/i
