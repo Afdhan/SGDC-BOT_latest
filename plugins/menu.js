@@ -231,7 +231,7 @@ _if you violate, your account will be banned permanently!_
 
 ${desc} *${bname}@^${vers}*
 
-``${dsci}```
+'```' + ${dsci} + '```'
 `.trim()
  await conn.fakeReply(m.chat, mn, '0@s.whatsapp.net', '*SGDC-BOT BY SGDC-TEAM*')
   conn.fakeReply(m.chat, 'Untuk Menu Gretongan, Ketik *!gretongmenu*', '0@s.whatsapp.net', '*MENU GRETONGAN SGDC-TEAM*')
