@@ -25,8 +25,8 @@ _Saya Pribadi Mengucapkan Ribuan, Jutaan, Milyaran, Atau Bahkan Trilyunan Terima
 	conn.fakeReply(m.chat, ingfo, '0@s.whatsapp.net', '*INGFO SGDC-BOT*')
 }
 
-handler.customPrefix = /^X /
-handler.command = /(?:)/i
+handler.customPrefix = /^(X)$/i
+handler.command = new RegExp
 
 
 handler.fail = null
