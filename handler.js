@@ -311,7 +311,7 @@ module.exports = {
 
 global.dfail = (type, m, conn) => {
   let msg = {
-    rowner: '_*Command Khusus Owner Script SGDC-BOT*_',
+    rowner: '_*Command Khusus ROwner SGDC-BOT*_',
     owner: '_*Command Khusus Owner SGDC-BOT*_',
     mods: '_*Command Khusus Moderator SGDC-BOT*_',
     premium: '*Command Premium!* _Hubungi Owner jika ingin jadi user premium_!',
