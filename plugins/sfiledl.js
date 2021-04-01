@@ -18,7 +18,7 @@ _Download Sendiri, Jangan Manja :v_
 `.trim()*/
 
  //  await m.reply(hasil)
-conn.sendFile(m.chat, '${res.data.title}','ini', m)
+conn.sendFile(m.chat, '${res.data.result}','ini', m)
 	})
 }
 
