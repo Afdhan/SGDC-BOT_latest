@@ -6,7 +6,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
     conn.tebakgambar = conn.tebakgambar ? conn.tebakgambar : {}
     let id = m.chat
     if (id in conn.tebakgambar) {
-        conn.reply(m.chat, 'Masih ada soal belum terjawab di chat ini', conn.tebakgambar[id][0])
+        conn.reply(m.chat, '_Masih ada soal belum terjawab di chat ini_', conn.tebakgambar[id][0])
         throw false
     }
     let res = await fetch(global.API('xteam', '/game/tebakgambar', {}, 'APIKEY'))
@@ -14,15 +14,14 @@ let handler  = async (m, { conn, usedPrefix }) => {
     let json = await res.json()
     if (!json.status) throw json
     let caption = `
-Timeout *${(timeout / 1000).toFixed(2)} detik*
-Ketik ${usedPrefix}hint untuk hint
-Bonus: ${poin} XP
+Timeout: *${(timeout / 1000).toFixed(2)} detik*
+Ketik *${usedPrefix}hint* untuk mendapat bantuan
     `.trim()
     conn.tebakgambar[id] = [
-      await conn.sendFile(m.chat, json.url, 'tebakgambar.jpg', caption, m),
+      await conn.sendFile(m.chat, json.url, 'SGDC-BOT.jpg', caption, m),
       json, poin,
       setTimeout(() => {
-        if (conn.tebakgambar[id]) conn.reply(m.chat, `Waktu habis!\nJawabannya adalah *${json.jawaban}*`, conn.tebakgambar[id][0])
+        if (conn.tebakgambar[id]) conn.reply(m.chat, `_Waktu habis! Jawabannya adalah *${json.jawaban}*_`, conn.tebakgambar[id][0])
         delete conn.tebakgambar[id]
       }, timeout)
     ]
