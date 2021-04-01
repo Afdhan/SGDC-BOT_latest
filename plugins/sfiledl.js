@@ -4,8 +4,8 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Masukkan Link!', m)
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-	axios.get(`https://fzn-gaz.herokuapp.com/api/sfiledl?url=${text}`).then ((res) => {
-	 /*let hasil = `
+	axios.get(`https://fzn-gaz.herokuapp.com/api/sfiledl?url=${text}`).then ((res) => 
+/*let hasil = `
 *KLIK LINK UNTUK DOWNLOAD*
 
 *Title:* ${res.data.title}
@@ -15,8 +15,8 @@ let handler = async(m, { conn, text }) => {
 _Download Sendiri, Jangan Manja :v_
 
 *[ • SGDC-BOT • ]*
-`.trim()
-  conn.reply(m.chat, hasil, m)*/
+`.trim()*/
+ // conn.reply(m.chat, hasil, m)
 conn.sendFile(m.chat, res.data.result,`${res.data.title}`, 'ini', m)
 	})
 }
