@@ -3,7 +3,7 @@ let util = require('util')
 let path = require('path')
 let { spawn } = require('child_process')
 let handler  = async (m, { conn, args, usedPrefix: _p }) => {
-    await conn.fakeReply(m.chat, '_L o a d i n g . . ._', '0@s.whatsapp.net', '*MEMUAT LIST MENU*')
+    await conn.fakeReply(m.chat, '```L o a d i n g . . .```', '0@s.whatsapp.net', '*MEMUAT LIST MENU*')
     let package = JSON.parse(fs.readFileSync(path.join(__dirname, '../package.json')))
     let bname = package.name
     let vers = package.version
@@ -234,7 +234,7 @@ ${desc} *${bname}@^${vers}*
 ${dsci}
 `.trim()
  await conn.fakeReply(m.chat, mn, '0@s.whatsapp.net', '*SGDC-BOT BY SGDC-TEAM*')
-  conn.fakeReply(m.chat, '```Untuk Menu Gretongan, Ketik``` *!gretongmenu*', '0@s.whatsapp.net', '*MENU GRETONGAN SGDC-TEAM*')
+  conn.fakeReply(m.chat, 'Untuk Menu Gretongan, Ketik *!gretongmenu*', '0@s.whatsapp.net', '*MENU GRETONGAN SGDC-TEAM*')
   /*  } catch (e) {
     conn.fakeReply(m.chat, 'Terjadi Kesalahan Saat Memuat Menu!', '0@s.whatsapp.net', '*SYSTEM ERROR!*')
     throw e*/
