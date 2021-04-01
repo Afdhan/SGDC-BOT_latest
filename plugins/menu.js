@@ -27,7 +27,7 @@ let handler  = async (m, { conn, args, usedPrefix: _p }) => {
     })
     let _uptime = process.uptime() * 1000
     let uptime = clockString(_uptime)
-    let pict ='src/SGDC_BOT.jpg'
+    //let pict ='src/SGDC_BOT.jpg'
     let mn = `
 *━━━━━━━━━━━━━━━━━━━━━*
 _Hey *${name}* you will using *${bname}!*_
@@ -216,6 +216,7 @@ _if you violate, your account will be banned permanently!_
 *┃║ ${_p}nonton* _Judul Film_
 *┃║ ${_p}enable* _Option_
 *┃║ ${_p}disable* _Option_
+*┃║ ${_p}semoji* _Emoji_
 *┃║ ${_p}snobg* _Image/Reply_ (error)
 *┃║ ${_p}sgif2* _Image/Reply_ (error)
 *┃║ ${_p}sticgif* _Image/Reply_ (error)
