@@ -3,7 +3,7 @@ let fetch = require('node-fetch')
 let handler = async (m, { text }) => {
 let chat = global.DATABASE.data.chats[m.chat]
 if (chat.simi) {
- axios.get(`https://api.zeks.xyz/api/simi?apikey=apivinz&text=${text}`).then((res) => {
+ axios.get(`https://fzn-gaz.herokuapp.com/api/simi?text=${text}`).then((res) => {
  // let hh = `${res.data.result}`
 conn.reply(m.chat, `${res.data.result}`, m)
   }) 
