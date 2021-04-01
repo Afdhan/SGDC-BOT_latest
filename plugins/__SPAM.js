@@ -1,9 +1,9 @@
 const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async(m, { conn, text }) => {
-let [kn, psn] = text.split `|`
+let [usr, psn] = text.split `|`
 
-    if (!kn) return conn.reply(m.chat, 'Siapa yang mau di santet?', m)
+    if (!usr) return conn.reply(m.chat, 'Siapa yang mau di santet?', m)
     if (!psn) return conn.reply(m.chat, 'Silahkan masukan teks pesan', m)
     if (text > 500) return conn.reply(m.chat, 'Teks Kepanjangan!', m)
 
