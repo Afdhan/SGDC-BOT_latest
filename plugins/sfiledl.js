@@ -17,7 +17,7 @@ _Download Sendiri, Jangan Manja :v_
 *[ • SGDC-BOT • ]*
 `.trim()
 
-   await m.reply(hasil)
+ //  await m.reply(hasil)
 conn.sendFile(m.chat, `${res.data.title}`,'ini', m)
 	})
 }
