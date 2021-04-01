@@ -1,5 +1,5 @@
 let handler = function (m) {
-  this.sendContact(m.chat, '6282252655313', '꧁࿇ ᴍ ᴀꜰᴅʜᴀɴ ࿇꧂', m)
+  this.sendContact(m.chat, '6282252655313', '꧁࿇ ᴍ ᴀꜰᴅʜᴀɴ ࿇꧂ || @dhans11__', m)
 m.reply('*Jangan Lupa Donasi :v')
 //let pp_owner ='src/Owner.jpg'
 //conn.sendFile(m.chat, pp_owner, 'My Owner.jpg', '*This is my owner ᴍ ᴀꜰᴅʜᴀɴ*\n*Contact: https://wa.me/6282252655313*', m)
