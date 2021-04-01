@@ -3,11 +3,13 @@ const { sticker } = require('../lib/sticker')
 const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async (m, { conn, text }) => {
-let [tipe, emoji] = text.split `|`
+let items = ["whatsapp", "microsoft", "google", "apple", "samsung", "twitter", "facebook", "joypixels", "openmoji", "emojidex", "lg", "htc", "mozilla"]
+let tipe = items[Math.floor(Math.random() * items.length)]
+//let [tipe, emoji] = text.split `|`
  try {
-  if (!tipe) throw '_Silahkan masukan tipe emoji! Misal *!semoji whatsapp*_'
-  if (!emoji) throw 'Emoji?'
-  let stiker = await sticker(null, global.API('xteam', '/sticker/emojitopng' + tipe, { emo: emoji }, 'APIKEY'), global.packname, global.author)
+ // if (!tipe) throw '_Silahkan masukan tipe emoji! Misal *!semoji whatsapp*_'
+  if (!text) throw 'Emoji?'
+  let stiker = await sticker(null, global.API('xteam', '/sticker/emojitopng' + tipe, { emo: text }, 'APIKEY'), global.packname, global.author)
   conn.sendMessage(m.chat, stiker, MessageType.sticker, {
     quoted: m
   })
