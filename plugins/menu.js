@@ -48,7 +48,7 @@ _if you violate, your account will be banned permanently!_
 *┃║ Time :         ${time}*
 *┃║ Uptime :      ${uptime}*
 *┃║ Version :     ${vers}*
-*┃║ Prefix :       「 ${_p} 」*
+*┃║ MultiPrefix :「 ${_p} 」*
 *┃╰═════════════════╯*
 *┃                 MENU ON SGDC-BOT*
 *┃╭═════════════════╮*
