@@ -199,6 +199,7 @@ _if you violate, your account will be banned permanently!_
 *┃║ ${_p}getpp* _@user_
 *┃║ ${_p}spam* _@user|Teks_
 *┃║ ${_p}santet* _@user|Teks_
+*┃║ ${_p}santet2* _@user|Teks_
 *┃║ ${_p}jadwalsholat* _Daerah_
 *┃║ ${_p}cuaca* _Daerah_
 *┃║ ${_p}waktu* _Daerah_
