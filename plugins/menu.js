@@ -220,7 +220,7 @@ _if you violate, your account will be banned permanently!_
 *┃║ ${_p}sgif2* _Image/Reply_ (error)
 *┃║ ${_p}sticgif* _Image/Reply_ (error)
 *┃║ ${_p}sticker* _Image/Reply_
-*┃║ ${_p}toimg* _Reply Sticker_
+*┃║ ${_p}toimg* _Reply Sticker_ (error)
 *┃╰═════════════════╯*
 *┃                    [ • SGDC-BOT • ]*
 *┗━━━━━━━━━━━━━━━━━━━┛*
