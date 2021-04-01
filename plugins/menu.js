@@ -40,6 +40,7 @@ _if you violate, your account will be banned permanently!_
 *> Don't Calling !!!*
 *> Don't Video Calls !!!*
 *━━━━━━━━━━━━━━━━━━━━━*
+${readMore}
 *┏━━━━━━━━━━━━━━━━━━━┓*
 *┃                      [ • SGDC-BOT • ]*
 *┃╭═════════════════╮*
@@ -168,7 +169,6 @@ _if you violate, your account will be banned permanently!_
 *┃║ ${_p}dark* _Teks_
 *┃║ ${_p}coffe* _Teks_
 *┃║ ${_p}coffe2* _Teks_
-*┃║ ${_p}coffe3* _Teks_
 *┃║ ${_p}matrix* _Teks_
 *┃║ ${_p}silverbutton* _Teks_
 *┃║ ${_p}goldbutton* _Teks_
@@ -238,7 +238,7 @@ ${dsci}
   /*  } catch (e) {
     conn.fakeReply(m.chat, 'Terjadi Kesalahan Saat Memuat Menu!', '0@s.whatsapp.net', '*SYSTEM ERROR!*')
     throw e*/
- }
+}
 
 handler.command = /^(menu|help|start|bot|helep)$/i
 
@@ -247,6 +247,9 @@ handler.fail = null
 
 module.exports = handler
 
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
+
 function clockString(ms) {
   let h = Math.floor(ms / 3600000)
   let m = Math.floor(ms / 60000) % 60
@@ -254,6 +257,8 @@ function clockString(ms) {
   console.log({ms,h,m,s})
   return [h, m, s].map(v => v.toString().padStart(2, 0) ).join(':')
 }
+
+
 
 // Muhammad afdhan
 
