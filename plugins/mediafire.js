@@ -12,11 +12,15 @@ axios.get(`https://videfikri.com/api/mediafire/?query=${text}`).then((res) => {
 *Download:* ${res.data.result.download}
 
 _Download sendiri, jangan manja:v_
+
+_Kalau Gak Error,_
+_File Nya Langsung Dikirim_
+
 *[ • SGDC-BOT • ]*
 `.trim()
 m.reply(hasil)	
-/*let file = await conn.downloadM(res.data.result.download)
-conn.sendFile(m.chat, file, `${res.data.result.filename}`, m)*/
+//let file = await conn.downloadM(res.data.result.download)
+conn.sendFile(m.chat, res.data.result.download, `${res.data.result.filename}`, m)
    })
 }
 handler.command = /^(mediafire)$/i
