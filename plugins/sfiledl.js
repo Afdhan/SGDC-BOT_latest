@@ -14,6 +14,9 @@ m.reply(`
 
 _Download Sendiri, Jangan Manja :v_
 
+_Kalau Gak Error,_
+_File Nya Langsung Dikirim_
+
 *[ • SGDC-BOT • ]*
 `.trim())
 
