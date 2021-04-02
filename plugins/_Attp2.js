@@ -5,18 +5,18 @@ const { MessageType } = require('@adiwajshing/baileys')
 
 let handler  = async (m, { conn, text }) => {
 /*let user = global.DATABASE._data.users[m.sender]
-if (user.prems) {*/
-  try{
+if (user.prems) {
+  try{*/
   await m.reply('*[ WAIT ]* _Sedang membuat..._')
-  let stiker = await sticker(null, `http://lolhuman.herokuapp.com/api/attp?apikey=761e676c13e7710a48011b2b&text=${text}`), global.packname, global.author)
+  /*let stiker = await sticker(null, `http://lolhuman.herokuapp.com/api/attp?apikey=761e676c13e7710a48011b2b&text=${text}`), global.packname, global.author)
   conn.sendMessage(m.chat, stiker, MessageType.sticker, {
     quoted: m
   })
  } catch (e) {
    m.reply('_Terjadi Kesalahan!_')
-  }
-  //if (text) conn.sendFile(m.chat, 'http://lolhuman.herokuapp.com/api/attp?apikey=761e676c13e7710a48011b2b&text=' + encodeURIComponent(text), 'attp.webp', '', m, false, { asSticker: true })
-  //else throw 'Teksnya mbah?'
+  }*/
+  if (text) conn.sendFile(m.chat, 'http://lolhuman.herokuapp.com/api/attp?apikey=761e676c13e7710a48011b2b&text=' + encodeURIComponent(text), 'attp.webp', '', m, false, { asSticker: true })
+  else throw 'Teksnya mana mbah?'
  // } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
