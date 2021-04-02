@@ -3,7 +3,7 @@ handler.before = async function (m) {
   let id = m.chat
   if (!m.quoted || !m.quoted.fromMe || !m.quoted.isBaileys || !/Ketik.*hint/i.test(m.quoted.text)) return
   conn.tebakgambar = conn.tebakgambar ? conn.tebakgambar : {}
-  if (!(id in conn.tebakgambar)) return m.reply('_Lu telat :v_')
+  if (!(id in conn.tebakgambar)) return m.reply('_Lu telat ngen' + readMore + 'uhh :v_')
   if (m.quoted.id == conn.tebakgambar[id][0].id) {
     let json = JSON.parse(JSON.stringify(conn.tebakgambar[id][1]))
     // m.reply(JSON.stringify(json, null, '\t'))
@@ -17,3 +17,7 @@ handler.before = async function (m) {
   }
 }
 module.exports = handler
+
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
