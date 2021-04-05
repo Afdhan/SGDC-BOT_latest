@@ -7,7 +7,7 @@ if (user.prems) {*/
     if (args[0] == 'random' || args[0] == 'blowjob' || args[0] == 'trap' || args[0] == 'loli' || args[0] == 'waifu' || args[0] == 'neko') {
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
 
-      let nsfw = 'http://lolhuman.herokuapp.com/api/random/nsfw/' + args[0] + '?apikey=761e676c13e7710a48011b2b'
+      let nsfw = 'http://lolhuman.herokuapp.com/api/random/nsfw/' + args[0] + '?apikey=761e676c13e7710aiiib'
 
                 conn.sendFile(m.chat, nsfw, 'SGDC-NSFW.jpg', 'Jangan Colay:v', m)
       }
