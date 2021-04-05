@@ -3,7 +3,7 @@ let handler = async(m, { conn, text }) => {
 /*let user = global.DATABASE._data.users[m.sender]
 if (user.prems) {*/
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-let link = 'https://api.zeks.xyz/api/memeindo?apikey=apivinz'
+let link = 'https://api.zeks.xyz/api/memeindo?apikey=00'
 
 conn.sendFile(m.chat, link, 'SGDC-BOT.png', '*[ • SGDC-BOT • ]*', m)
   //} else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
