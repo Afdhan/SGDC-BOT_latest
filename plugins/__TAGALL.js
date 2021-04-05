@@ -1,14 +1,11 @@
 let handler = async (m, { conn, text }) => {
   let users = (await conn.groupMetadata(m.chat)).participants.map(u => u.jid)
-  let mem = `
-*╭════[  SGDC-BOT  ]════╮*
-*┏═══════════════\n*
-`.trim()
+  let mem = `*╭════[  SGDC-BOT  ]════╮*`
 
   for (let i = 0; i < users.length; i++) {
-      mem += `*┣►* @${users[i].split("@")[0]}\n`
+      mem += `*►* @${users[i].split("@")[0]}\n`
      }
-      mem += '*┗═══════════════*\n*╰════[  SGDC-BOT  ]════╯*'
+      mem += '*╰════[  SGDC-BOT  ]════╯*'
   conn.reply(m.chat, mem, m, {
     contextInfo: {
       mentionedJid: users 
@@ -16,7 +13,7 @@ let handler = async (m, { conn, text }) => {
   })
 }
 
-handler.command = /^(tagall2)$/i
+handler.command = /^(tagall)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
