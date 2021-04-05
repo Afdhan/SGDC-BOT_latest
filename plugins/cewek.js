@@ -1,8 +1,6 @@
 let imageToBase64 = require('image-to-base64');
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
-/*let user = global.DATABASE._data.users[m.sender]
-if (user.prems) {*/
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
     let items = ["ullzang girl", "cewe cantik", "hijab cantik", "korean girl", "remaja cantik", "cewek korea", "cewek jepang"];
     let cewe = items[Math.floor(Math.random() * items.length)];
@@ -32,10 +30,9 @@ Jangan Ngaceng :v
         )
     
     });
- // } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
 
-handler.command = /^(cecan|ciwi|cewek)$/i
+handler.command = /^(cewek|cecan|ciwi|ciwey)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = true

@@ -12,7 +12,7 @@ if (user.prems) {*/
             .then(body => {
                 let randomnime = body.split('\n')
                 let randomnimex = randomnime[Math.floor(Math.random() * randomnime.length)]
-                conn.sendFile(m.chat, randomnimex, '', 'Dasar Wibu:v', m)
+                conn.sendFile(m.chat, randomnimex, '', 'SGDC-BOT', m)
             })
             .catch(() => {
                 conn.reply(m.chat, '*[ ERROR ]* _Terjadi Kesalahan!_', m)

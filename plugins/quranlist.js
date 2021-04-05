@@ -1,14 +1,21 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
 
-    if (!text) return conn.reply(m.chat, 'Masukkan nomor surah', m)
 
   await m.reply('*[ WAIT ]* _Searching..._')
-	axios.get(`https://api.vhtear.com/quran?no=${text}&apikey=NOT-PREMIUM`).then ((res) => {
+	axios.get(`https://videfikri.com/api/randquran/`).then ((res) => {
 	 	let hasil = `
-*NAMA SURAH:* ${res.data.result.surah}
-*QUR'AN:* 
-${res.data.result.quran}
+*HASIL SEARCHING*
+	
+*Nama Surah:* ${res.data.result.name}
+*Nomor:* ${res.data.result.nomor}
+*Ayat:* ${res.data.result.ayat}
+*Asma:* ${res.data.result.asma}
+*Tipe:* ${res.data.result.tipe}
+*No Urut:* ${res.data.result.no_urut}
+*Rukuk:* ${res.data.result.rukuk}
+*Arti:* ${res.data.result.arti}
+*Keterangan:* ${res.data.result.keterangan}
 
 *[ • SGDC-BOT • ]*
 `.trim()
@@ -17,7 +24,7 @@ ${res.data.result.quran}
 	})
 }
 
-handler.command = /^(quran(list)?)$/i
+handler.command = /^(randquran|quran)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false

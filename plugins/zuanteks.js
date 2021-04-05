@@ -8,7 +8,7 @@ if (user.prems) {*/
    
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-let link = 'https://tes-apime.herokuapp.com/api/textmaker/zuan?text=' + text + '&theme=zuan1&apikey=tbot' 
+let link = 'https://tes-apime.herokuapp.com/api/textmaker/zuan?text=' + text + '&theme=zuan1&apikey=alikey' 
 
 conn.sendFile(m.chat, link, 'SGDC-BOT.png', '*[ • SGDC-BOT • ]*', m)
   //} else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')

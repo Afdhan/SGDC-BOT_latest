@@ -10,7 +10,7 @@ let [fx, xs] = text.split `|`
    if (xs > 10) return conn.reply(m.chat, '*Teks2 Terlalu Panjang!* _Maksimal 10 huruf!_', m)
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-let link = 'https://api.xteam.xyz/photooxy/' + fx + '?text=' + xs + '&APIKEY=abba3220ce4a347f'
+let link = 'https://api.xteam.xyz/photooxy/' + fx + '?text=' + xs + '&APIKEY=abba322a347f'
 
 conn.sendFile(m.chat, link, 'SGDC-BOT.png', '*[ • SGDC-BOT • ]*', m)
  // } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')

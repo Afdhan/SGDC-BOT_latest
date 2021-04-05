@@ -3,7 +3,7 @@ let handler = async(m, { conn, text }) => {
 
     if (!text) return conn.reply(m.chat, 'Masukan Nama Daerahnya', m)
 
-	axios.get(`https://tobz-api.herokuapp.com/api/jamdunia?lokasi=${text}&apikey=BotWeA`).then ((res) => {
+	axios.get(`https://tobz-api.herokuapp.com/api/jamdunia?lokasi=${text}&apikey=APINYA`).then ((res) => {
 	 	let hasil = `[[ Waktu Daerah *${text}* ]]\n\nJam: ${res.data.time}\nTanggal: ${res.data.date}\nInfo: ${res.data.title}`
 m.reply('*FITUR NONAKTIF!*')
 //    conn.reply(m.chat, hasil, m)

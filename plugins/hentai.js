@@ -1,12 +1,12 @@
 let axios = require("axios");
 let handler = async(m, { conn, text }) => {
-/*let user = global.DATABASE._data.users[m.sender]
-if (user.prems) {*/
+let chat = global.DATABASE.data.chats[m.chat]
+    if (chat.nsfw) { 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-let link = 'https://api.xteam.xyz/randomimage/hentai?APIKEY=abba3220ce4a347f'
+let link = 'https://api.xteam.xyz/randomimage/hentai?APIKEY=abba3ce4a347f'
 
 conn.sendFile(m.chat, link, 'SGDC-BOT.png', 'Mending lu tobat dah :v\n\n*[ • SGDC-BOT • ]*', m)
- //  } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
+    } else if (!chat.nsfw) return m.reply('```Perlu Mengaktifkan Mode NSFW```')
 }
 
 handler.command = /^(hentai)$/i

@@ -4,7 +4,7 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Silahkan masukan link', m)
 
 
-axios.get(`https://api.xteam.xyz/shorturl/cuttly?url=${text}&APIKEY=Panas`).then((res) => {
+axios.get(`https://api.xteam.xyz/shorturl/cuttly?url=${text}&APIKEY=abba32ce4a347f`).then((res) => {
     let hasil = `*Link:* ${res.data.result.fullLink}\n*Short:* ${res.data.result.shortLink}\n\n*[ • SGDC-BOT • ]*`
 conn.reply(m.chat, hasil, m)
 	})

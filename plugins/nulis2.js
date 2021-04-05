@@ -4,7 +4,7 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, '*Nulis apa?*', m)
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-	axios.get(`https://api.zeks.xyz/api/nulis?text={text}%20test&apikey=apivinz`).then ((res) => {
+	axios.get(`https://api.zeks.xyz/api/nulis?text={text}%20test&apikey=apiz`).then ((res) => {
 	 	let hasil = `*[ • SGDC-BOT • ]* ${res.data.result}`
 
     conn.sendFile(m.chat, hasil, m)

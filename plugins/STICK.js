@@ -10,7 +10,7 @@ let handler  = async (m, { conn, text }) => {
 if (user.prems) {*/
 	  await m.reply('Sedang Membuat...')
   if (text) {
-    let res = await fetch('http://lolhuman.herokuapp.com/api/ttp4?apikey=761e676c13e7710a48011b2b&text=' + encodeURIComponent(text))
+    let res = await fetch('http://lolhuman.herokuapp.com/api/ttp4?apikey=761e676c13e7011b2b&text=' + encodeURIComponent(text))
     let img = await res.buffer()
     if (!img) throw img
     let stiker = await sticker(img)

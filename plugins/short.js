@@ -4,7 +4,7 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Silahkan masukan link', m)
 
 //  await m.reply('*[ WAIT ]* _Seda..._')
-axios.get(`https://xnxx-tbot.herokuapp.com/api/short/tiny?url=${text}&apikey=tbot`).then((res) => {
+axios.get(`https://xnxx-tbot.herokuapp.com/api/short/tiny?url=${text}&apikey=0iot`).then((res) => {
     let hasil = `*Link:* ${text}\n*Short:* ${res.data.result.link}`
 conn.reply(m.chat, hasil, m)
 	})

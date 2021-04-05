@@ -5,7 +5,7 @@ let { spawn } = require('child_process')
 
 let handler  = async(m, { conn, text }) => {
  await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-  let quot = 'https://api.xteam.xyz/quotemaker?text=' + text + '&wm=SGDC-BOT&APIKEY=abba3220ce4a347f'
+  let quot = 'https://api.xteam.xyz/quotemaker?text=' + text + '&wm=SGDC-BOT&APIKEY=abbace4a347f'
 conn.sendFile(m.chat, quot, 'SGDC-BOT.jpg', '*[ • SGDC-BOT • ]*', m)
 
  }
