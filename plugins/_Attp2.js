@@ -15,7 +15,7 @@ if (user.prems) {
  } catch (e) {
    m.reply('_Terjadi Kesalahan!_')
   }*/
-  if (text) conn.sendFile(m.chat, 'http://lolhuman.herokuapp.com/api/attp?apikey=761e676c13e7710a48011b2b&text=' + encodeURIComponent(text), 'attp.webp', '', m, false, { asSticker: true })
+  if (text) conn.sendFile(m.chat, 'http://lolhuman.herokuapp.com/api/attp?apikey=761e6u2882y7u179j7&text=' + encodeURIComponent(text), 'attp.webp', '', m, false, { asSticker: true })
   else throw 'Teksnya mana mbah?'
  // } else if (!user.prems) m.reply('*FITUR INI KHUSUS UNTUK USER PREMIUM!*')
 }
