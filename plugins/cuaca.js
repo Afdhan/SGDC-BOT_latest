@@ -4,7 +4,7 @@ let handler = async(m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, 'Masukkan Nama Kota', m)
 
   await m.reply('*[ WAIT ]* _Sedang Diproses..._')
-axios.get(`https://api.xteam.xyz/cuaca?kota=${text}&APIKEY=abba3220ce4a347f`).then((res) => {
+axios.get(`https://api.xteam.xyz/cuaca?kota=${text}&APIKEY=6`).then((res) => {
     let hasil = `
 *Kota:* _${res.data.message.kota}_
 *Hari:* _${res.data.message.hari}_
