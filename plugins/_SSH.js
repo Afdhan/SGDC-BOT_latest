@@ -1,13 +1,24 @@
-let util = require('util')
-let path = require('path')
-let { spawn } = require('child_process')
-let handler = async (m, { conn, args }) => {
-  let apk ='src/IPAN-SSH (SFILE.MOBI).apk'
-await m.reply('```[ WAIT ] Aplikasi Sedang Dikirim! Silahkan Tunggu Sekitar 1-2 Menit```')
-conn.sendFile(m.chat, apk, 'SGDC-BOT_IPAN-SSH.apk','ini', m)
+let axios = require("axios");
+let handler = async(m, { conn, text }) => {
+
+await m.reply('*[ WAIT ]* _Sedang Diproses..._')
+	axios.get(`https://fzn-gaz.herokuapp.com/api/sfiledl?url=https://sfile.mobi/bN5fUTnIl27`).then ((res) => {
+		
+		   conn.sendFile(m.chat, res.data.result, `${res.data.title}`, m)
+	})
 }
 
 handler.command = /^(apkssh)$/i
+handler.owner = false
+handler.mods = false
+handler.premium = false
+handler.group = false
+handler.private = false
+
+handler.admin = false
+handler.botAdmin = false
+
 handler.fail = null
+
 
 module.exports = handler
