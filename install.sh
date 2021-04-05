@@ -5,6 +5,4 @@ pkg install imagemagick -y
 npm install
 npm audit fix
 
-echo "*** WELCOME TO SCRIPT SGDC-BOT ***"
-echo "SCRIPT GRATISAN UNTUK KAUM GRATISAN"
-echo "KETIK (npm start) UNTUK MEMULAI"
+echo "[ WELCOME TO SCRIPT SGDC-BOT ]\n[ SCRIPT GRATISAN UNTUK KAUM GRATISAN ]\n[ KETIK (npm start) UNTUK MEMULAI ]"
