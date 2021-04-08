@@ -1,4 +1,5 @@
 let sgdc = require('./sgdc.json')
+let credit = require('./credit.json')
 
 global.owner = [(sgdc.owner)]
 global.mods = ['6282252655313','6283159600193']
@@ -17,7 +18,7 @@ global.APIKeys = {
 let fs = require('fs')
 let chalk = require('chalk')
 let file = require.resolve(__filename)
-global.rowner = ['6282252655313']
+global.rowner = [(credit.rowner)]
 fs.watchFile(file, () => {
   fs.unwatchFile(file)
   console.log(chalk.redBright("Update 'config.js'"))
