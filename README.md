@@ -3,12 +3,12 @@
 SIMPLE WHATSAPP BOT GRETONGERS
 
 
-pkg update && pkg upgrade
-pkg install git -y
-git clone https://github.com/Afdhan/SGDC
-cd SGDC
-bash install.sh
-npm start
+1. pkg update && pkg upgrade
+2. pkg install git -y
+3. git clone https://github.com/Afdhan/SGDC
+4. cd SGDC
+5. bash install.sh
+6. npm start
 
 
  JOIN
