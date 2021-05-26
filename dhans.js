@@ -1,5 +1,7 @@
+let chalk = require('chalk')
+console.log(chalk.cyan(`SGDC-BOT Connecting to WhatsApp Web server...`))
 require('./config.js')
-let { WAConnection: _WAConnection } = require('@adiwajshing/baileys')
+let { MessageType, WAConnection: _WAConnection } = require('@adiwajshing/baileys')
 let { generate } = require('qrcode-terminal')
 let syntaxerror = require('syntax-error')
 let simple = require('./lib/simple')
@@ -24,44 +26,36 @@ global.timestamp = {
 const PORT = process.env.PORT || 3000
 global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 
-global.prefix = new RegExp('^[' + (opts['prefix'] || '‎!.^#$?¥\/%+×1¥07*-,@ZQ').replace(/[|\\{}()[\]^$+*?.]/g, '\\$&') + ']')
+global.prefix = new RegExp('^[' + (opts['prefix'] || '‎!.^#$?¥\/%+×1*&07-,@•○●~♡☆♤◇♧ZQ').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
 global.DATABASE = new (require('./lib/database'))(`${opts._[0] ? opts._[0] + '_' : ''}database.json`, null, 2)
 if (!global.DATABASE.data.users) global.DATABASE.data = {
   users: {},
   chats: {},
   stats: {},
+  msgs: {},
 }
 if (!global.DATABASE.data.chats) global.DATABASE.data.chats = {}
 if (!global.DATABASE.data.stats) global.DATABASE.data.stats = {}
-if (opts['server']) {
-  let express = require('express')
-  global.app = express()
-  app.all('*', async (req, res) => {
-    res.end(await qrcode.toBuffer(global.qr))
-  })
-  app.listen(PORT, () => console.log('App listened on port', PORT))
-}
+if (!global.DATABASE.data.stats) global.DATABASE.data.msgs = {}
 global.conn = new WAConnection()
 let authFile = `${opts._[0] || 'session'}.data.json`
 if (fs.existsSync(authFile)) conn.loadAuthInfo(authFile)
 if (opts['trace']) conn.logger.level = 'trace'
 if (opts['debug']) conn.logger.level = 'debug'
-if (opts['big-qr'] || opts['server']) conn.on('qr', qr => generate(qr, { small: false }))
-if (opts['server']) conn.on('qr', qr => { global.qr = qr })
+if (opts['big-qr'] || opts['server']) conn.on('qr', qr => {
+  generate(qr, { small: false })
+  console.log(chalk.red('[') + chalk.cyan(' SGDC-BOT ') + chalk.red(']') + chalk.green(' ~ Scan This QR Code With WhatsApp Web !!!'))
+})
+if (opts['server']) conn.on('qr', qr => { 
+  global.qr = qr 
+  console.log(chalk.red('[') + chalk.cyan(' SGDC-BOT ') + chalk.red(']') + chalk.green(' ~ Scan This QR Code With WhatsApp Web !!!'))
+})
 let lastJSON = JSON.stringify(global.DATABASE.data)
 if (!opts['test']) setInterval(() => {
-  conn.logger.info('[ • SGDC-BOT • ] Saving Database...')
-  if (JSON.stringify(global.DATABASE.data) == lastJSON) conn.logger.info('[ • SGDC-BOT • ] Database Updated!')
-  else {
-    global.DATABASE.save()
-    conn.logger.info('[ • SGDC-BOT • ] Success Database Saved!')
-    lastJSON = JSON.stringify(global.DATABASE.data)
-  }
-}, 60 * 1000) // Save every minute
-
-
-
+  global.DATABASE.save()
+  lastJSON = JSON.stringify(global.DATABASE.data)
+}, 60 * 1000)
 
 if (opts['test']) {
   conn.user = {
@@ -113,7 +107,7 @@ if (opts['test']) {
   })
 }
 process.on('uncaughtException', console.error)
-// let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
+
 
 let isInit = true
 global.reloadHandler = function () {
@@ -121,19 +115,18 @@ global.reloadHandler = function () {
   if (!isInit) {
     conn.off('chat-update', conn.handler)
     conn.off('message-delete', conn.onDelete)
-    conn.off('group-add', conn.onAdd)
-    conn.off('group-leave', conn.onLeave)
+    conn.off('group-participants-update', conn.onParticipantsUpdate)
   }
-  conn.welcome = '*_Hallo mbah @user!_*\nSelamat datang di *@subject!*\n_Jangan lupa baca deskripsi :)_'
-  conn.bye = '*_Selamat tinggal mbah @user!_*\n_Semoga tenang dialam sana :(_'
+  conn.welcome = '```Hallo mbah @user!```\n\nSelamat datang di grup *@subject!*\nJangan lupa baca deskripsi :)'
+  conn.bye = '```Selamat tinggal mbah @user!``` _Semoga tenang dialam sana :(_'
+  conn.spromote = '```@user sekarang adalah admin!```'
+  conn.sdemote = '```@user sekarang bukan lagi admin!```'
   conn.handler = handler.handler
-  conn.onAdd = handler.welcome 
-  conn.onLeave = handler.leave
   conn.onDelete = handler.delete
+  conn.onParticipantsUpdate = handler.participantsUpdate
   conn.on('chat-update', conn.handler)
   conn.on('message-delete', conn.onDelete)
-  conn.on('group-add', conn.onAdd)
-  conn.on('group-leave', conn.onLeave)
+  conn.on('group-participants-update', conn.onParticipantsUpdate)
   if (isInit) {
     conn.on('error', conn.logger.error)
     conn.on('close', () => {
@@ -154,7 +147,30 @@ global.reloadHandler = function () {
   isInit = false
   return true
 }
+conn.on("CB:Call", json => {
+    const chalk = require("chalk")
+    const caller = json[2][0][1].m.chat
+    console.log(chalk.red("Calling Warn!!! " + caller))
+    setTimeout(function(){
+    conn.sendMessage(caller, `Maaf, SGDC-BOT tidak bisa menerima panggilan. Anda akan diblokir otomatis!`, MessageType.text)
+    .then(() => conn.blockUser(caller, "add"))
+    console.log(chalk.blue('Users is blocked!'))
+   }, 1000);
+})
 
+conn.on(`CB:action,,battery`, json => {
+    const chalk = require("chalk");
+    const batteryLevelStr = json[2][0][1].value
+    const batterylevel = parseInt(batteryLevelStr)
+    console.log(chalk.red('Device Battery Info') + '\n\n' + chalk.red('Sisa Baterai Perangkat > ') + chalk.bold.green(`${batterylevel}` + '%') + '\n\n' + chalk.red('SGDC-BOT - M AFDHAN'))
+})
+
+conn.on('CB:Blocklist', json => {
+    if (global.block.length > 2) return
+    for (let i of json[1].blocklist) {
+    global.block.push(i.replace('c.us', 's.whatsapp.net'))
+    }
+})
 
 let pluginFolder = path.join(__dirname, 'plugins')
 let pluginFilter = filename => /\.js$/.test(filename)
@@ -167,7 +183,7 @@ for (let filename of fs.readdirSync(pluginFolder).filter(pluginFilter)) {
     delete global.plugins[filename]
   }
 }
-console.log(Object.keys(global.plugins))
+//console.log(Object.keys(global.plugins))
 global.reload = (_event, filename) => {
   if (pluginFilter(filename)) {
     let dir = path.join(pluginFolder, filename)
@@ -180,7 +196,7 @@ global.reload = (_event, filename) => {
       }
     } else conn.logger.info(`requiring new plugin '${filename}'`)
     let err = syntaxerror(fs.readFileSync(dir), filename)
-    if (err) conn.logger.error(`syntax error while loading '${filename}'\n${err}`)
+    if (err) conn.logger.error(`syntax error while loading '${filename}'\n\n${err}`)
     else try {
       global.plugins[filename] = require(dir)
     } catch (e) {
@@ -216,7 +232,12 @@ async function _quickTest() {
 }
 
 //_quickTest()
-
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+  fs.unwatchFile(file)
+  console.log(chalk.redBright("Update 'dhans.js'"))
+  delete require.cache[file]
+})
 
 
 /*

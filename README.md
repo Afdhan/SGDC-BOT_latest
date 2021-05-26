@@ -1,23 +1,13 @@
-# SGDC-BOT@^1.5.1
+# SGDC-BOT@^1.6.5
 
-SIMPLE WHATSAPP BOT GRETONGERS
-
-
-1. pkg update && pkg upgrade
-2. pkg install git -y
-3. git clone https://github.com/Afdhan/SGDC
-4. cd SGDC
-5. bash install.sh
-6. npm start
-
+Simple WhatsApp BOT / Gretongers SGDC-TEAM
 
  JOIN
-[`WhatsApp`](https://chat.whatsapp.com/JTqD3cJLmrlJPfxYZMtju8)
+[`WhatsApp`](https://chat.whatsapp.com/C6JvFUMrWpBJ5THI0Bz3QM)
 [`Telegram`](https://t.me/SGDC_TEAM)
 [`Channel`](https://t.me/SobatGretong)
 
  # MUHAMMAD AFDHAN
-
 YouTube
 [`SGDC Project`](https://www.youtube.com/channel/UCpx5nDQcdVpqrQBUfMLuloA)
 
@@ -31,4 +21,4 @@ Donate
 [`Saweria`](https://saweria.co/AFD11)
 [`Nyawer`](https://nyawer.co/SGDC)
 
-Original Script [`Klik Disini`](https://github.com/Nurutomo/wabot-aq)
+Original Script [`Nurutomo`](https://github.com/Nurutomo/wabot-aq)
