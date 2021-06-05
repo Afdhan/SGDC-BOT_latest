@@ -90,10 +90,10 @@ Powered By SGDC-BOT || M AFDHAN
     let about = (await conn.getStatus(mmk)).status
     let nom = PhoneNumber('+' + mmk.replace('@s.whatsapp.net', '')).getNumber('international')
     let mode
-    if(isROwner || mmk === own) mode = "```ROwner SGDC-BOT```"
-    else if(mmk === cown) mode = "```Owner SGDC-BOT```"
-    else if(premi) mode = "```Premium User```"
-    else mode = "```Free User```"
+    if(isROwner || mmk === own) mode = "ROwner SGDC-BOT"
+    else if(mmk === cown) mode = "Owner SGDC-BOT"
+    else if(premi) mode = "Premium User"
+    else mode = "Free User"
     let chat = global.DATABASE.data.chats[m.chat]
     let ngc
     if(m.isGroup) ngc = conn.getName(m.chat)
