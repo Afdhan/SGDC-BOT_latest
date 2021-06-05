@@ -15,7 +15,8 @@ Simple WhatsApp BOT / Gretongers SGDC-TEAM
 > node index
 > Scan
 ```
-Input Your Apikey Here [`SGDC-APIKEYS`] (https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
+Input Your Apikey Here 
+[`SGDC-APIKEYS`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
 
 
  JOIN
