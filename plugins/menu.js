@@ -501,8 +501,9 @@ await conn.sendFile(m.chat, ppp, "SGDC_BOT.jpg", mn, {
        mentionedJid: [mmk, own, cown]
       }
 })
-
-conn.reply(m.chat, `Untuk Menu Gretongan, Ketik *${_p}gretongmenu*`, {
+let chat = global.DATABASE._data.chats[m.chat]
+let tek = `Untuk Menu Gretongan, Ketik *${_p}gretongmenu*`
+let kemem =  {
   key: { 
       remoteJid: '111234567890-1594482450@g.us', 
       participant: '0@s.whatsapp.net', 
@@ -515,7 +516,10 @@ conn.reply(m.chat, `Untuk Menu Gretongan, Ketik *${_p}gretongmenu*`, {
         "jpegThumbnail": fs.readFileSync('./src/sgdc1.jpg')
        }
     }
-})
+}
+if (m.isGroup && chat.gretong) conn.reply(m.chat, tek, kemem)
+else if(!m.isGroup && !chat.gretong || chat.gretong) conn.reply(m.chat, tek, kemem)
+       
   } catch (e) {
     conn.reply(m.chat, '```Menu Gagal Dimuat!!!```', '0@s.whatsapp.net', 'MENU ERROR! SEGERA LAPORKAN KE OWNER!', 'status@broadcast')
     console.error(e)
