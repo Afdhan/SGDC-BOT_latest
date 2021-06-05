@@ -2,6 +2,20 @@
 
 Simple WhatsApp BOT / Gretongers SGDC-TEAM
 
+# Usage
+```bash
+> pkg update && pkg upgrade
+> pkg install git -y
+> pkg install nodejs -y
+> pkg install ffmpeg -y
+> pkg install imagemagick -y
+> git clone https://github.com/Afdhan/SGDC
+> cd SGDC
+> npm install
+> node index
+> Scan
+```
+
  JOIN
 [`WhatsApp`](https://chat.whatsapp.com/C6JvFUMrWpBJ5THI0Bz3QM)
 [`Telegram`](https://t.me/SGDC_TEAM)
