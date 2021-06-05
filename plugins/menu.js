@@ -11,7 +11,7 @@ let { performance } = require('perf_hooks')
 let handler  = async (m, { conn, args, text, command, isOwner, isPrems, isROwner, usedPrefix: _p }) => {
 let gmbr = './src/SGDC-BOT.jpg'
 let old = performance.now()
- await conn.fakeReply(m.chat, '```L o a d i n g . . .```', '0@s.whatsapp.net', '*SGDC-BOT PROCESSING*')
+ await conn.fakeReply(m.chat, '```L o a d i n g . . .```', '0@s.whatsapp.net', '```SGDC-BOT PROCESSING```', 'status@broadcast')
 let neww = performance.now()
  try {
 let chalk = require("chalk");
@@ -482,7 +482,7 @@ ${week}, ${islami} H
 
 let ppp = 'src/SGDC-BOT.jpg'
 global.cpt = `Support Me With Donate :)`
-await conn.sendFile(m.chat, ppp, "SGDC_BOT.jpg", mn, {
+await conn.reply(m.chat, mn, {
   key: { 
       remoteJid: '6283159600193-1620323735@g.us', 
       participant: '0@s.whatsapp.net', 
@@ -495,7 +495,7 @@ await conn.sendFile(m.chat, ppp, "SGDC_BOT.jpg", mn, {
         "jpegThumbnail": fs.readFileSync(gmbr)
        }
     }
-}, false,
+},
 { 
    contextInfo: { 
        mentionedJid: [mmk, own, cown]
