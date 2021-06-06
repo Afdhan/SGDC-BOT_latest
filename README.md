@@ -1,6 +1,6 @@
 # SGDC-BOT@^1.7.0
-Input Apikey [`Click Here`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
-# Installing
+Sebelumnya Masukkan Apikeymu [`Disini`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
+# Install
 ```bash
 > pkg update && pkg upgrade
 > pkg install git -y
@@ -11,7 +11,7 @@ Input Apikey [`Click Here`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.js
 > cd SGDC
 > npm install
 ```
-# Run
+# Mulai
 ```bash
 > npm start
 > node index.js
