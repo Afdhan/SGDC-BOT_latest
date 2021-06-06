@@ -1,9 +1,23 @@
-# SGDC-BOT@^1.6.5
+```js
+const info = {
+  "sosmed": [
+       "facebook": "Muhammad Afdhan",
+       "telegram": "@Bagi_Config",
+       "instagram": "@dhans11__",
+       "youtube": "SGDC Project",
+       "saweria": "https://saweria.co/AFD11",
+       "nyawer": "https://nyawer.co/SGDC",
+         ]
+     }
+}
+```
+
+# SGDC-BOT@^1.7.0
 
 Simple WhatsApp BOT / Gretongers SGDC-TEAM
 
-Input Apikey [`SGDC-BOT`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
-
+# SGDC-BOT  BY SGDC-TEAM
+Input Apikey [`Click Here`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
 Installing
 ```bash
 > pkg update && pkg upgrade
