@@ -13,7 +13,7 @@ global.APIs = {
   xteam: 'https://api.xteam.xyz'
 }
 global.APIKeys = {
-  'https://api.xteam.xyz': 'abba3220ce4a347f'
+  'https://api.xteam.xyz': 'Donasi dulu om, 5k juga gapapa'
 }
 
 
