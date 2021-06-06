@@ -1,15 +1,3 @@
-```js
-const info = {
-       "facebook": "Muhammad Afdhan",
-       "telegram": "@Bagi_Config",
-       "instagram": "@dhans11__",
-       "youtube": "SGDC Project",
-       "saweria": "https://saweria.co/AFD11",
-       "nyawer": "https://nyawer.co/SGDC",
-         }
-}
-```
-
 # SGDC-BOT@^1.7.0
 
 Simple WhatsApp BOT / Gretongers SGDC-TEAM
@@ -39,6 +27,18 @@ Input Apikey [`Click Here`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.js
 [`Channel`](https://t.me/SobatGretong)
 
  # MUHAMMAD AFDHAN
+ ```js
+const info = 
+{
+    "facebook": "Muhammad Afdhan",
+    "telegram": "@Bagi_Config",
+    "instagram": "@dhans11__",
+    "youtube": "SGDC Project",
+    "saweria": "https://saweria.co/AFD11",
+    "nyawer": "https://nyawer.co/SGDC"
+}
+```
+ 
 YouTube
 [`SGDC Project`](https://www.youtube.com/channel/UCpx5nDQcdVpqrQBUfMLuloA)
 
