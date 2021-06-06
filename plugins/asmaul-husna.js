@@ -2,9 +2,9 @@ let fetch = require("node-fetch");
 let kntl = require("../src/kntl.json");
 let handler = async(m, { conn, text }) => {
 	let api = (kntl.tbotkey)
+	await m.reply(global.wait)
     try{
-            await m.reply(global.wait)
-            let res = await fetch(`https://sgdc-bot.herokuapp.com/api/data/json/asmaulhusna`).then ((res) => {
+            let res = await fetch(`https://sgdc-bot.herokuapp.com/api/data/json/asmaulhusna`)
             let data = await res.json()
             let out = `*「  • ASMA'UL HUSNA •  」*\n\n`
                 for (let x of data) {
@@ -12,7 +12,6 @@ let handler = async(m, { conn, text }) => {
                 }
                     out += '\n\n*SGDC-BOT*'
                  conn.reply(m.chat, out, m)
-	})
     } catch (e) {
   	m.reply('```Error```')
   }
