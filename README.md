@@ -1,13 +1,13 @@
 ```js
 const info = {
-   let sosmed = [
+   sosmed = [
        facebook = "Muhammad Afdhan",
        telegram = "@Bagi_Config",
        instagram = "@dhans11__",
        youtube = "SGDC Project",
        saweria = "https://saweria.co/AFD11",
        nyawer = "https://nyawer.co/SGDC",
-                ]
+            ]
          }
 }
 ```
