@@ -531,7 +531,7 @@ ${week}, ${islami} H
                       *ＳＧＤＣ－ＢＯＴ*
 ─────────────────────
 `.trim()
-let thumb = fs.readFileSync("https://telegra.ph/file/2e6035d48c86dc776f17f.jpg")
+//let thumb = fs.readFileSync("https://telegra.ph/file/2e6035d48c86dc776f17f.jpg")
 let ppp = 'src/SGDC-BOT.jpg'
 let cap = `*SGDC-BOT BY MUHAMMAD AFDHAN*`
 await conn.reply(m.chat, mn, {
@@ -573,7 +573,7 @@ if (m.isGroup && chat.gretong) conn.reply(m.chat, tek, kemem)
 else if(!m.isGroup && !chat.gretong || chat.gretong) conn.reply(m.chat, tek, kemem)
 
   } catch (e) {
-    conn.reply(m.chat, '```Menu Gagal Dimuat!!!```', '0@s.whatsapp.net', 'MENU ERROR! SEGERA LAPORKAN KE OWNER!', 'status@broadcast')
+    await conn.reply(m.chat, '```Menu Gagal Dimuat!!!```', '0@s.whatsapp.net', 'MENU ERROR! SEGERA LAPORKAN KE OWNER!', 'status@broadcast')
     conn.sendMessage("6282252655313@s.whatsapp.net", `Menu Error\nBot Number: https://wa.me/${global.conn.user.jid.split`@`[0]}\nType Error:\n\n${e}`, MessageType.text)
     console.log(e)
   }
