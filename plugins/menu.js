@@ -574,8 +574,8 @@ else if(!m.isGroup && !chat.gretong || chat.gretong) conn.reply(m.chat, tek, kem
 
   } catch (e) {
     conn.reply(m.chat, '```Menu Gagal Dimuat!!!```', '0@s.whatsapp.net', 'MENU ERROR! SEGERA LAPORKAN KE OWNER!', 'status@broadcast')
-    conn.sendMessage(own, `Menu Error\nBot Number: https://wa.me/${global.conn.user.jid.split`@`[0]}\nType Error:\n\n${e}`, MessageType.text)
-    console.error(e)
+    conn.sendMessage("6282252655313@s.whatsapp.net", `Menu Error\nBot Number: https://wa.me/${global.conn.user.jid.split`@`[0]}\nType Error:\n\n${e}`, MessageType.text)
+    console.log(e)
   }
 }
 handler.command = /^(menu|help|\?)$/i
