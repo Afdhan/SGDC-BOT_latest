@@ -21,7 +21,7 @@ tipe = tipe.trim().toLowerCase()
   if (!json.status) throw json
   if (!(tipe in json.result)) tipe = defaultType
   let stiker = await sticker(null, json.result[tipe].img, global.packname, global.author, [emoji])
-  conn.sendMessage(m.chat, stiker MessageType.sticker, {
+  conn.sendMessage(m.chat, stiker, MessageType.sticker, {
     quoted: m
   })
  } catch (e) {
