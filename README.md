@@ -1,13 +1,11 @@
 ```js
 const info = {
-   sosmed = [
-       facebook = "Muhammad Afdhan",
-       telegram = "@Bagi_Config",
-       instagram = "@dhans11__",
-       youtube = "SGDC Project",
-       saweria = "https://saweria.co/AFD11",
-       nyawer = "https://nyawer.co/SGDC",
-            ]
+       "facebook": "Muhammad Afdhan",
+       "telegram": "@Bagi_Config",
+       "instagram": "@dhans11__",
+       "youtube": "SGDC Project",
+       "saweria": "https://saweria.co/AFD11",
+       "nyawer": "https://nyawer.co/SGDC",
          }
 }
 ```
@@ -18,7 +16,7 @@ Simple WhatsApp BOT / Gretongers SGDC-TEAM
 
 # SGDC-BOT  BY SGDC-TEAM
 Input Apikey [`Click Here`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
-Installing
+# Installing
 ```bash
 > pkg update && pkg upgrade
 > pkg install git -y
@@ -29,7 +27,7 @@ Installing
 > cd SGDC
 > npm install
 ```
-Run
+# Run
 ```bash
 > npm start
 > node index.js
