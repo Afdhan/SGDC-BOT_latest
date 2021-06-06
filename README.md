@@ -17,11 +17,6 @@ Input Apikey [`Click Here`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.js
 > node index.js
 ```
 
- JOIN
-[`WhatsApp`](https://chat.whatsapp.com/C6JvFUMrWpBJ5THI0Bz3QM)
-[`Telegram`](https://t.me/SGDC_TEAM)
-[`Channel`](https://t.me/SobatGretong)
-
  # MUHAMMAD AFDHAN
  ```json 
 {
@@ -36,6 +31,11 @@ Input Apikey [`Click Here`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.js
 ```
 Ini Script Open Source Yang Bisa Anda Ubah Atau Dibuat Ulang Dengan Syarat Tanpa Menghapus Nama Author Utama Dan Nama Pengembang Script
 ```
+JOIN
+[`WhatsApp`](https://chat.whatsapp.com/C6JvFUMrWpBJ5THI0Bz3QM)
+[`Telegram`](https://t.me/SGDC_TEAM)
+[`Channel`](https://t.me/SobatGretong)
+
 YouTube
 [`SGDC Project`](https://www.youtube.com/channel/UCpx5nDQcdVpqrQBUfMLuloA)
 
