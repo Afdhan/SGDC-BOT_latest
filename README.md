@@ -27,8 +27,7 @@ Input Apikey [`Click Here`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.js
 [`Channel`](https://t.me/SobatGretong)
 
  # MUHAMMAD AFDHAN
- ```js
-const info = 
+ ```json 
 {
     "facebook": "Muhammad Afdhan",
     "telegram": "@Bagi_Config",
