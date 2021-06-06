@@ -2,6 +2,8 @@
 
 Simple WhatsApp BOT / Gretongers SGDC-TEAM
 
+Input Apikey [`SGDC-BOT`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
+
 Installing
 ```bash
 > pkg update && pkg upgrade
