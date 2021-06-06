@@ -38,7 +38,7 @@ CFonts.say(`Jika suatu Kejadian berawal dari sebuah Tindakan|Maka jangan ragu un
   space: false,
   gradient: true,
 })
-CFonts.say(`SGDC-BOT@^1.6.5\n---------------------\nMUHAMMAD AFDHAN`, {
+CFonts.say(`SGDC-BOT@^1.7.0\n---------------------\nMUHAMMAD AFDHAN`, {
   font: 'console',
   align: 'center',
   colors: ['red']

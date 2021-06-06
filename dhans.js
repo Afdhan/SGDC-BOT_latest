@@ -13,7 +13,8 @@ let cp = require('child_process')
 let qrcode = require('qrcode')
 let path = require('path')
 let fs = require('fs')
-
+let { lolkey } = JSON.parse(fs.readFileSync('./src/kntl.json'))
+if(lolkey == "") console.log(chalk.red(`Masukkan Apikeymu Di src/kntl.json !!!`))
 let rl = Readline.createInterface(process.stdin, process.stdout)
 let WAConnection = simple.WAConnection(_WAConnection)
 

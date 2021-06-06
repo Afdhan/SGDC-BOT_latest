@@ -2,22 +2,20 @@
 
 Simple WhatsApp BOT / Gretongers SGDC-TEAM
 
-# Usage
+Installing
 ```bash
 > pkg update && pkg upgrade
 > pkg install git -y
 > pkg install nodejs -y
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
-> git clone https://github.com/Afdhan/SGDC
-> cd SGDC
 > npm install
-> node index
-> Scan
 ```
-Input Your Apikey Here 
-[`SGDC-APIKEYS`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
-
+Run
+```bash
+> npm start
+> node index.js
+```
 
  JOIN
 [`WhatsApp`](https://chat.whatsapp.com/C6JvFUMrWpBJ5THI0Bz3QM)
@@ -38,4 +36,4 @@ Donate
 [`Saweria`](https://saweria.co/AFD11)
 [`Nyawer`](https://nyawer.co/SGDC)
 
-Original Script [`Nurutomo`](https://github.com/Nurutomo/wabot-aq)
+Base [`Nurutomo`](https://github.com/Nurutomo/wabot-aq)
