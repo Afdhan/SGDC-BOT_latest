@@ -47,15 +47,13 @@ if (opts['big-qr'] || opts['server']) conn.on('qr', qr => {
   generate(qr, { small: false })
   console.log(chalk.red('[') + chalk.cyan(' SGDC-BOT ') + chalk.red(']') + chalk.green(' ~ Scan This QR Code With WhatsApp Web !!!'))
 })
-if (opts['server']) conn.on('qr', qr => { 
-  global.qr = qr 
-  console.log(chalk.red('[') + chalk.cyan(' SGDC-BOT ') + chalk.red(']') + chalk.green(' ~ Scan This QR Code With WhatsApp Web !!!'))
-})
 let lastJSON = JSON.stringify(global.DATABASE.data)
 if (!opts['test']) setInterval(() => {
   global.DATABASE.save()
   lastJSON = JSON.stringify(global.DATABASE.data)
 }, 60 * 1000)
+if (opts['server']) require('./server')(global.conn, PORT)
+
 
 if (opts['test']) {
   conn.user = {
@@ -63,13 +61,13 @@ if (opts['test']) {
     name: 'test',
     phone: {}
   }
-  conn.chats
+ 
   conn.prepareMessageMedia = (buffer, mediaType, options = {}) => {
     return {
       [mediaType]: {
         url: '',
         mediaKey: '',
-        mimetype: options.mimetype,
+        mimetype: options.mimetype || '',
         fileEncSha256: '',
         fileSha256: '',
         fileLength: buffer.length,
@@ -84,10 +82,12 @@ if (opts['test']) {
 
   conn.sendMessage = async (chatId, content, type, opts = {}) => {
     let message = await conn.prepareMessageContent(content, type, opts)
-    let waMessage = conn.prepareMessageFromContent(chatId, message, opts)
+    let waMessage = await conn.prepareMessageFromContent(chatId, message, opts)
     if (type == 'conversation') waMessage.key.id = require('crypto').randomBytes(16).toString('hex').toUpperCase()
     conn.emit('chat-update', {
       jid: conn.user.jid,
+      hasNewMessage: true,
+      count: 1,
       messages: {
         all() {
           return [waMessage]
@@ -147,7 +147,7 @@ global.reloadHandler = function () {
   isInit = false
   return true
 }
-conn.on("CB:Call", json => {
+/*conn.on("CB:Call", json => {
     const chalk = require("chalk")
     const caller = json[2][0][1].m.chat
     console.log(chalk.red("Calling Warn!!! " + caller))
@@ -156,6 +156,13 @@ conn.on("CB:Call", json => {
     .then(() => conn.blockUser(caller, "add"))
     console.log(chalk.blue('Users is blocked!'))
    }, 1000);
+})*/
+
+conn.on('CB:call', async function (json) {
+  const callerld = json [2][0][1].from;
+    await this.sendMessage(callerld, "Maaf anda di blokir!", 'conversation')
+    await this.sendMessage(callerld, `hadeh, jangan nelpon`, 'conversation')
+     this.blockUser(callerld, "add")
 })
 
 conn.on(`CB:action,,battery`, json => {
@@ -213,32 +220,54 @@ process.on('exit', () => global.DATABASE.save())
 
 
 async function _quickTest() {
-  let spawn = promisify(cp.spawn).bind(cp)
-  let [ffmpeg, ffmpegWebp, convert] = await Promise.all([
-    spawn('ffmpeg', [], {}),
-    spawn('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-filter_complex', 'color', '-frames:v', '1', '-f', 'webp', '-'], {}),
-    spawn('convert', [], {})
-  ]).catch(conn.logger.error)
-  global.support = {
-    ffmpeg: ffmpeg.status,
-    ffmpegWebp: ffmpeg.status && ffmpegWebp.stderr.length == 0 && ffmpegWebp.stdout.length > 0,
-    convert: convert.status
+  let test = await Promise.all([
+    cp.spawn('ffmpeg'),
+    cp.spawn('ffprobe'),
+    cp.spawn('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-filter_complex', 'color', '-frames:v', '1', '-f', 'webp', '-']),
+    cp.spawn('convert'),
+    cp.spawn('magick'),
+    cp.spawn('gm'),
+  ].map(p => {
+    return Promise.race([
+      new Promise(resolve => {
+        p.on('close', code => {
+          resolve(code !== 127)
+        })
+      }),
+      new Promise(resolve => {
+        p.on('error', _ => resolve(false))
+      })
+    ])
+  }))
+  let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm] = test
+  console.log(test)
+  let s = global.support = {
+    ffmpeg,
+    ffprobe,
+    ffmpegWebp,
+    convert,
+    magick,
+    gm
   }
+  
+require('./lib/sticker').support = s
   Object.freeze(global.support)
 
-  if (!global.support.ffmpeg) conn.logger.warn('Please install ffmpeg for sending videos (pkg install ffmpeg)')
-  if (!global.support.ffmpegWebp) conn.logger.warn('Stickers may not animated without libwebp on ffmpeg (--enable-ibwebp while compiling ffmpeg)')
-  if (!global.support.convert) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt isntalled (pkg install imagemagick)')
+  if (!s.ffmpeg) conn.logger.warn('Please install ffmpeg for sending videos (pkg install ffmpeg)')
+  if (s.ffmpeg && !s.ffmpegWebp) conn.logger.warn('Stickers may not animated without libwebp on ffmpeg (--enable-ibwebp while compiling ffmpeg)')
+  if (!s.convert && !s.magick && !s.gm) conn.logger.warn('Stickers may not work without imagemagick if libwebp on ffmpeg doesnt isntalled (pkg install imagemagick)')
 }
+_quickTest()
+  .then(() => conn.logger.info('Quick Test Done'))
+  .catch(console.error)
 
-//_quickTest()
-let file = require.resolve(__filename)
+/*let file = require.resolve(__filename)
 fs.watchFile(file, () => {
   fs.unwatchFile(file)
   console.log(chalk.redBright("Update 'dhans.js'"))
   delete require.cache[file]
 })
-
+*/
 
 /*
 * MUHAMMAD AFDHAN
