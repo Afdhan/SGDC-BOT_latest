@@ -1,8 +1,4 @@
 # SGDC-BOT@^1.7.0
-
-Simple WhatsApp BOT / Gretongers SGDC-TEAM
-
-# SGDC-BOT  BY SGDC-TEAM
 Input Apikey [`Click Here`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
 # Installing
 ```bash
@@ -37,18 +33,16 @@ Input Apikey [`Click Here`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.js
     "nyawer": "https://nyawer.co/SGDC"
 }
 ```
- 
+```
+Ini Script Open Source Yang Bisa Anda Ubah Atau Dibuat Ulang Dengan Syarat Tanpa Menghapus Nama Author Utama Dan Nama Pengembang Script
+```
 YouTube
 [`SGDC Project`](https://www.youtube.com/channel/UCpx5nDQcdVpqrQBUfMLuloA)
-
 Instagram
 [`@dhans11__`](https://instagram.com/dhans11__)
-
 Contact 
 [`WhatsApp`](https://wa.me/6282252655313&send?text=Bang+saya+mau+donasi,+5k+via+dana..+boleh+minta+nomor+dananya+bang?)
-
 Donate
 [`Saweria`](https://saweria.co/AFD11)
 [`Nyawer`](https://nyawer.co/SGDC)
-
 Base [`Nurutomo`](https://github.com/Nurutomo/wabot-aq)
