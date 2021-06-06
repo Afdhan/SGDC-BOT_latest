@@ -9,6 +9,8 @@ Installing
 > pkg install nodejs -y
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
+> git clone https://github.com/Afdhan/SGDC
+> cd SGDC
 > npm install
 ```
 Run
