@@ -6,9 +6,12 @@ let handler = async(m, { conn, text }) => {
             await m.reply(global.wait)
             let res = await fetch(`https://sgdc-bot.herokuapp.com/api/data/json/wirid`)
             let json = await res.json()
-                let out = `*「  DO'A WIRID  」*\n\n`
-                for (let x of json) {
-                    out += `─────────────────────\n${x.arabic}\n*Keterangan:*\n_${x.tnc}_\n`
+            let data = json.result.data
+                let out = `*「  DO'A WIRID  」*\n`
+                for (let x of data) {
+                    out += `───────────────────\n`
+                    out += `${x.arabic}\n`
+                    out += `*Keterangan:*\n_${x.tnc}_\n`
                 }
                     out += '\n\n*SGDC-BOT*'
                  conn.reply(m.chat, out, m)
