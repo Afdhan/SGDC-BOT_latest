@@ -98,7 +98,7 @@ Powered By SGDC-BOT || M AFDHAN
     }
     let muptime = clockString(_muptime)
     let premi = global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
-    let reg = Object.values(global.DATABASE._data.users).filter(user => user.registered == false).length
+    let reg = Object.keys(global.DATABASE._data.users).length
     let own = '6282252655313@s.whatsapp.net'
     let cown = '6283129011845@s.whatsapp.net'
     let mmk = m.sender
@@ -108,8 +108,8 @@ Powered By SGDC-BOT || M AFDHAN
     let mode
     if(mmk === own) mode = "ROwner SGDC-BOT"
     else if(mmk === cown) mode = "Owner SGDC-BOT"
-    else if(premi) mode = "Premium User"
     else if(mmk === conn.user.jid) mode = "User SGDC-BOT"
+    else if(premi) mode = "Premium User"
     else mode = "Free User"
  //   let chat = global.DATABASE.data.chats[m.chat]
   //  let ngc
