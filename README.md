@@ -1,5 +1,5 @@
 # SGDC-BOT@^1.7.0
-Sebelumnya Masukkan Apikeymu [`Disini`](https://github.com/Afdhan/SGDC/blob/main/src/kntl.json)
+Sebelumnya Masukkan Apikeymu [`Disini`](https://github.com/Afdhan/SGDC-BOT_latest/blob/main/src/kntl.json)
 # Install
 ```bash
 > pkg update && pkg upgrade
@@ -7,8 +7,8 @@ Sebelumnya Masukkan Apikeymu [`Disini`](https://github.com/Afdhan/SGDC/blob/main
 > pkg install nodejs -y
 > pkg install ffmpeg -y
 > pkg install imagemagick -y
-> git clone https://github.com/Afdhan/SGDC
-> cd SGDC
+> git clone https://github.com/Afdhan/SGDC-BOT_latest
+> cd SGDC-BOT_latest
 > npm install
 ```
 # Mulai
@@ -21,7 +21,7 @@ Sebelumnya Masukkan Apikeymu [`Disini`](https://github.com/Afdhan/SGDC/blob/main
  ```json 
 {
     "facebook": "Muhammad Afdhan",
-    "telegram": "@Bagi_Config",
+    "telegram": "@SobatGretong",
     "instagram": "@dhans11__",
     "youtube": "SGDC Project",
     "saweria": "https://saweria.co/AFD11",
